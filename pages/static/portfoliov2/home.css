@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: #444; */
+    overflow: auto;
+}
+  
+h1 {
+    font-size: 50px;
+}
+
+a {
+    color: blue;          
+    text-decoration: none;   
+}
+
+.social-links h2 {
+    display: inline-block;       /* Display as inline-block */
+    margin-right: 20px;         /* Space between the links */
+}
+
+.social-links h2:last-child {
+    margin-right: 0;            /* Remove margin from the last item */
+}
