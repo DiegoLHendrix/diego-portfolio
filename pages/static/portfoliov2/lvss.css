@@ -9,7 +9,7 @@
 body {
     overflow: auto;
 }
-  
+
 a {
     color: blue;          
     text-decoration: none;   
@@ -20,14 +20,23 @@ a {
     flex-wrap: wrap;
     justify-content: space-between; /* Space between cards */
     gap: 20px; /* Adjust spacing between cards */
-  }
+}
 
-  .card {
+.card {
     flex: 1 1 calc(50% - 20px); /* Two cards per row with 20px gap */
     margin-bottom: 20px;
     background-color: #dddd; /* Replace with desired color */
-  }
+}
 
-  .evt {
+
+.jumbotron {
+    transform: translate(15%);
+}
+.lvss {
     margin-top: 20px;
-  }
+}
+
+/* Center pdf */
+iframe {
+    transform: translate(15%);
+}

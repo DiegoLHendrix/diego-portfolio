@@ -1,3 +1,11 @@
 .container {
     margin-left: 10px;
+    margin-top:65px;
 }
+
+footer {
+    padding: 30px 0;
+    font-size: 1rem;
+    height: 50px;
+}
+  

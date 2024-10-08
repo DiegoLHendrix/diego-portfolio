@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block title %}Projects | Diego Lopez Portfolio{% endblock %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'portfoliov2/lvss.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock extrahead %}
+
+{% block content %}
+
+<!-- <h1>Relevant Projects<span class="badge badge-secondary">New</span></h1> -->
+
+<div class="lvss">
+    <div class="jumbotron">
+        <h1 class="display-4">Low Voltage Sub-System</h1>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" role="button" href="{% static 'docs/LVSS.pdf' %}" download>Download PDF</a>
+        </p>
+    </div>
+    
+    <!-- <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Low Voltage Sub-System Finite State Machine</h5>
+            <p class="card-text">Worked with an Integration team to design firmware for a Low Voltage Sub-System to safely power on an electric motorcycle.</p>
+            <a href="https://app.diagrams.net/#W39cb1b6d3800b1a2%2F39CB1B6D3800B1A2!s52abcb58cf4743f9ba3ac87c0f49df9e#%7B"pageId"%3A"jGngGYrcRXXs4YjXfpA_"%7D" class="btn btn-primary" target="_blank">FSM Diagram</a>
+        </div>
+    </div> -->
+
+    <iframe src="{% static 'docs/LVSS.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
+
+    <div class="jumbotron">
+        <h1 class="display-4">FSM Diagram</h1>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" role="button" href="{% static 'docs/LVSS-FSM.pdf' %}" download>Download Diagram PDF</a>
+        </p>
+    </div>
+
+    <iframe class="lvss-fsm" src="{% static 'docs/LVSS-FSM.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
+
+</div>
+
+{% endblock content %}

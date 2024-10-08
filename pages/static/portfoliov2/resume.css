@@ -10,10 +10,12 @@ body {
     overflow: auto;
 }
 
+/* Center header and button */
 .jumbotron {
     transform: translate(15%);
 }
 
+/* Center pdf */
 iframe {
     transform: translate(15%);
 }  

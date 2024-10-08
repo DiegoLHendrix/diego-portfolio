@@ -18,3 +18,9 @@ def contact(request):
     arg = {}
     arg['form_id'] = form_id
     return render(request, 'contact/contact.html', arg)
+
+def evt(request):
+    return render(request, "projects/evt.html")
+
+def lvss(request):
+    return render(request, "projects/lvss.html")
