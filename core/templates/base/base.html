@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}Diego Lopez Portfolio{% endblock %}</title>
-    <!-- Optionally include Bootstrap CSS -->
+
     {% load static %}
     <!-- FontAwesome for GitHub icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -19,6 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% block extrahead %}{% endblock extrahead %}
+
   </head>
   <body>
 
@@ -40,16 +41,13 @@
             <li class="nav-item">
               <a class="nav-link" href="/contact">Contact</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="/evt">EVT</a>
-            </li> -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/evt" target="_blank">Electric Vehicle Team</a></li>
+                <li><a class="dropdown-item" href="/evt">Electric Vehicle Team</a></li>
                 <li><a class="dropdown-item" href="#">Embedded Systems</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Electrical</a></li>
+                <!-- <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Electrical</a></li> -->
               </ul>
             </li>
           </ul>
@@ -74,12 +72,13 @@
       </div>
     </nav>
 
-    <div class="container">
-      {% block content %}
-      <!-- Page-specific content will go here -->
-      {% endblock content %}
-    </div>
-
+    <main class="flex-grow-1">
+      <div class="container-fluid pt-5">
+        {% block content %}
+        <!-- Page-specific content will go here -->
+        {% endblock content %}
+      </div>
+    </main>
     <footer class="footer bg-primary text-center mt-4">
       <div class="footer-content">
           <p>&copy; Diego Lopez 2024</p>

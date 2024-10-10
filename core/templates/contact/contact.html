@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% block title %}Contact | Diego Lopez Portfolio{% endblock %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'portfoliov2/contact.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock extrahead %}
+
+{% block content %}
+
+<div class="container custom-container">
+    <h1 class="display-4">Contact Me</h1>
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{{ form_id }}" method="post">
+    <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Message." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+
+    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    <!-- <a  class="btn btn-primary btn-lg">LVSS Page</a> -->
+    </form>
+</div>
+
+{% endblock content %}

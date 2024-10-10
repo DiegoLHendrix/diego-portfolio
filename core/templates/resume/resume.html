@@ -8,13 +8,14 @@
 {% endblock extrahead %}
 
 {% block content %}
-<div class="jumbotron">
+<div class="container contact-form">
     <h1 class="display-4">Resume</h1>
     <p class="lead">
         <a class="btn btn-primary btn-lg" role="button" href="{% static 'docs/Diego_Lopez_Resume.pdf' %}" download>Download PDF</a>
     </p>
+
+    <!-- Embed PDF in the page with an iframe for better browser support -->
+    <iframe src="{% static 'docs/Diego_Lopez_Resume.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
 </div>
 
-<!-- Embed PDF in the page with an iframe for better browser support -->
-<iframe src="{% static 'docs/Diego_Lopez_Resume.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
 {% endblock %}

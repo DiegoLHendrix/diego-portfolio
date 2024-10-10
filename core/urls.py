@@ -11,4 +11,5 @@ urlpatterns = [
     # EVT
     path('evt/', views.evt, name="evt"),
     path('lvss/', views.lvss, name="lvss"),
+    path('rtos/', views.rtos, name="rtos"),
 ]

@@ -24,3 +24,6 @@ def evt(request):
 
 def lvss(request):
     return render(request, "projects/lvss.html")
+
+def rtos(request):
+    return render(request, "projects/rtos.html")

@@ -1,0 +1,17 @@
+.custom-container {
+    max-width: 1200px; /* Adjust the width to your desired size */
+    padding: 15px 15px;  /* Optional: adjust padding */
+    margin: 0 auto;   /* Center the container */
+}
+
+/* Basic button styling (in case it's not defined elsewhere) */
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #ffdd57; /* Change background color on hover */
+    color: #000000;               /* Ensure text color stays white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}

@@ -16,15 +16,6 @@ a {
     background-color: #dddd; /* Replace with desired color */
 }
 
-
-.jumbotron {
-    transform: translate(15%);
-}
 .lvss {
     margin-top: 20px;
-}
-
-/* Center pdf */
-iframe {
-    transform: translate(15%);
 }
