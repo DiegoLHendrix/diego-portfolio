@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'pages.apps.PagesConfig',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'pages/static/',
+    BASE_DIR / 'core/static/',
 ]
 
 STATIC_ROOT = BASE_DIR / "static/"

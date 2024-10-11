@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% block title %}EVT | Diego Lopez Portfolio{% endblock %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'portfoliov2/evt/evt.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock extrahead %}
+
+{% block content %}
+
+<div class="container custom-container">
+  <h1 class="display-6">RIT Electric Vehicle Team | Firmware Team | 09/2023 - Present</h1>
+  <a href="/rtos" class="btn btn-primary btn-lg">RTOS Page</a>
+  <a href="/lvss" class="btn btn-primary btn-lg">LVSS Page</a>
+</div>
+
+{% endblock content %}
