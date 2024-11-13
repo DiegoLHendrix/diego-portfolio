@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* Add margin for spacing */
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+    padding: 0 15px;
+    margin: 0 auto;
+    /* Center the container */
+}
+
+footer {
+    background-color: #0275d8;
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    /* Add padding for better spacing */
+    text-align: center;
+    /* Ensure text is centered */
+    margin-top: auto;
+    /* Push footer to the bottom if content is short */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    gap: 15px;
+    /* Add gap between items */
+}
+
+.footer-content p {
+    margin: 0;
+    /* Remove default margin */
+}
+
+.footer-content a {
+    color: white;
+    /* Change link color to match footer */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.footer-content a:hover {
+    color: #ffdd57;
+    /* Change link color on hover */
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        /* Scale down font size for smaller screens */
+    }
+
+    .container {
+        padding: 0 10px;
+        /* Adjust padding on smaller screens */
+    }
+}

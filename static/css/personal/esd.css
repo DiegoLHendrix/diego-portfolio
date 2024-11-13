@@ -1,0 +1,8 @@
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body a.btn {
+    margin-top: auto;
+}
