@@ -2,20 +2,15 @@
 {% block title %}ESD | Diego Lopez Portfolio{%endblock %} 
 {% load static %} 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/personal/esd.css' %}" />
+<link rel="stylesheet" href="{% static 'css/esd/esd.css' %}" />
 <link rel="stylesheet" href="{% static 'css/base/custom.css' %}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 {% endblock extrahead %} {% block content %}
 
 <div class="custom-container-center">
   <h1 class="display-4 custom-title">Embedded Systems Design</h1>
-
-  <!-- <h2 class="display-4">Low-Pass Filter</h2>
-  <p class="lead">
-  </p>
-  <hr class="my-4"> -->
-
 </div>
+
 <div class="row custom-container-center">
 
   <div class="card custom-container-center" style="width: 18rem;">
@@ -23,7 +18,7 @@
     <div class="card-body">
       <h5 class="card-title">High and Low Pass Filter</h5>
       <p class="card-text">Using VHDL and C with the Cyclone V FPGA, I researched digital signal processing to design and verify a high and low pass filter to process audio signals.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="/esd/filters" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 
@@ -53,6 +48,13 @@
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  
+
+  <nav class="breadcrumb-bottom" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">ESD</li>
+    </ol>
+  </nav>
 </div>
+
 {% endblock content %}

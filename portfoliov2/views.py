@@ -33,10 +33,15 @@ def rtos(request):
     return render(request, "projects/evt/rtos.html")
 
 
-# Personal Projects and Class Assignments/Labs
+# Embedded Systems Design
 def esd(request):
-    return render(request, "projects/personal/esd.html")
+    return render(request, "projects/esd/esd.html")
 
 
+def filters(request):
+    return render(request, "projects/esd/filters.html")
+
+
+# Personal Projects and Class Assignments/Labs
 def clovis(request):
     return render(request, "projects/personal/clovis-1.html")

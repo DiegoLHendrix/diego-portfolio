@@ -9,8 +9,6 @@
 {% endblock extrahead %}
 
 {% block content %}
-<base target="_blank"> <!-- Makes all links open in new tab -->
-
 <div class="container lvss">
 
     <section class="jumbotron text-center">
@@ -27,7 +25,15 @@
     </p>
 
     <iframe src="{% static 'docs/lvss.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
-    
+
 </div>
+
+<nav class="breadcrumb-bottom" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/evt">EVT</a></li>
+      <li class="breadcrumb-item active" aria-current="page">LVSS</li>
+    </ol>
+  </nav>
 
 {% endblock content %}

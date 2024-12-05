@@ -1,0 +1,95 @@
+{% extends 'base/base.html' %} 
+{% block title %}ESD | Diego Lopez Portfolio{%endblock %} 
+{% load static %} 
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/esd/esd.css' %}" />
+<link rel="stylesheet" href="{% static 'css/base/custom.css' %}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+{% endblock extrahead %} {% block content %}
+
+<div class="custom-container-center">
+  <h1 class="display-4">VHDL Audio Processor</h1>
+  <h2 class="display-4" style="color: blue">VHDL Code</h2>
+
+  <div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Audio Filter Component Entity</h2>
+        <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_entity.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Audio Filter Component Architecuter</h2> <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_arch.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Filter data_in process</h2> <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_data_in.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Filter coefficients process</h2> <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeff_proc.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Shift register process</h2> <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_shift_reg.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Multiplier generator process</h2> <p class="lead">Words.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
+        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_multiplier.png' %}" alt="VHDL Audio Processor">
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">
+
+  <h2 class="display-4" style="color: blue">C Code</h2>
+
+</div>
+
+<nav class="breadcrumb-bottom" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/esd">ESD</a></li>
+    <li class="breadcrumb-item active" aria-current="page">filters</li>
+  </ol>
+</nav>
+{% endblock content %}
