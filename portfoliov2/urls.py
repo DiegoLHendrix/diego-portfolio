@@ -28,8 +28,6 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     # EVT
     path("evt/", views.evt, name="evt"),
-    path("lvss/", views.lvss, name="lvss"),
-    path("rtos/", views.rtos, name="rtos"),
     # Embedded Systems
     path("esd/", views.esd, name="esd"),
     path("esd/filters/", views.filters, name="filters"),

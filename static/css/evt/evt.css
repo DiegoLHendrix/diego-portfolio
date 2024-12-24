@@ -1,3 +1,8 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 /* Basic button styling (in case it's not defined elsewhere) */
 .btn {
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -11,4 +16,39 @@
     /* Ensure text color stays white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Add a subtle shadow effect */
+}
+
+.project-title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.custom-container-center {
+    width: 900px;
+    /* Adjust the width to your desired size */
+
+    /* Order: top, right, bottom, left */
+    padding: 30px 15px;
+    /* Equivalent to:
+        padding-top: 30px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        padding-left: 15px; */
+
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.custom-container {
+    width: 150%;
+}
+
+.custom-subtitle {
+    width: 150%;
+}
+
+.accordion-body iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
 }

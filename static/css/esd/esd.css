@@ -6,3 +6,35 @@
 .card-body a.btn {
     margin-top: auto;
 }
+
+.custom-container-center {
+    width: 900px;
+    /* Adjust the width to your desired size */
+
+    /* Order: top, right, bottom, left */
+    padding: 30px 15px;
+    /* Equivalent to:
+        padding-top: 30px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        padding-left: 15px; */
+
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.custom-title {
+    position: relative;
+    /* Aligns the title to the top of the page */
+    left: 55%;
+    /* Centers horizontally relative to the page */
+    transform: translateX(-50%);
+    /* Adjusts position back to center */
+    /* color: blue; */
+}
+
+
+.breadcrumb-bottom {
+    position: relative;
+    text-align: left;
+}
