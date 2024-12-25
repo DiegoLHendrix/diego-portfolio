@@ -62,7 +62,7 @@
   <div class="container projects-grid">
     <div class="row">
       <div class="col-lg-4">
-        <h2>LVSS</h2>
+        <h2>Low Voltage SubSystem</h2>
         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
           vehicula ut id elit.</p>
         <p><a class="btn btn-secondary" href="/evt" role="button">View details &raquo;</a></p>
@@ -89,7 +89,7 @@
       <div class="col-md-7">
         <h2 class="featurette-heading">Electric Vehicle Team<br> <span class="text-muted">Firmware Team</span></h2>
         <p class="lead">Joined the firmware team on September of 2023 and have been lucky enough to have the opportunity
-          to work on some amazing projects.</p>
+          to work on amazing projects and meet awesome people.</p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src="../../static/Assets/Grey-Square.png"
@@ -167,25 +167,5 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const sequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter']; // Array holding a variation of the Konami code
-    let currentIndex = 0; // Index of the current key in the sequence
-
-    document.addEventListener('keydown', (event) => { // Listen for keydown events
-      if (event.key === sequence[currentIndex]) { // Check if the key is the expected key in the sequence
-        currentIndex++; // Move to the next key in the sequence
-        if (currentIndex === sequence.length) { // Check if the sequence is complete
-          // alert('Sequence completed!'); // Alert the user that the sequence is complete
-          // Show the custom modal with the image
-          const imageAlertModal = new bootstrap.Modal(document.getElementById('imageAlertModal'));
-          imageAlertModal.show();
-          currentIndex = 0; // Reset the sequence
-        }
-      } else {
-        currentIndex = 0; // Reset if the sequence is broken
-      }
-    });
-  });
-</script>
+<script src="../../static/js/base/landing.js"></script>
 {% endblock content %}
