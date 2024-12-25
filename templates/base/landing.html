@@ -87,9 +87,9 @@
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Example feature. <span class="text-muted">text-muted.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-          semper.</p>
+        <h2 class="featurette-heading">Electric Vehicle Team<br> <span class="text-muted">Firmware Team</span></h2>
+        <p class="lead">Joined the firmware team on September of 2023 and have been lucky enough to have the opportunity
+          to work on some amazing projects.</p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src="../../static/Assets/Grey-Square.png"
@@ -149,4 +149,43 @@
   </div>
 </div>
 
+<!-- Custom Modal for Image Alert -->
+<div class="modal fade" id="imageAlertModal" tabindex="-1" aria-labelledby="imageAlertModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageAlertModalLabel">Sequence Completed!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="../../static/Assets/funny/meme-1.png" alt="Sequence Completed Image" class="img-fluid">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const sequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter']; // Array holding a variation of the Konami code
+    let currentIndex = 0; // Index of the current key in the sequence
+
+    document.addEventListener('keydown', (event) => { // Listen for keydown events
+      if (event.key === sequence[currentIndex]) { // Check if the key is the expected key in the sequence
+        currentIndex++; // Move to the next key in the sequence
+        if (currentIndex === sequence.length) { // Check if the sequence is complete
+          // alert('Sequence completed!'); // Alert the user that the sequence is complete
+          // Show the custom modal with the image
+          const imageAlertModal = new bootstrap.Modal(document.getElementById('imageAlertModal'));
+          imageAlertModal.show();
+          currentIndex = 0; // Reset the sequence
+        }
+      } else {
+        currentIndex = 0; // Reset if the sequence is broken
+      }
+    });
+  });
+</script>
 {% endblock content %}
