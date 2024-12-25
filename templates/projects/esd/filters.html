@@ -1,19 +1,19 @@
-{% extends 'base/base.html' %} 
-{% block title %}ESD | Diego Lopez Portfolio{%endblock %} 
-{% load static %} 
+{% extends 'base/base.html' %}
+{% block title %}ESD | Diego Lopez Portfolio{%endblock %}
+{% load static %}
 {% block extrahead %}
 <link rel="stylesheet" href="{% static 'css/esd/esd.css' %}" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 {% endblock extrahead %} {% block content %}
 
 <div class="custom-container-center">
   <h1 class="display-4">VHDL Audio Processor</h1>
-  <h2 class="display-4" style="color: blue">VHDL Code</h2>
+  <!-- <h2 class="display-4" style="color: blue">VHDL Code</h2> -->
 
   <div class="row featurette">
     <div class="col-md-7">
-        <h2 class="featurette-heading">Audio Filter Component Entity</h2>
-        <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Audio Filter Component Entity</h2>
+      <!-- <p class="lead">Words.</p> -->
     </div>
     <div class="col-md-5">
       <img class="audio-entity" src="{% static 'Assets/vhdl/filter_entity.png' %}" alt="VHDL Audio Processor">
@@ -24,10 +24,11 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Audio Filter Component Architecuter</h2> <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Audio Filter Component Architecture</h2>
+      <!-- <p class="lead">Words.</p> -->
     </div>
     <div class="col-md-5">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_arch.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_arch.png' %}" alt="VHDL Audio Processor">
     </div>
   </div>
 
@@ -35,52 +36,61 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Filter data_in process</h2> <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Filter data_in process</h2>
+      <p class="lead">Where the .wav file data is sent is determined. If address is 0 then it does not go through either
+        filter and is sent straight to the output. If address is 1 it is going to be going through one of the filters.
+      </p>
     </div>
     <div class="col-md-5">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_data_in.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_data_in.png' %}" alt="VHDL Audio Processor">
     </div>
   </div>
-  
+
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Filter coefficients process</h2> <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Filter coefficients process</h2>
+      <p class="lead">The arrays for the high and low pass filters are filled with the corresponding coefficients. The
+        process chooses which array of coefficients to use based on the filter select vector.</p>
     </div>
     <div class="col-md-5">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeff_proc.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeff_proc.png' %}" alt="VHDL Audio Processor">
     </div>
   </div>
-  
+
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Shift register process</h2> <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Shift register process</h2>
+      <p class="lead">The shift register (delay_reg) is used to sequentially delay the input data, enabling the filter
+        to process a sequence of input values (samples) in order. This delay mechanism is critical for implementing
+        Finite Impulse Response (FIR) filters, where previous input samples are multiplied by pre-determined
+        coefficients and then summed to produce the output.</p>
     </div>
     <div class="col-md-5">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_shift_reg.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_shift_reg.png' %}" alt="VHDL Audio Processor">
     </div>
   </div>
-  
+
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Multiplier generator process</h2> <p class="lead">Words.</p>
+      <h2 class="featurette-heading">Multiplier generator process</h2>
+      <p class="lead">The multiplier takes the input signal and multiplies it with the corresponding coefficient. Since
+        the input and output signals for this filter are 16 bits I used a for loop to instantiate 16 multipliers.</p>
     </div>
     <div class="col-md-5">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_coeffs.png' %}" alt="VHDL Audio Processor">
-        <img class="audio-entity" src="{% static 'Assets/vhdl/filter_multiplier.png' %}" alt="VHDL Audio Processor">
+      <img class="audio-entity" src="{% static 'Assets/vhdl/filter_multiplier.png' %}" alt="VHDL Audio Processor">
     </div>
   </div>
-  
+
   <hr class="featurette-divider">
 
-  <h2 class="display-4" style="color: blue">C Code</h2>
+  <!-- <h2 class="display-4" style="color: blue">C Code</h2> -->
 
 </div>
 
