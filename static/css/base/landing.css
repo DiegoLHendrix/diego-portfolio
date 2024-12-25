@@ -49,20 +49,20 @@ body {
 }
 
 
-/* PROJECTS CONTENT
+/* PROJECTS-GRID CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.projects .col-lg-4 {
+.projects-grid .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.projects h2 {
+.projects-grid h2 {
   font-weight: 400;
 }
 
-.projects .col-lg-4 p {
+.projects-grid .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
