@@ -125,13 +125,3 @@
   /* Center the container */
   margin-left: 10px;
 }
-
-.custom-breadcrumb-bottom {
-  position: relative;
-  bottom: -225px;
-  left: 20px;
-  width: 100%;
-  text-align: left;
-  padding: 10px 0;
-  z-index: 10;
-}
