@@ -30,7 +30,6 @@ urlpatterns = [
     path("evt/", views.evt, name="evt"),
     # Embedded Systems
     path("esd/", views.esd, name="esd"),
-    path("esd/filters/", views.filters, name="filters"),
     # Personal
     path("clovis-1/", views.clovis, name="clovis-1"),
 ]
