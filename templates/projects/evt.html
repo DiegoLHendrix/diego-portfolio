@@ -16,15 +16,14 @@
   <a href="#rtos-section" class="btn btn-primary btn-lg">RTOS Page</a> -->
 </div>
 
-
 <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- Card Grid -->
   <div class="col">
     <div class="card">
       <!-- <img src="..." class="card-img-top" alt="..."> -->
       <div class="card-body">
-        <h5 class="card-title">SDO</h5>
-        <p class="card-text">Using VHDL and C with the Cyclone V FPGA, I researched digital signal processing to design
-          and verify a high and low pass filter to process audio signals.</p>
+        <h5 class="card-title">CANopen Service Data Objects</h5>
+        <p class="card-text">Designed an example program that would use two stm32 microcontrollers that would
+          communicate with each other using the Service Data Objects (SDO) CANopen communication protocol.</p>
         <!-- Button to trigger the CAN modal -->
         <button type="button" class="btn btn-primary" id="showCanModalButton">
           View details
@@ -37,10 +36,8 @@
     <div class="card">
       <!-- <img src="..." class="card-img-top" alt="..."> -->
       <div class="card-body">
-        <h5 class="card-title">LVSS</h5>
-        <p class="card-text">Using VHDL and C with the Cyclone V FPGA, I researched digital signal processing to
-          design
-          and verify a high and low pass filter to process audio signals.</p>
+        <h5 class="card-title">Low Voltage SubSystem</h5>
+        <p class="card-text">Created the core logic to control an LVSS using a Finite State Machine.</p>
         <!-- Button to trigger the LVSS modal -->
         <button type="button" class="btn btn-primary" id="showLvssModalButton">
           View details
@@ -59,9 +56,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <strong>I designed an example program that would use two stm32 microcontrollers that would communicate
-          with
-          each other using the Service Data Objects (SDO) CANopen communication protocol.</strong>
+        <strong>Overview:<br></strong>
+        <p>I designed an example program that would use two stm32 microcontrollers that would communicate with each
+          other using the Service Data Objects (SDO) CANopen communication protocol.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -79,8 +76,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <strong>Overview:<br></strong>
+        <p>The Low Voltage Subsystem (LVSS) is a system that controls the power distribution of the bike. The LVSS is
+          responsible for turning on and off the bike's power systems. The LVSS is controlled by a Finite State Machine
+          (FSM) that is implemented in the firmware.</p>
         <strong>Firmware Documentation:</strong>
-        <iframe src="{% static 'docs/lvss.pdf' %}" width="100%" height="100%" style="border: none;"></iframe>
+        <iframe src="../../static/docs/lvss.pdf" width="100%" height="100%" style="border: none;"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -88,7 +89,6 @@
     </div>
   </div>
 </div> <!-- LVSS Modal -->
-
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
