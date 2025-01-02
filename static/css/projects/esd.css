@@ -36,3 +36,29 @@
 .row {
     margin-bottom: 100px;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Adjust the gap between cards as needed */
+}
+
+.card {
+    flex: 1 1 300px;
+    /* Adjust the width as needed */
+    max-width: 300px;
+    /* Ensure cards do not exceed this width */
+    height: 400px;
+    /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

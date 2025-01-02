@@ -3,7 +3,7 @@
 
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/evt/evt.css' %}" />
+<link rel="stylesheet" href="{% static 'css/projects/evt.css' %}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 {% endblock extrahead %}
 
@@ -16,36 +16,31 @@
   <a href="#rtos-section" class="btn btn-primary btn-lg">RTOS Page</a> -->
 </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4"> <!-- Card Grid -->
-  <div class="col">
-    <div class="card">
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
-      <div class="card-body">
-        <h5 class="card-title">CANopen Service Data Objects</h5>
-        <p class="card-text">Designed an example program that would use two stm32 microcontrollers that would
-          communicate with each other using the Service Data Objects (SDO) CANopen communication protocol.</p>
-        <!-- Button to trigger the CAN modal -->
-        <button type="button" class="btn btn-primary" id="showCanModalButton">
-          View details
-        </button>
-      </div>
+<div class="card-container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">CANopen Service Data Objects</h5>
+      <p class="card-text">Designed an example program that would use two stm32 microcontrollers that would
+        communicate with each other using the Service Data Objects (SDO) CANopen communication protocol.</p>
+      <!-- Button to trigger the CAN modal -->
+      <button type="button" class="btn btn-primary" id="showCanModalButton">
+        View details
+      </button>
     </div>
   </div>
-
-  <div class="col">
-    <div class="card">
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
-      <div class="card-body">
-        <h5 class="card-title">Low Voltage SubSystem</h5>
-        <p class="card-text">Created the core logic to control an LVSS using a Finite State Machine.</p>
-        <!-- Button to trigger the LVSS modal -->
-        <button type="button" class="btn btn-primary" id="showLvssModalButton">
-          View details
-        </button>
-      </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Low Voltage SubSystem</h5>
+      <p class="card-text">Created the core logic for an LVSS which converts a 400 VDC battery pack into several 12 VDC
+        outputs that are then distributed throughout the bike.</p>
+      <!-- Button to trigger the LVSS modal -->
+      <button type="button" class="btn btn-primary" id="showLvssModalButton">
+        View details
+      </button>
     </div>
   </div>
-</div> <!-- Card Grid -->
+  <!-- Add more cards as needed -->
+</div>
 
 <!-- CAN Modal HTML -->
 <div class="modal fade" id="canModal" tabindex="-1" aria-labelledby="canModalLabel" aria-hidden="true">
@@ -58,7 +53,8 @@
       <div class="modal-body">
         <strong>Overview:<br></strong>
         <p>I designed an example program that would use two stm32 microcontrollers that would communicate with each
-          other using the Service Data Objects (SDO) CANopen communication protocol.</p>
+          other using the Service Data Objects (SDO) CANopen communication protocol. This would serve as an example to
+          other members on how SDO's can be used in the code base.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
