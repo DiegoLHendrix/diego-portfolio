@@ -10,36 +10,26 @@
 {% block content %}
 <div class="container custom-container-center">
   <h1 class="display-4 custom-title">RIT Electric Vehicle Team</h1>
-  <h2 class="display-4 custom-subtitle">Firmware Team | 09/2023 - Present</h2>
-  <!-- <a href="#can-section" class="btn btn-primary btn-lg">CANopen Page</a>
-  <a href="#lvss-section" class="btn btn-primary btn-lg">LVSS Page</a>
-  <a href="#rtos-section" class="btn btn-primary btn-lg">RTOS Page</a> -->
+  <h2 class="display-4 custom-subtitle">Firmware Team | September 2023 - Present</h2>
 </div>
 
 <div class="card-container">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">CANopen Service Data Objects</h5>
-      <p class="card-text">Designed an example program that would use two stm32 microcontrollers that would
-        communicate with each other using the Service Data Objects (SDO) CANopen communication protocol.</p>
-      <!-- Button to trigger the CAN modal -->
-      <button type="button" class="btn btn-primary" id="showCanModalButton">
-        View details
-      </button>
+      <p class="card-text">Designed a sample program that demonstrates communication between two STM32 microcontrollers
+        using the CANopen Service Data Objects (SDO) protocol.</p>
+      <button type="button" class="btn btn-primary" id="showCanModalButton">View Details</button>
     </div>
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Low Voltage SubSystem</h5>
-      <p class="card-text">Created the core logic for an LVSS which converts a 400 VDC battery pack into several 12 VDC
-        outputs that are then distributed throughout the bike.</p>
-      <!-- Button to trigger the LVSS modal -->
-      <button type="button" class="btn btn-primary" id="showLvssModalButton">
-        View details
-      </button>
+      <h5 class="card-title">Low Voltage Subsystem</h5>
+      <p class="card-text">Developed core logic for the LVSS, which converts a 400 VDC battery pack into multiple 12 VDC
+        outputs for distribution across the bike.</p>
+      <button type="button" class="btn btn-primary" id="showLvssModalButton">View Details</button>
     </div>
   </div>
-  <!-- Add more cards as needed -->
 </div>
 
 <!-- CAN Modal HTML -->
@@ -51,135 +41,92 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <strong>Overview:<br></strong>
-        <p>I designed an example program that would use two stm32 microcontrollers that would communicate with each
-          other using the Service Data Objects (SDO) CANopen communication protocol. This would serve as an example to
-          other members on how SDO's can be used in the code base.</p>
-      </div>
+        <strong>Overview:</strong>
+        <p>This example program uses two STM32 microcontrollers to communicate via the CANopen Service Data Objects
+          (SDO) protocol, serving as a learning tool for other team members.</p>
 
-      <div class="custom-container-center">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Main loop</h2>
-            <p class="lead">Every one second the client node receives data from the server node and every five seconds
-              sends data back to the server.</p>
+        <div class="custom-container-center">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Main Loop</h2>
+              <p class="lead">The client node receives data from the server every second and sends data back every five
+                seconds.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="Main Loop Visualization">
+            </div>
           </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
-          </div>
-        </div>
 
-        <hr class="featurette-divider">
+          <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">receiveData</h2>
-            <p class="lead">Gets data from the client to the server.
-            <ol>
-              <li>An array is instantiated to hold the value being received.</li>
-              <li>The SDOReceive method is called to request a receive operation and check for errors.</li>
-              <li>If any errors occur a UART Logger prints a corresponding message else the logger prints a message
-                letting the user know the request was successfull.</li>
-            </ol>
-            </p>
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">receiveData</h2>
+              <p class="lead">Retrieves data from the server to the client.
+              <ol>
+                <li>Instantiates an array to store the received values.</li>
+                <li>Uses the SDOReceive method to request and validate the data.</li>
+                <li>Logs errors or success messages via a UART Logger.</li>
+              </ol>
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="receiveData Diagram">
+            </div>
           </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
-          </div>
-        </div>
 
-        <hr class="featurette-divider">
+          <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">transferData</h2>
-            <p class="lead">Sends data from the client to the server.
-            <ol>
-              <li>The first element of an array, holding the value of zero when the code is first ran, is incremented by
-                one.</li>
-              <li>The second element is then set to double the value of the first element.</li>
-              <li>The SDOTransfer method is called to request a receive operation and check for errors.</li>
-              <li>If any errors occur a UART Logger prints a corresponding message else the logger prints a message
-                letting the user know the request was successfull.</li>
-            </ol>
-            </p>
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">transferData</h2>
+              <p class="lead">Sends data from the client to the server.
+              <ol>
+                <li>Increments the first array element and doubles its value for the second element.</li>
+                <li>Uses the SDOTransfer method to initiate the data transfer and checks for errors.</li>
+                <li>Logs errors or success messages via a UART Logger.</li>
+              </ol>
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="transferData Diagram">
+            </div>
           </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
-          </div>
-        </div>
 
-        <hr class="featurette-divider">
+          <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">SDOReceive</h2>
-            <p class="lead">This function starts an SDO upload (read) request to fetch data from the specified object
-              dictionary entry on the target CANopen node.
-            <ol>
-              <li>The COCSdoFind method searches for the CANopen node to connect to.</li>
-              <li>The callback function is registered.</li>
-              <li>The upload request is sent and any corresponding errors are returned.</li>
-            </ol>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">SDOTransfer</h2>
-            <p class="lead">This function sets up and starts an SDO download (write) request to transfer data to the
-              specified object dictionary entry on the target CANopen node.
-            <ol>
-              <li>The COCSdoFind method searches for the CANopen node to connect to.</li>
-              <li>The callback function is registered.</li>
-              <li>The transfer request is sent and any corresponding errors are returned.</li>
-            </ol>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">registerCallBack</h2>
+              <p class="lead">Assigns a user-defined callback function for SDO operations.
+              <ol>
+                <li>AppCallback function is a pointer to the callback function to register.</li>
+                <ul>
+                  <li><strong>Parameters:</strong></li>
+                  <ul>
+                    <li><code>CO_CSDO* csdo</code>: Pointer to the client SDO object.</li>
+                    <li><code>uint16_t index</code>: Object dictionary index.</li>
+                    <li><code>uint8_t sub</code>: Object dictionary subindex.</li>
+                    <li><code>uint32_t code</code>: Completion status (0 for success).</li>
+                  </ul>
+                </ul>
+                <li>AppContext is pointer to the csdo node.</li>
+              </ol>
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="registerCallBack Diagram">
+            </div>
           </div>
         </div>
 
-        <hr class="featurette-divider">
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">registerCallBack</h2>
-            <p class="lead">This method assigns the user-provided callback method and AppContext to be used when an
-              SDO operation completes</p>
-            <ol>
-              <li>AppCallback function is a pointer to the callback function to register.</li>
-              AppCallback Parameters:
-              <ul>
-                <li>CO_CSDO* csdo is a pointer to the client SDO object</li>
-                <li>uint16_t index is the object dictionary index.</li>
-                <li>uint8_t sub is the object dictionary subindex.</li>
-                <li>uint32_t code indicates the completion status of the operation (0 for success, error code
-                  otherwise).</li>
-              </ul>
-              <li>AppContext is pointer to the csdo node.</li>
-            </ol>
-            </p>
-          </div>
-          <div class="col-md-5">
-            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
         </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-</div> <!-- CAN Modal -->
+</div>
 
 <!-- LVSS Modal HTML -->
 <div class="modal fade" id="lvssModal" tabindex="-1" aria-labelledby="lvssModalLabel" aria-hidden="true">
@@ -190,10 +137,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <strong>Overview:<br></strong>
-        <p>The Low Voltage Subsystem (LVSS) is a system that controls the power distribution of the bike. The LVSS is
-          responsible for turning on and off the bike's power systems. The LVSS is controlled by a Finite State Machine
-          (FSM) that is implemented in the firmware.</p>
+        <strong>Overview:</strong>
+        <p>The Low Voltage Subsystem (LVSS) manages power distribution for the bike, turning its systems on and off
+          using a firmware-implemented Finite State Machine (FSM).</p>
         <strong>Firmware Documentation:</strong>
         <iframe src="../../static/docs/lvss.pdf" width="100%" height="100%" style="border: none;"></iframe>
       </div>
@@ -202,12 +148,8 @@
       </div>
     </div>
   </div>
-</div> <!-- LVSS Modal -->
+</div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-<!-- Custom Script -->
 <script src="../../static/js/projects/evt.js"></script>
-
 {% endblock content %}
