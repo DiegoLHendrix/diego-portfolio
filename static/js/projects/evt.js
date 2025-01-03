@@ -30,3 +30,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         canModal.show();
     }
 });
+
+// Get the button and the iframe element
+const fullscreenButton = document.getElementById('fullscreenButton');
+const lvssIframe = document.getElementById('lvssIframe');
+
+// Check if the elements are available before adding event listeners
+if (fullscreenButton && lvssIframe) {
+    fullscreenButton.addEventListener('click', () => {
+        // Toggle the visibility of the iframe
+        lvssIframe.hidden = !lvssIframe.hidden;
+
+        // If the iframe is made visible, you may want to ensure it reloads
+        if (!lvssIframe.hidden) {
+            lvssIframe.src = lvssIframe.src; // Reload the iframe (optional)
+        }
+    });
+}

@@ -64,3 +64,16 @@ body {
     max-height: 100%;
     overflow-y: auto;
 }
+
+.custom-rows-center {
+    width: 900px;
+    /* Adjust the width to your desired size */
+
+    /* Order: top, right, bottom, left */
+    padding: 30px 15px;
+    /* Equivalent to:
+        padding-top: 30px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        padding-left: 15px; */
+}

@@ -22,15 +22,21 @@
       <button type="button" class="btn btn-primary" id="showCanModalButton">View Details</button>
     </div>
   </div>
+
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Low Voltage Subsystem</h5>
       <p class="card-text">Developed core logic for the LVSS, which converts a 400 VDC battery pack into multiple 12 VDC
         outputs for distribution across the bike.</p>
+      <button type="button" class="btn btn-secondary" id="fullscreenButton">View PDF</button>
       <button type="button" class="btn btn-primary" id="showLvssModalButton">View Details</button>
     </div>
   </div>
+
+  <iframe id="lvssIframe" src="../../static/docs/lvss.pdf" style="width: 100vh; height: 125vh" hidden></iframe>
+
 </div>
+
 
 <!-- CAN Modal HTML -->
 <div class="modal fade custom-modal" id="canModal" tabindex="-1" aria-labelledby="canModalLabel" aria-hidden="true">
@@ -45,21 +51,21 @@
         <p>This example program uses two STM32 microcontrollers to communicate via the CANopen Service Data Objects
           (SDO) protocol, serving as a learning tool for other team members.</p>
 
-        <div class="custom-container-center">
-          <div class="row featurette">
+        <div class="custom-rows-center">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">Main Loop</h2>
               <p class="lead">The client node receives data from the server every second and sends data back every five
                 seconds.</p>
             </div>
             <div class="col-md-5">
-              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="Main Loop Visualization">
+              <img class="audio-entity" src="../../static/Assets/evt/sdo/main-loop.png" alt="Main Loop Visualization">
             </div>
           </div>
 
-          <hr class="featurette-divider">
+          <hr class="featurette-divider custom-featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">receiveData</h2>
               <p class="lead">Retrieves data from the server to the client.
@@ -71,13 +77,13 @@
               </p>
             </div>
             <div class="col-md-5">
-              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="receiveData Diagram">
+              <img class="audio-entity" src="../../static/Assets/evt/sdo/receiveData.png" alt="receiveData Code">
             </div>
           </div>
 
           <hr class="featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">transferData</h2>
               <p class="lead">Sends data from the client to the server.
@@ -89,13 +95,13 @@
               </p>
             </div>
             <div class="col-md-5">
-              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="transferData Diagram">
+              <img class="audio-entity" src="../../static/Assets/evt/sdo/transferData.png" alt="transferData Code">
             </div>
           </div>
 
           <hr class="featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">SDOReceive</h2>
               <p class="lead">
@@ -115,7 +121,7 @@
 
           <hr class="featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">SDOTransfer</h2>
               <p class="lead">
@@ -133,10 +139,9 @@
             </div>
           </div>
 
-
           <hr class="featurette-divider">
 
-          <div class="row featurette">
+          <div class="row featurette custom-featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">registerCallBack</h2>
               <p class="lead">Assigns a user-defined callback function for SDO operations.
@@ -177,12 +182,10 @@
         <h5 class="modal-title" id="lvssModalLabel">Low Voltage Subsystem</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="height: 100vh;">
         <strong>Overview:</strong>
         <p>The Low Voltage Subsystem (LVSS) manages power distribution for the bike, turning its systems on and off
           using a firmware-implemented Finite State Machine (FSM).</p>
-        <strong>Firmware Documentation:</strong>
-        <iframe src="../../static/docs/lvss.pdf" width="100%" height="100%" style="border: none;"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
