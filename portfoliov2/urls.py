@@ -31,5 +31,5 @@ urlpatterns = [
     # Embedded Systems
     path("esd/", views.esd, name="esd"),
     # Personal
-    path("clovis-1/", views.clovis, name="clovis-1"),
+    path("clovis/", views.clovis, name="clovis"),
 ]
