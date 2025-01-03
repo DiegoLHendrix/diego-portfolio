@@ -97,6 +97,47 @@
 
           <div class="row featurette">
             <div class="col-md-7">
+              <h2 class="featurette-heading">SDOReceive</h2>
+              <p class="lead">
+                This function initiates an SDO upload (read) request to retrieve data from the specified object
+                dictionary entry on the target CANopen node.
+              <ol>
+                <li>Uses the <code>COCSdoFind</code> method to locate the target CANopen node for communication.</li>
+                <li>Registers the callback function to handle the operation's completion or errors.</li>
+                <li>Sends the upload request and returns any corresponding error codes or statuses.</li>
+              </ol>
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="SDOReceive Diagram">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">SDOTransfer</h2>
+              <p class="lead">
+                This function prepares and initiates an SDO download (write) request to send data to the specified
+                object dictionary entry on the target CANopen node.
+              <ol>
+                <li>Uses the <code>COCSdoFind</code> method to locate the target CANopen node for communication.</li>
+                <li>Registers the callback function to monitor the operation's completion or errors.</li>
+                <li>Sends the download request and handles any errors that occur during the process.</li>
+              </ol>
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="SDOTransfer Diagram">
+            </div>
+          </div>
+
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-7">
               <h2 class="featurette-heading">registerCallBack</h2>
               <p class="lead">Assigns a user-defined callback function for SDO operations.
               <ol>
