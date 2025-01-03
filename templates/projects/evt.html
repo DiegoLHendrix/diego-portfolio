@@ -43,7 +43,7 @@
 </div>
 
 <!-- CAN Modal HTML -->
-<div class="modal fade" id="canModal" tabindex="-1" aria-labelledby="canModalLabel" aria-hidden="true">
+<div class="modal fade custom-modal" id="canModal" tabindex="-1" aria-labelledby="canModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
@@ -61,8 +61,9 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">SDOReceive method</h2>
-            <p class="lead">Words.</p>
+            <h2 class="featurette-heading">Main loop</h2>
+            <p class="lead">Every one second the client node receives data from the server node and every five seconds
+              sends data back to the server.</p>
           </div>
           <div class="col-md-5">
             <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
@@ -70,6 +71,108 @@
         </div>
 
         <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">receiveData</h2>
+            <p class="lead">Gets data from the client to the server.
+            <ol>
+              <li>An array is instantiated to hold the value being received.</li>
+              <li>The SDOReceive method is called to request a receive operation and check for errors.</li>
+              <li>If any errors occur a UART Logger prints a corresponding message else the logger prints a message
+                letting the user know the request was successfull.</li>
+            </ol>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">transferData</h2>
+            <p class="lead">Sends data from the client to the server.
+            <ol>
+              <li>The first element of an array, holding the value of zero when the code is first ran, is incremented by
+                one.</li>
+              <li>The second element is then set to double the value of the first element.</li>
+              <li>The SDOTransfer method is called to request a receive operation and check for errors.</li>
+              <li>If any errors occur a UART Logger prints a corresponding message else the logger prints a message
+                letting the user know the request was successfull.</li>
+            </ol>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">SDOReceive</h2>
+            <p class="lead">This function starts an SDO upload (read) request to fetch data from the specified object
+              dictionary entry on the target CANopen node.
+            <ol>
+              <li>The COCSdoFind method searches for the CANopen node to connect to.</li>
+              <li>The callback function is registered.</li>
+              <li>The upload request is sent and any corresponding errors are returned.</li>
+            </ol>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">SDOTransfer</h2>
+            <p class="lead">This function sets up and starts an SDO download (write) request to transfer data to the
+              specified object dictionary entry on the target CANopen node.
+            <ol>
+              <li>The COCSdoFind method searches for the CANopen node to connect to.</li>
+              <li>The callback function is registered.</li>
+              <li>The transfer request is sent and any corresponding errors are returned.</li>
+            </ol>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">registerCallBack</h2>
+            <p class="lead">This method assigns the user-provided callback method and AppContext to be used when an
+              SDO operation completes</p>
+            <ol>
+              <li>AppCallback function is a pointer to the callback function to register.</li>
+              AppCallback Parameters:
+              <ul>
+                <li>CO_CSDO* csdo is a pointer to the client SDO object</li>
+                <li>uint16_t index is the object dictionary index.</li>
+                <li>uint8_t sub is the object dictionary subindex.</li>
+                <li>uint32_t code indicates the completion status of the operation (0 for success, error code
+                  otherwise).</li>
+              </ul>
+              <li>AppContext is pointer to the csdo node.</li>
+            </ol>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="audio-entity" src="../../static/Assets/Grey-Square.png" alt="VHDL Audio Processor">
+          </div>
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>

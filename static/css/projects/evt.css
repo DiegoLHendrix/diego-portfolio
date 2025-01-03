@@ -53,3 +53,14 @@ body {
     justify-content: space-between;
     height: 100%;
 }
+
+.custom-modal {
+    height: auto;
+    max-height: 100%;
+}
+
+.custom-modal {
+    height: auto;
+    max-height: 100%;
+    overflow-y: auto;
+}
