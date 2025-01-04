@@ -5,5 +5,112 @@
     /* Optional: adjust padding */
     margin: 0 auto;
     /* Center the container */
-
 }
+
+/* Custom Card Start */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Adjust the gap between cards as needed */
+    justify-content: center;
+    /* Center cards within the container */
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card img {
+    margin-top: 10px;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+    height: 325px;
+}
+
+.card .hidden-element {
+    display: none;
+}
+
+.card:hover .hidden-element {
+    display: block;
+}
+
+.card:active {
+    transform: scale(1.1) rotateZ(1.7deg);
+}
+
+/** Stars **/
+.checked {
+    color: orange;
+}
+
+/** Hidden Project Links **/
+button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #00e1ff 0%, #0fd88b 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 9em;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-element {
+    /* margin-top: 10px; */
+    color: black;
+    font-size: 0.9em;
+}
+
+.hidden-element button {
+    margin: 5px;
+    /* Add margin between buttons */
+}
+
+/* Custom Card End */

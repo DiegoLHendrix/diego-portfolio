@@ -12,6 +12,108 @@
   <h1 class="display-4">Resume</h1>
   <!-- Embed PDF in the page with an iframe for better browser support -->
   <iframe src="{% static 'docs/Diego_Lopez_Resume.pdf' %}" width="100%" height="1000px" style="border: none;"></iframe>
-
 </div>
+
+<div class="container contact-form" style="margin-top: 20px;">
+  <h1 class="display-5">Languages</h1>
+</div>
+
+<div class="card-container">
+  <div class="card-container">
+    <div class="card skill">
+      <img src="../../static/Assets/resume/assembly.png" alt="Assembly logo" style="width:53%;">
+      <div class="rating stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <div class="hidden-element hidden" style="margin-top: 10px;">
+        <p>Related Projects:<br></p>
+        <button type="button" onclick="viewDetails('#')">Unavailable</button>
+        <button type="button" onclick="viewDetails('#')">Unavailable</button>
+        <button type="button" onclick="viewDetails('#')">Unavailable</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card skill">
+    <img src="../../static/Assets/resume/C++ Logo.png" alt="C++ logo" style="width:50%">
+    <div class="rating stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <div class="hidden-element hidden">
+      <p>Related Projects:<br></p>
+      <button type="button" onclick="viewDetails('/evt?modal=can')">CANopen SDO</button>
+      <button type="button" onclick="viewDetails('/evt?modal=lvss')">LVSS</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+    </div>
+  </div>
+
+  <div class="card skill">
+    <img src="../../static/Assets/resume/C Logo.png" alt="C logo" style="width:50%">
+    <div class="rating stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <div class="hidden-element hidden">
+      <p>Related Projects:<br></p>
+      <button type="button" onclick="viewDetails('/esd?modal=filter')">Audio Filter</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+    </div>
+  </div>
+
+  <div class="card skill">
+    <img src="../../static/Assets/resume/Python Logo.png" alt="Python logo" style="width:50%">
+    <div class="rating stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <div class="hidden-element hidden">
+      <p>Related Projects:<br></p>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+    </div>
+  </div>
+
+  <div class="card skill">
+    <h1 class="display-6" style="margin-top: 25px;">VHDL</h1>
+    <div class="rating stars" style="margin-top: 10px;"> <!-- Adjust this value to move down -->
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </div>
+
+    <div class="hidden-element hidden">
+      <p>Related Projects:<br></p>
+      <button type="button" onclick="viewDetails('/esd?modal=filter')">Audio Filter</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+      <button type="button" onclick="viewDetails('#')">Unavailable</button>
+    </div>
+  </div>
+
+</div><!-- Card Container -->
+
+<div style="margin-bottom: 600px;"></div>
+
+<!-- Javascripts -->
+<script src="../../static/js/base/resume.js"></script>
 {% endblock %}
