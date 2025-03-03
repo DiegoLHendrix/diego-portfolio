@@ -16,7 +16,7 @@ html, body {
 /* Main content wrapper grows to push footer down */
 .content-wrap {
     flex: 1;
-    padding-top: 80px; /* Adjust this value based on the navbar height */
+    padding-top: 70px; /* Adjust this value based on the navbar height */
 }
 
 /* Footer stays at the bottom */

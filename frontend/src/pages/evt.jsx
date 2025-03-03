@@ -8,8 +8,8 @@ function EVT() {
 
   // Project data with skills
   const projects = [
-    { key: "lvss", title: "LVSS", component: <LVSS />, skills: ["Embedded C/C++", "CAN Protocol", "PCB Schematic Analysis", "Circuit Analysis", "Hardware Testing"].sort() },
-    { key: "canopen", title: "CANopen SDO", component: <CANopenSdo />, skills: ["Embedded C/C++", "CAN Protocol", "Hardware Testing"].sort() },
+      { key: "canopen", title: "CANopen SDO", component: <CANopenSdo />, skills: ["Embedded C/C++", "CAN Protocol", "Hardware Testing"].sort() },
+      { key: "lvss", title: "LVSS", component: <LVSS />, skills: ["Embedded C/C++", "PCB Schematic Analysis", "Circuit Analysis", "Hardware Testing"].sort() },
   ];
 
   // Extract unique skills for filtering

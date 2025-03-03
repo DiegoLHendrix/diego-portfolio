@@ -1,7 +1,7 @@
 /* PortfolioCarousel.css */
 
 .portfolio-carousel {
-  margin-top: 20px; /* Adjust to position below Navbar */
+  margin-bottom: 20px; /* Adjust position of object below carousel */
   width: 100vw; /* Full viewport width */
   height: 500px; /* Adjust height as needed */
   overflow: hidden; /* Prevents overflow issues */
