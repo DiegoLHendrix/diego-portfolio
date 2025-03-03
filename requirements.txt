@@ -1,0 +1,7 @@
+asgiref
+Django
+sqlparse
+gunicorn
+tzdata
+psycopg
+psycopg2-binary
