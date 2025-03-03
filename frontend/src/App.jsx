@@ -4,7 +4,8 @@ import "./App.css"
 
 import NavigationBar from "./components/base/NavigationBar.jsx";
 import Footer from "./components/base/Footer.jsx";
-import Home from './pages/Home.jsx';
+import Home from './pages/base/Home.jsx';
+import EVT from './pages/evt.jsx';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/evt" element={<EVT />} />
                     </Routes>
                 </BrowserRouter>
             </div>

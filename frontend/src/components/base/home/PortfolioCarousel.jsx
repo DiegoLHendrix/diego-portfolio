@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/Home/PortfolioCarousel.css"; // Import the new CSS file
+import "../../../styles/base/home/PortfolioCarousel.css"; // Import the new CSS file
 
 // Import local images
-import GreySquare from "../../assets/base/Grey-Square.png";
+import GreySquare from "../../../assets/base/Grey-Square.png";
 
 function PortfolioCarousel() {
   const [index, setIndex] = useState(0);

@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styles/Home/PortfolioFeaturette.css';
+import '../../../styles/base/home/PortfolioFeaturette.css';
 
 // Import local images
-import GreySquare from "../../assets/base/Grey-Square.png";
-import BlackSquare from "../../assets/base/BlackSquare.jpg";
-import EVTLogo from "../../assets/evt/EVT-Logo.jpg";
+import GreySquare from "../../../assets/base/Grey-Square.png";
+import BlackSquare from "../../../assets/base/BlackSquare.jpg";
+import EVTLogo from "../../../assets/evt/EVT-Logo.jpg";
 
 function PortfolioFeaturette() {
     return (
