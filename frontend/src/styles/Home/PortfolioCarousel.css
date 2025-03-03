@@ -1,0 +1,21 @@
+/* PortfolioCarousel.css */
+
+.portfolio-carousel {
+  margin-top: 20px; /* Adjust to position below Navbar */
+  width: 100vw; /* Full viewport width */
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+.portfolio-carousel img {
+  width: 100%; /* Ensure images take full width */
+  height: 500px; /* Keep consistent height */
+  object-fit: cover; /* Ensures images cover area without distortion */
+}
+
+/* Blue and shit: #0275d8*/
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Dark background for better readability */
+  border-radius: 5px;
+  padding: 10px;
+}
