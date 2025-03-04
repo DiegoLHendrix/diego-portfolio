@@ -8,8 +8,8 @@ function EVT() {
 
   // Project data with skills
   const projects = [
-      { key: "canopen", title: "CANopen SDO", component: <CANopenSdo />, skills: ["Embedded C/C++", "CAN Protocol", "Hardware Testing"].sort() },
-      { key: "lvss", title: "LVSS", component: <LVSS />, skills: ["Embedded C/C++", "PCB Schematic Analysis", "Circuit Analysis", "Hardware Testing"].sort() },
+      { key: "canopen", title: "CANopen SDO", component: <CANopenSdo />, skills: ["CAN Protocol"].sort() },
+      { key: "lvss", title: "LVSS", component: <LVSS />, skills: ["PCB Schematic Analysis", "Circuit Analysis", "Hardware Testing"].sort() },
   ];
 
   // Extract unique skills for filtering
@@ -25,14 +25,14 @@ function EVT() {
       <h1 className="text-center my-4">Electric Vehicle Team</h1>
 
       {/* Filter Dropdown */}
-      <Form.Group className="mb-3 text-center">
-        <Form.Label><strong>Filter by Skill:</strong></Form.Label>
-        <Form.Select value={selectedSkill} onChange={(e) => setSelectedSkill(e.target.value)} className="mx-auto w-50">
-          {allSkills.map(skill => (
-            <option key={skill} value={skill}>{skill}</option>
-          ))}
-        </Form.Select>
-      </Form.Group>
+      {/*<Form.Group className="mb-3 text-center">*/}
+      {/*  <Form.Label><strong>Filter by Skill:</strong></Form.Label>*/}
+      {/*  <Form.Select value={selectedSkill} onChange={(e) => setSelectedSkill(e.target.value)} className="mx-auto w-50">*/}
+      {/*    {allSkills.map(skill => (*/}
+      {/*      <option key={skill} value={skill}>{skill}</option>*/}
+      {/*    ))}*/}
+      {/*  </Form.Select>*/}
+      {/*</Form.Group>*/}
 
       {/* Tabs for Filtered Projects */}
       <Tabs defaultActiveKey={filteredProjects.length > 0 ? filteredProjects[0].key : ""} id="evt-tabs" className="mb-3">

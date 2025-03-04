@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer bg-primary text-center mt-4">
       <Container className="footer-content">
-        <p>&copy; Diego Lopez 2024</p>
+        <p>&copy; Diego Lopez 2025</p>
         <div className="footer-icons">
           <a href="https://github.com/DiegoLHendrix" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />

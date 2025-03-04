@@ -17,7 +17,7 @@ function PortfolioFeaturette() {
                     <h2 className="featurette-heading">Hello, I'm Diego!</h2>
                     <p className="lead">
                         I am an embedded systems engineer with a passion for designing and integrating embedded software
-                        and hardware.
+                        and hardware. Currently I am working on a computer vision system that will track a tennis ball in blender and process the image using MATLAB and C++.
                     </p>
                 </div>
                 <div className="col-md-5">
@@ -41,9 +41,6 @@ function PortfolioFeaturette() {
                         I joined the firmware team in September 2023 and have had the opportunity to work on amazing
                         projects and meet incredible people.
                     </p>
-                    <p className="lead">
-                        I am currently working on writing the core logic for a Low Voltage SubSystem.
-                    </p>
                 </div>
                 <div className="col-md-5 order-md-1">
                     <div className="evt-container">
@@ -59,10 +56,10 @@ function PortfolioFeaturette() {
             <div className="row featurette">
                 <div className="col-md-7">
                     <h2 className="featurette-heading">
-                        Personal Life <br /> <span className="text-muted">My Passions Outside Work</span>
+                        Personal Life <br /> <span className="text-muted">Interests</span>
                     </h2>
                     <p className="lead">
-                        In my free time, I enjoy working on personal projects, rock climbing, and welding.
+                        I am always seeking new things to learn and apply new things. In my free time, I enjoy working on personal projects, such as my personal server.
                     </p>
                 </div>
                 <div className="col-md-5">

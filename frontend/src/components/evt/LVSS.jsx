@@ -14,6 +14,25 @@ function LVSS() {
 
           <hr />
 
+          {/* Hardware Section */}
+          <Row className="align-items-center">
+              <Col md={7}>
+                  <h2>Hardware Used</h2>
+                  <p>
+                      <ul>
+                          <li> High Side Switch Motherboard Evaluation Module </li>
+                          <li> STM32 Nucleo </li>
+                          <li> LVSS PCB </li>
+                      </ul>
+                  </p>
+            </Col>
+            <Col md={5}>
+                {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
+            </Col>
+        </Row>
+
+          <hr />
+
           {/* Current Sensing Section */}
           <Row className="align-items-center">
               <Col md={7}>
@@ -60,6 +79,23 @@ function LVSS() {
                 {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
             </Col>
         </Row>
+
+       <hr />
+
+      {/* To Do Section */}
+      <Row className="align-items-center">
+          <Col md={7}>
+              <h2>What Has to Be Done</h2>
+              <p>
+                  <ul>
+                      <li> Test code with high voltage </li>
+                  </ul>
+              </p>
+        </Col>
+        <Col md={5}>
+            {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
+        </Col>
+    </Row>
 
     </Container>
   );

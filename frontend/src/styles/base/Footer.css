@@ -28,3 +28,10 @@ footer {
 .footer-content a:hover {
     color: #ffdd57; /* Change link color on hover */
 }
+
+.footer-icons {
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  align-items: center; /* Center icons vertically */
+  gap: 10px; /* Adjust the gap between icons */
+}
