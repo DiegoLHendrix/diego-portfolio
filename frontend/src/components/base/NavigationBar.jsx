@@ -15,11 +15,15 @@ function NavigationBar() {
             <Nav.Link href="/resume">Resume</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/evt">Electric Vehicle Team</NavDropdown.Item>
+              <NavDropdown.Item href="/evt">
+                Electric Vehicle Team
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/esd">Embedded Systems</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/dsp">Digital Signal Processing</NavDropdown.Item>
+              <NavDropdown.Item href="/dsp">
+                Digital Signal Processing
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
 

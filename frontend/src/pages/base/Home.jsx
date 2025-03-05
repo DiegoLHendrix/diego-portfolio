@@ -6,13 +6,13 @@ import ProjectsGrid from "../../components/base/home/ProjectsGrid.jsx";
 import PortfolioFeaturette from "../../components/base/home/PortfolioFeaturette.jsx";
 
 const Home = () => {
-    return (
-        <main role="main">
-            <PortfolioCarousel />
-            <ProjectsGrid />
-            <PortfolioFeaturette />
-        </main>
-    );
+  return (
+    <main role="main">
+      <PortfolioCarousel />
+      <ProjectsGrid />
+      <PortfolioFeaturette />
+    </main>
+  );
 };
 
 export default Home;

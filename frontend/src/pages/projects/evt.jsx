@@ -1,24 +1,39 @@
 import React, { useState } from "react";
 import { Container, Tabs, Tab, Form } from "react-bootstrap";
-import CANopenSdo from "../components/EVT/CANopenSdo";
-import LVSS from "../components/EVT/LVSS";
+import CANopenSdo from "../../components/evt/CANopenSdo.jsx";
+import LVSS from "../../components/evt/LVSS.jsx";
 
 function EVT() {
   const [selectedSkill, setSelectedSkill] = useState("All");
 
   // Project data with skills
   const projects = [
-      { key: "canopen", title: "CANopen SDO", component: <CANopenSdo />, skills: ["CAN Protocol"].sort() },
-      { key: "lvss", title: "LVSS", component: <LVSS />, skills: ["PCB Schematic Analysis", "Circuit Analysis", "Hardware Testing"].sort() },
+    {
+      key: "canopen",
+      title: "CANopen SDO",
+      component: <CANopenSdo />,
+      skills: ["CAN Protocol"].sort(),
+    },
+    {
+      key: "lvss",
+      title: "LVSS",
+      component: <LVSS />,
+      skills: [
+        "PCB Schematic Analysis",
+        "Circuit Analysis",
+        "Hardware Testing",
+      ].sort(),
+    },
   ];
 
   // Extract unique skills for filtering
-  const allSkills = ["All", ...new Set(projects.flatMap(p => p.skills))];
+  const allSkills = ["All", ...new Set(projects.flatMap((p) => p.skills))];
 
   // Filter projects based on selected skill
-  const filteredProjects = selectedSkill === "All"
-    ? projects
-    : projects.filter(p => p.skills.includes(selectedSkill));
+  const filteredProjects =
+    selectedSkill === "All"
+      ? projects
+      : projects.filter((p) => p.skills.includes(selectedSkill));
 
   return (
     <Container>
@@ -35,8 +50,14 @@ function EVT() {
       {/*</Form.Group>*/}
 
       {/* Tabs for Filtered Projects */}
-      <Tabs defaultActiveKey={filteredProjects.length > 0 ? filteredProjects[0].key : ""} id="evt-tabs" className="mb-3">
-        {filteredProjects.map(project => (
+      <Tabs
+        defaultActiveKey={
+          filteredProjects.length > 0 ? filteredProjects[0].key : ""
+        }
+        id="evt-tabs"
+        className="mb-3"
+      >
+        {filteredProjects.map((project) => (
           <Tab key={project.key} eventKey={project.key} title={project.title}>
             {project.component}
           </Tab>
@@ -44,7 +65,11 @@ function EVT() {
       </Tabs>
 
       {/* No Results Message */}
-      {filteredProjects.length === 0 && <p className="text-center mt-4">No projects match the selected skill.</p>}
+      {filteredProjects.length === 0 && (
+        <p className="text-center mt-4">
+          No projects match the selected skill.
+        </p>
+      )}
     </Container>
   );
 }

@@ -175,3 +175,5 @@ media/**/*.jpg
 
 # PyCharm
 .idea/
+backend/api/__init__.py
+backend/backend/__init__.py
