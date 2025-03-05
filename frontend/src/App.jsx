@@ -9,6 +9,7 @@ import Resume from "./pages/base/Resume.jsx";
 import Contact from "./pages/base/Contact.jsx";
 import EVT from "./pages/projects/evt.jsx";
 import ESD from "./pages/projects/esd.jsx";
+import PROJECTS from "./pages/projects/projects.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<PROJECTS />} />
             <Route path="/evt" element={<EVT />} />
             <Route path="/esd" element={<ESD />} />
           </Routes>

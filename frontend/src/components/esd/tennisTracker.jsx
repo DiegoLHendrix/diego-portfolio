@@ -5,26 +5,27 @@ import "../../styles/esd/audioProc.css";
 function TRACKER() {
   return (
     <Container className="project-content">
-      <h1 className="display-4 text-center">Tennis Tracker System</h1>
+      <h1 className="display-4 text-center">Tennis Tracker System </h1>
+      <p className="lead text-center"> 3/17/2025 </p>
       <p className="lead text-center">
         An FPGA-based tennis ball tracking system designed for high accuracy in
         various conditions.
       </p>
 
-      <p className="text-center">
+      <p className="lead text-center">
         This project is part of the Embedded Systems Design II course and aims
         to develop a precise tennis ball tracking system using FPGA technology.
         Designed as a replacement for the Hawk-Eye system, it ensures reliable
         tracking even in challenging environments such as windy conditions.
       </p>
 
-      <p className="text-center">
+      <p className="lead text-center">
         The project consists of multiple phases, including design reviews,
         technical and financial analysis, and the development of a fully
         functional demonstration. Key features include:
       </p>
 
-      <ul>
+      <ul className="lead">
         <li>Camera calibration for improved tracking accuracy</li>
         <li>System accuracy analysis for both static and dynamic conditions</li>
         <li>Ball restitution measurement</li>
@@ -32,7 +33,7 @@ function TRACKER() {
         <li>Real-time tracking and instant replay integration using Unity</li>
       </ul>
 
-      <p className="text-center">
+      <p className="lead text-center">
         Check out the full project on{" "}
         <a
           href="https://github.com/ESD-II/Tennis-Tracker"

@@ -14,7 +14,8 @@ function NavigationBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/resume">Resume</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
+            <Nav.Link href="/projects">Projects</Nav.Link>
+            {/* <NavDropdown title="Projects" id="basic-nav-dropdown">
               <NavDropdown.Item href="/evt">
                 Electric Vehicle Team
               </NavDropdown.Item>
@@ -24,7 +25,7 @@ function NavigationBar() {
               <NavDropdown.Item href="/dsp">
                 Digital Signal Processing
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
 
           {/* Right side GitHub, LinkedIn, and Admin Login */}
