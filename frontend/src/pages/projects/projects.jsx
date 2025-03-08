@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Container, Tabs, Tab, Form, Button } from "react-bootstrap";
 
 import CANopenSdo from "../../components/evt/CANopenSdo.jsx";
@@ -7,8 +8,18 @@ import AUDIOPROC from "../../components/esd/audioProc.jsx";
 import TRACKER from "../../components/esd/tennisTracker.jsx";
 
 function PROJECTS() {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const projectQuery = queryParams.get("project");
+
   const [selectedSkills, setSelectedSkills] = useState([]);
-  const [activeTab, setActiveTab] = useState("canopen"); // Default to first project key
+  const [activeTab, setActiveTab] = useState("audio"); // Default to first project key
+
+  useEffect(() => {
+    if (projectQuery) {
+      setActiveTab(projectQuery);
+    }
+  }, [projectQuery]);
 
   // Project data with skills
   const projects = [

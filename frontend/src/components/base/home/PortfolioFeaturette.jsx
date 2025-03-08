@@ -66,9 +66,9 @@ function PortfolioFeaturette() {
             Personal Life <br /> <span className="text-muted">Interests</span>
           </h2>
           <p className="lead">
-            I am always seeking new things to learn and apply new things. In my
-            free time, I enjoy working on personal projects, such as my personal
-            server.
+            I have a passion for continuous learning and applying new knowledge.
+            In my free time, I enjoy working on personal projects, including
+            managing my own server.
           </p>
         </div>
         <div className="col-md-5">

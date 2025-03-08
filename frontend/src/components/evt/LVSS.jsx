@@ -8,6 +8,7 @@ function LVSS() {
   return (
     <Container className="project-content">
       <h1 className="display-4 text-center">Low Voltage Sub-System (LVSS)</h1>
+      <p className="lead text-center"> 2/10/2025 </p>
       <p className="lead text-center">
         The Low Voltage Sub-System (LVSS) is a board designed to receive
         messages from the Vehicle Control Unit (VCU), indicating which boards on

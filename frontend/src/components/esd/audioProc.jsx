@@ -17,7 +17,7 @@ function AUDIOPROC() {
       <h1 className="display-4 text-center">
         Embedded VHDL and C Audio Processor
       </h1>
-      <p className="lead text-center"></p>
+      <p className="lead text-center"> 11/12/2024 </p>
 
       <hr />
 

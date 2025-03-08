@@ -47,6 +47,24 @@ function TRACKER() {
 
       <hr />
 
+      {/* Roles Section */}
+      <Row className="align-items-center">
+        <Col md={7}>
+          <h2>Roles</h2>
+          <ul>
+            <li>Diego Lopez: C/C++, Python/Matlab</li>
+            <li>Benjamin Fauteux: VHDL, GUI</li>
+            <li>Leila Daly: C++, Python/Matlab</li>
+            <li>Siare Williams: Matlab, VHDL</li>
+            <li>Keyon Vassell: Python/Matlab, C/C++</li>
+            <li>Saeed Sharifi: Business, VHDL</li>
+            <li>Jackson Reed: Business, Blender</li>
+          </ul>
+        </Col>
+      </Row>
+
+      <hr />
+
       {/* Hardware Section */}
       <Row className="align-items-center">
         <Col md={7}>

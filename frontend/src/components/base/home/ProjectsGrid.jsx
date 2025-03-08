@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../../styles/base/home/ProjectsGrid.css"; // Import the CSS file
 
 const ProjectsGrid = () => {
+  const navigate = useNavigate();
+
+  const handleProjectClick = (projectKey) => {
+    navigate(`/projects?project=${projectKey}`);
+  };
+
   return (
     <div className="container projects-grid">
       <div className="row">
@@ -15,9 +22,12 @@ const ProjectsGrid = () => {
               throughout the bike.
             </p>
             <p>
-              <a className="btn btn-secondary" href="/evt?modal=lvss">
+              <button
+                className="btn btn-secondary"
+                onClick={() => handleProjectClick("lvss")}
+              >
                 View details &raquo;
-              </a>
+              </button>
             </p>
           </div>
         </div>
@@ -31,9 +41,12 @@ const ProjectsGrid = () => {
               node.
             </p>
             <p>
-              <a className="btn btn-secondary" href="/evt?modal=can">
+              <button
+                className="btn btn-secondary"
+                onClick={() => handleProjectClick("canopen")}
+              >
                 View details &raquo;
-              </a>
+              </button>
             </p>
           </div>
         </div>
@@ -46,9 +59,12 @@ const ProjectsGrid = () => {
               high-pass and low-pass filters.
             </p>
             <p>
-              <a className="btn btn-secondary" href="/esd?modal=filter">
+              <button
+                className="btn btn-secondary"
+                onClick={() => handleProjectClick("audio")}
+              >
                 View details &raquo;
-              </a>
+              </button>
             </p>
           </div>
         </div>
