@@ -2,6 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
+// Utilities
+import { DynamicTitle } from "./utils/DynamicTitle.jsx";
+
+// Components
 import NavigationBar from "./components/base/NavigationBar.jsx";
 import Footer from "./components/base/Footer.jsx";
 import Home from "./pages/base/Home.jsx";
@@ -21,6 +25,7 @@ function App() {
         {" "}
         {/* Ensures main content expands */}
         <BrowserRouter>
+          <DynamicTitle /> {/* This will update the title dynamically */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
