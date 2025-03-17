@@ -80,7 +80,6 @@ function PortfolioFeaturette() {
         </div>
       </div>
 
-      <hr className="featurette-divider" />
     </div>
   );
 }

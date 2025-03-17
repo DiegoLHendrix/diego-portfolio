@@ -10,11 +10,17 @@ import SDOReceive from "../../assets/evt/sdo/SDOReceive.png";
 import SDOTransfer from "../../assets/evt/sdo/SDOTransfer.png";
 import registerCallBack from "../../assets/evt/sdo/registerCallBack.png";
 
-function CANopenSdo() {
+function CANopenSdo({ skills }) {
   return (
     <Container className="project-content">
       <h1 className="display-4 text-center">CANopen Service Data Objects</h1>
       <p className="lead text-center"> 1/20/2024 </p>
+
+      {/* Skills Section */}
+      <p className="text-center">
+        <strong>Skills:</strong> {skills.join(", ")}
+      </p>
+
       <p className="lead text-center">
         This project demonstrates communication between two STM32
         microcontrollers using the CANopen SDO protocol.

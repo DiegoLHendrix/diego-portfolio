@@ -2,11 +2,17 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../styles/esd/audioProc.css";
 
-function TRACKER() {
+function TRACKER({ skills }) {
   return (
     <Container className="project-content">
       <h1 className="display-4 text-center">Tennis Tracker System </h1>
-      <p className="lead text-center"> 3/17/2025 </p>
+      <p className="lead text-center"> 3/17/2025 - Present </p>
+
+      {/* Skills Section */}
+      <p className="text-center">
+        <strong>Skills:</strong> {skills.join(", ")}
+      </p>
+
       <p className="lead text-center">
         An FPGA-based tennis ball tracking system designed for high accuracy in
         various conditions.
@@ -48,17 +54,17 @@ function TRACKER() {
       <hr />
 
       {/* Roles Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>Roles</h2>
-          <ul>
-            <li>Diego Lopez: C/C++, Python/Matlab</li>
-            <li>Benjamin Fauteux: VHDL, GUI</li>
-            <li>Leila Daly: C++, Python/Matlab</li>
-            <li>Siare Williams: Matlab, VHDL</li>
-            <li>Keyon Vassell: Python/Matlab, C/C++</li>
-            <li>Saeed Sharifi: Business, VHDL</li>
-            <li>Jackson Reed: Business, Blender</li>
+      <Row className="align-items-center justify-content-center">
+        <Col md={12} className="text-center">
+          <h2>Team Roles</h2>
+          <ul className="list-unstyled">
+            <li><strong>Diego Lopez:</strong> C/C++, Python/Matlab</li>
+            <li><strong>Benjamin Fauteux:</strong> VHDL, GUI</li>
+            <li><strong>Leila Daly:</strong> C++, Python/Matlab</li>
+            <li><strong>Siare Williams:</strong> Matlab, VHDL</li>
+            <li><strong>Keyon Vassell:</strong> Python/Matlab, C/C++</li>
+            <li><strong>Saeed Sharifi:</strong> Business, VHDL</li>
+            <li><strong>Jackson Reed:</strong> Business, Blender</li>
           </ul>
         </Col>
       </Row>

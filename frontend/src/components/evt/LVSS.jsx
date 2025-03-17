@@ -1,14 +1,23 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import {Container, Row, Col, Image, OverlayTrigger, Tooltip} from "react-bootstrap";
 import "../../styles/evt/LVSS.css";
 
 // Import images
+import nucleo from "../../assets/evt/lvss/nucleo.png";
+import HSSEVM from "../../assets/evt/lvss/HSSEVM.png";
+import PCB from "../../assets/evt/lvss/LVSSPCB.png";
 
-function LVSS() {
+function LVSS({ skills }) {
   return (
     <Container className="project-content">
       <h1 className="display-4 text-center">Low Voltage Sub-System (LVSS)</h1>
       <p className="lead text-center"> 2/10/2025 </p>
+
+      {/* Skills Section */}
+      <p className="text-center">
+        <strong>Skills:</strong> {skills.join(", ")}
+      </p>
+
       <p className="lead text-center">
         The Low Voltage Sub-System (LVSS) is a board designed to receive
         messages from the Vehicle Control Unit (VCU), indicating which boards on
@@ -27,24 +36,49 @@ function LVSS() {
       <Row className="align-items-center">
         <Col md={7}>
           <h2>Hardware Used</h2>
-          <p>
-            <ul>
-              <li> High Side Switch Motherboard Evaluation Module </li>
-              <li> STM32 Nucleo </li>
-              <li> LVSS PCB </li>
-            </ul>
-          </p>
+          <ul>
+            <li>High Side Switch Motherboard Evaluation Module</li>
+            <li>STM32 Nucleo</li>
+            <li>LVSS PCB</li>
+          </ul>
         </Col>
         <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
+          <Row className="mt-3">
+            <Col xs={6}>
+              <OverlayTrigger
+                placement="left"
+                overlay={<Tooltip>High Side Switch Evaluation Module</Tooltip>}
+              >
+                <Image src={HSSEVM} fluid alt="High Side Switch Evaluation Module" className="hover-image" />
+              </OverlayTrigger>
+            </Col>
+            <Col xs={6}>
+              <OverlayTrigger
+                placement="right"
+                overlay={<Tooltip>STM32 Nucleo Development Board</Tooltip>}
+              >
+                <Image src={nucleo} fluid alt="STM32 Nucleo Development Board" className="hover-image" />
+              </OverlayTrigger>
+            </Col>
+          </Row>
+          <Row className="mt-3">
+            <Col xs={6}>
+              <OverlayTrigger
+                placement="left"
+                overlay={<Tooltip>LVSS Custom PCB</Tooltip>}
+              >
+                <Image src={PCB} fluid alt="LVSS Custom PCB" className="hover-image" />
+              </OverlayTrigger>
+            </Col>
+          </Row>
         </Col>
       </Row>
 
       <hr />
 
       {/* Current Sensing Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
+      <Row className="align-items-center justify-content-center">
+        <Col md={12} className="text-center">
           <h2>Current Sensing</h2>
           <p>
             According to the datasheet, the relationship between output current
@@ -63,16 +97,13 @@ function LVSS() {
             (in mA).
           </p>
         </Col>
-        <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
-        </Col>
       </Row>
 
       <hr />
 
       {/* Temperature Sensing Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={12} className="text-center">
           <h2>Temperature Sensing</h2>
           <p>
             According to the datasheet, the equation for{" "}
@@ -107,16 +138,13 @@ function LVSS() {
             × 10<sup>3</sup> ) − 575 ) / 11.
           </p>
         </Col>
-        <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
-        </Col>
       </Row>
 
       <hr />
 
       {/* Fault Sensing Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={12} className="text-center">
           <h2>Fault Sensing</h2>
           <p>
             In order to test if the power switch fault was working a calculation
@@ -134,27 +162,20 @@ function LVSS() {
             / 18A = 7.7k&#x2126;.
           </p>
         </Col>
-        <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
-        </Col>
       </Row>
 
       <hr />
 
       {/* To Do Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
+      <Row className="align-items-center justify-content-center">
+        <Col md={12} className="text-center">
           <h2>What Has to Be Done</h2>
-          <p>
-            <ul>
-              <li> Test code with high voltage </li>
-            </ul>
-          </p>
-        </Col>
-        <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
+          <ul className="list-unstyled">
+            <li>Test code with high voltage</li>
+          </ul>
         </Col>
       </Row>
+
     </Container>
   );
 }
