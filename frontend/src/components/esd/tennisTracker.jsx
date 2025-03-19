@@ -58,13 +58,27 @@ function TRACKER({ skills }) {
         <Col md={12} className="text-center">
           <h2>Team Roles</h2>
           <ul className="list-unstyled">
-            <li><strong>Diego Lopez:</strong> C/C++, Python/Matlab</li>
-            <li><strong>Benjamin Fauteux:</strong> VHDL, GUI</li>
-            <li><strong>Leila Daly:</strong> C++, Python/Matlab</li>
-            <li><strong>Siare Williams:</strong> Matlab, VHDL</li>
-            <li><strong>Keyon Vassell:</strong> Python/Matlab, C/C++</li>
-            <li><strong>Saeed Sharifi:</strong> Business, VHDL</li>
-            <li><strong>Jackson Reed:</strong> Business, Blender</li>
+            <li>
+              <strong>Diego Lopez:</strong> C/C++, Python/Matlab
+            </li>
+            <li>
+              <strong>Benjamin Fauteux:</strong> VHDL, GUI
+            </li>
+            <li>
+              <strong>Leila Daly:</strong> C++, Python/Matlab
+            </li>
+            <li>
+              <strong>Siare Williams:</strong> Matlab, VHDL
+            </li>
+            <li>
+              <strong>Keyon Vassell:</strong> Python/Matlab, C/C++
+            </li>
+            <li>
+              <strong>Saeed Sharifi:</strong> Business, VHDL
+            </li>
+            <li>
+              <strong>Jackson Reed:</strong> Business, Blender
+            </li>
           </ul>
         </Col>
       </Row>

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 // Utilities
-import { DynamicTitle } from "./utils/DynamicTitle.jsx";
+import { DynamicTitle } from "./components/base/DynamicTitle.ts";
 
 // Components
 import NavigationBar from "./components/base/NavigationBar.jsx";

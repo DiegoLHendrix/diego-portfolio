@@ -79,7 +79,6 @@ function PortfolioFeaturette() {
           />
         </div>
       </div>
-
     </div>
   );
 }

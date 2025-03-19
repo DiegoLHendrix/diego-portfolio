@@ -1,5 +1,12 @@
 import React from "react";
-import {Container, Row, Col, Image, OverlayTrigger, Tooltip} from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
 import "../../styles/evt/LVSS.css";
 
 // Import images
@@ -49,7 +56,12 @@ function LVSS({ skills }) {
                 placement="left"
                 overlay={<Tooltip>High Side Switch Evaluation Module</Tooltip>}
               >
-                <Image src={HSSEVM} fluid alt="High Side Switch Evaluation Module" className="hover-image" />
+                <Image
+                  src={HSSEVM}
+                  fluid
+                  alt="High Side Switch Evaluation Module"
+                  className="hover-image"
+                />
               </OverlayTrigger>
             </Col>
             <Col xs={6}>
@@ -57,7 +69,12 @@ function LVSS({ skills }) {
                 placement="right"
                 overlay={<Tooltip>STM32 Nucleo Development Board</Tooltip>}
               >
-                <Image src={nucleo} fluid alt="STM32 Nucleo Development Board" className="hover-image" />
+                <Image
+                  src={nucleo}
+                  fluid
+                  alt="STM32 Nucleo Development Board"
+                  className="hover-image"
+                />
               </OverlayTrigger>
             </Col>
           </Row>
@@ -67,7 +84,12 @@ function LVSS({ skills }) {
                 placement="left"
                 overlay={<Tooltip>LVSS Custom PCB</Tooltip>}
               >
-                <Image src={PCB} fluid alt="LVSS Custom PCB" className="hover-image" />
+                <Image
+                  src={PCB}
+                  fluid
+                  alt="LVSS Custom PCB"
+                  className="hover-image"
+                />
               </OverlayTrigger>
             </Col>
           </Row>
@@ -175,7 +197,6 @@ function LVSS({ skills }) {
           </ul>
         </Col>
       </Row>
-
     </Container>
   );
 }

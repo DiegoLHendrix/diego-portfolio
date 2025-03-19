@@ -1,18 +1,21 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function getTitle(pathname) {
-  const titles = {
+// Define the type for the pathname to ensure correct typing
+type TitleMap = { [key: string]: string };
+
+function getTitle(pathname: string): string {
+  const titles: TitleMap = {
     "/": "Home - My Portfolio",
-    "/resume": "Resume - My Portfolio",
-    "/contact": "Contact - My Portfolio",
-    "/projects": "Projects - My Portfolio",
+    "/resume": "Resume",
+    "/contact": "Contact",
+    "/projects": "Projects",
   };
 
   return titles[pathname] || "My Portfolio";
 }
 
-export function DynamicTitle() {
+export function DynamicTitle(): null {
   const location = useLocation();
 
   useEffect(() => {
@@ -22,7 +25,7 @@ export function DynamicTitle() {
   return null;
 }
 
-export function StaticTitle() {
+export function StaticTitle(): null {
   const location = useLocation();
 
   useEffect(() => {

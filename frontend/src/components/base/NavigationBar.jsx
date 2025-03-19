@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -15,17 +15,6 @@ function NavigationBar() {
             <Nav.Link href="/resume">Resume</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/projects">Projects</Nav.Link>
-            {/* <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/evt">
-                Electric Vehicle Team
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/esd">Embedded Systems</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/dsp">
-                Digital Signal Processing
-              </NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
 
           {/* Right side GitHub, LinkedIn, and Admin Login */}
@@ -37,7 +26,12 @@ function NavigationBar() {
               <FaLinkedin size={30} />
             </Nav.Link>
             <Nav.Link href="/admin">
-              <button className="btn btn-outline-light">Admin Login</button>
+              <button
+                className="btn btn-outline-light"
+                style={{ position: "relative", top: "-6px" }}
+              >
+                Admin Login
+              </button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

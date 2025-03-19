@@ -57,6 +57,8 @@ const ProjectsGrid = () => {
             <p>
               Programmed an FPGA to process audio input and output it through
               high-pass and low-pass filters.
+              <br />
+              <br />
             </p>
             <p>
               <button
