@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../../../styles/base/home/ProjectsGrid.css"; // Import the CSS file
 
 const ProjectsGrid = () => {

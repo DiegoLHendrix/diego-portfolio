@@ -5,8 +5,8 @@ import "../../styles/esd/audioProc.css";
 function TRACKER({ skills }) {
   return (
     <Container className="project-content">
-      <h1 className="display-4 text-center">Tennis Tracker System </h1>
-      <p className="lead text-center"> 3/17/2025 - Present </p>
+      <h1 className="display-4 text-center">Tennis Tracker System</h1>
+      <p className="lead text-center">3/17/2025 - Present</p>
 
       {/* Skills Section */}
       <p className="text-center">
@@ -36,7 +36,7 @@ function TRACKER({ skills }) {
         <li>System accuracy analysis for both static and dynamic conditions</li>
         <li>Ball restitution measurement</li>
         <li>LED-based visual feedback for real-time game analysis</li>
-        <li>Real-time tracking and instant replay integration using Unity</li>
+        <li>Real-time tracking and instant replay integration using Blender</li>
       </ul>
 
       <p className="lead text-center">

@@ -32,8 +32,10 @@ function PROJECTS() {
     {
       key: "canopen",
       title: "CANopen SDO",
-      component: <CANopenSdo skills={["CAN Protocol", "Embedded C++"]} />,
-      skills: ["CAN Protocol", "Embedded C++"].sort(),
+      component: (
+        <CANopenSdo skills={["CAN Protocol", "Embedded C++", "EVT"]} />
+      ),
+      skills: ["CAN Protocol", "Embedded C++", "EVT"].sort(),
     },
     {
       key: "lvss",
@@ -46,6 +48,7 @@ function PROJECTS() {
             "Hardware Testing",
             "Embedded C++",
             "CAN Protocol",
+            "EVT",
           ]}
         />
       ),
@@ -55,6 +58,7 @@ function PROJECTS() {
         "Hardware Testing",
         "Embedded C++",
         "CAN Protocol",
+        "EVT",
       ].sort(),
     },
     {

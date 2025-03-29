@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function NavigationBar() {
