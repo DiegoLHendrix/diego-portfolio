@@ -1,19 +1,26 @@
 version: "3.8"
 services:
-  react:
-    build: .
+  frontend:
+    container_name: frontend
+    build:
+      context: . # Set context to the frontend directory
+      dockerfile: Dockerfile
     restart: always
-    
+    volumes:
+      - ./frontend:/frontend # Sync local files with the container (except node_modules)
+      - /frontend/node_modules # Prevent overwriting node_modules
+    ports:
+      - "5173:5173" # Expose port 5173 for the frontend app
     networks:
       - traefik_network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react.rule=Host(`diegolopezportfolio.net`) && PathPrefix(`/`)"
-      - "traefik.http.routers.react.entrypoints=websecure"
-      - "traefik.http.routers.react.tls=true"
-      - "traefik.http.routers.react.tls.certresolver=myresolver"
-      - "traefik.http.services.react.loadbalancer.server.port=80"  # Internal react port
-      
+      - "traefik.http.routers.frontend.rule=Host(`diegolopezportfolio.net`) && PathPrefix(`/`)"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls=true"
+      - "traefik.http.routers.frontend.tls.certresolver=myresolver"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+
 networks:
   traefik_network:
     external: true
