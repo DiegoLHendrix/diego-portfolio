@@ -1,5 +1,5 @@
-# Use the official Node.js image
-FROM node:22.11
+# Use the official Node.js image as a base
+FROM node:22.11 AS build
 
 # Set the working directory inside the container
 WORKDIR /frontend
@@ -7,17 +7,23 @@ WORKDIR /frontend
 # Copy package.json and package-lock.json first (for better caching)
 COPY ./frontend/package.json ./frontend/package-lock.json ./
 
-# Force React 18 to resolve dependency conflicts
-RUN npm install react@18 react-dom@18
+# Install dependencies
+RUN npm install
 
 # Copy the rest of the project files
 COPY ./frontend /frontend
 
-# Build the frontend
+# Build the frontend for production
 RUN npm run build
 
-# Expose port 5173 for the frontend application
+# Stage 2: Use a lightweight static server to serve the production build
+FROM nginx:alpine
+
+# Copy the build files from the previous stage to the nginx container
+COPY --from=build /frontend/dist /usr/share/nginx/html
+
+# Expose port 5173 to make the app accessible
 EXPOSE 5173
 
-# Command to run when starting the container
-CMD ["npm", "run", "dev"]
+# Start nginx to serve the app
+CMD ["nginx", "-g", "daemon off;"]
