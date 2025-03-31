@@ -24,14 +24,16 @@ function NavigationBar() {
             <Nav.Link href="https://www.linkedin.com/in/dl4583" target="_blank">
               <FaLinkedin size={30} />
             </Nav.Link>
-            <Nav.Link href="/admin">
+            {/* In App.css change .content-wrap padding-top to 70px to audjust admin login button increasing the height of the navbar */}
+
+            {/* <Nav.Link href="/admin">
               <button
                 className="btn btn-outline-light"
                 style={{ position: "relative", top: "-6px" }}
               >
                 Admin Login
               </button>
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
