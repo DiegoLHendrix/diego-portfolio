@@ -3,7 +3,7 @@ services:
   frontend:
     container_name: frontend
     build:
-      context: . # Set context to the frontend directory
+      context: .  # Set the context to the root directory
       dockerfile: Dockerfile.frontend
     restart: always
     volumes:
