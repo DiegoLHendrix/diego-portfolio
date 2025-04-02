@@ -12,6 +12,7 @@ import Footer from "./components/base/Footer.jsx";
 import Home from "./pages/base/Home.jsx";
 import Resume from "./pages/base/Resume.jsx";
 import Contact from "./pages/base/Contact.jsx";
+import NotFound from "./pages/base/NotFound.jsx";
 import Projects from "./pages/projects/projects.jsx";
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            {/* Catch-all route for undefined pages */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </div>

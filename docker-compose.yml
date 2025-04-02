@@ -3,7 +3,7 @@ services:
   frontend:
     container_name: frontend
     build:
-      context: .  # Set the context to the root directory
+      context: . # Set the context to the root directory
       dockerfile: Dockerfile.frontend
     restart: always
     volumes:
@@ -20,6 +20,31 @@ services:
       - "traefik.http.routers.frontend.tls=true"
       - "traefik.http.routers.frontend.tls.certresolver=myresolver"
       - "traefik.http.services.frontend.loadbalancer.server.port=80"
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    restart: always
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "8080:8000" # Exposes Django on host port 8080, but still runs on 8000 inside the container
+    env_file:
+      - .env
+    # networks:
+    #   - traefik_network
+    # labels:
+    #   - "traefik.enable=true"
+
+    #   # Subdomain pointing to Django app
+    #   - "traefik.http.routers.backend.rule=Host(`sub.diegolopezportfolio.net`)"
+    #   - "traefik.http.routers.backend.entrypoints=websecure"
+    #   - "traefik.http.routers.backend.tls=true"
+    #   - "traefik.http.routers.backend.tls.certresolver=myresolver"
+
+    #   - "traefik.http.services.backend.loadbalancer.server.port=8000"
 
 networks:
   traefik_network:

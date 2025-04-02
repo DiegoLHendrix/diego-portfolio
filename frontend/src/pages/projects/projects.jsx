@@ -4,10 +4,10 @@ import { Container, Tabs, Tab, Form, Button } from "react-bootstrap";
 
 import CANopenSdo from "../../components/evt/CANopenSdo.jsx";
 import LVSS from "../../components/evt/LVSS.jsx";
-import AUDIOPROC from "../../components/esd/audioProc.jsx";
-import TRACKER from "../../components/esd/tennisTracker.jsx";
+import AudioProc from "../../components/esd/audioProc.jsx";
+import Tracker from "../../components/esd/tennisTracker.jsx";
 
-function PROJECTS() {
+function Projects() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const projectQuery = queryParams.get("project");
@@ -26,7 +26,7 @@ function PROJECTS() {
     {
       key: "audio",
       title: "Audio Processor",
-      component: <AUDIOPROC skills={["Embedded C", "VHDL"]} />,
+      component: <AudioProc skills={["Embedded C", "VHDL"]} />,
       skills: ["Embedded C", "VHDL"].sort(),
     },
     {
@@ -65,7 +65,7 @@ function PROJECTS() {
       key: "tracker",
       title: "Tennis Tracker",
       component: (
-        <TRACKER skills={["MATLAB", "Embedded C++", "Blender", "VHDL"]} />
+        <Tracker skills={["MATLAB", "Embedded C++", "Blender", "VHDL"]} />
       ),
       skills: ["MATLAB", "Embedded C++", "Blender", "VHDL"].sort(),
     },
@@ -160,4 +160,4 @@ function PROJECTS() {
   );
 }
 
-export default PROJECTS;
+export default Projects;

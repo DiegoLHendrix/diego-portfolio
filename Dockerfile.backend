@@ -1,0 +1,22 @@
+# Use the official Python image from Docker Hub
+FROM python:3.11-slim
+
+# Set the working directory inside the container
+WORKDIR /backend
+
+# Copy the requirements.txt to the container
+COPY backend/requirements.txt /backend/
+
+# Copy the Django project files into the container
+COPY ./backend /backend/
+
+# Install the required dependencies inside a virtual environment
+RUN python -m venv /py && \
+    /py/bin/pip install --upgrade pip && \
+    /py/bin/pip install -r /backend/requirements.txt
+
+# Expose port 8000 for the Django app
+EXPOSE 8000
+
+# Command to run the Django server inside the virtual environment
+CMD ["/py/bin/python", "manage.py", "runserver", "0.0.0.0:8000"]
