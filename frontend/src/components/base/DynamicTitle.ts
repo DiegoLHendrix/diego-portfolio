@@ -6,13 +6,14 @@ type TitleMap = { [key: string]: string };
 
 function getTitle(pathname: string): string {
   const titles: TitleMap = {
-    "/": "Home - My Portfolio",
-    "/resume": "Resume",
-    "/contact": "Contact",
-    "/projects": "Projects",
+    "/": "Diego Lopez - Portfolio",
+    "/resume": "Diego Lopez - Resume",
+    "/contact": "Diego Lopez - Contact",
+    "/projects": "Diego Lopez - Projects",
+    "/experience": "Diego Lopez - Experience",
   };
 
-  return titles[pathname] || "My Portfolio";
+  return titles[pathname] || "Page Not Found";
 }
 
 export function DynamicTitle(): null {

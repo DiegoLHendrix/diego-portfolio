@@ -14,6 +14,7 @@ import Resume from "./pages/base/Resume.jsx";
 import Contact from "./pages/base/Contact.jsx";
 import NotFound from "./pages/base/NotFound.jsx";
 import Projects from "./pages/projects/projects.jsx";
+import Experience from "./pages/projects/Experience.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/experience" element={<Experience />} />
             {/* Catch-all route for undefined pages */}
             <Route path="*" element={<NotFound />} />
           </Routes>

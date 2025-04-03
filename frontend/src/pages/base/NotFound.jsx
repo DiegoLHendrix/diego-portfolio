@@ -1,4 +1,3 @@
-import { useForm } from "@formspree/react";
 import "../../styles/base/Contact.css";
 
 const NotFound = () => {
