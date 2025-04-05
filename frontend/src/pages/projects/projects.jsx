@@ -89,7 +89,7 @@ function Projects() {
     selectedSkills.length === 0
       ? projects
       : projects.filter((p) =>
-          p.skills.some((skill) => selectedSkills.includes(skill))
+          selectedSkills.every((skill) => p.skills.includes(skill))
         );
 
   // Automatically switch the active tab if the currently selected project is filtered out
