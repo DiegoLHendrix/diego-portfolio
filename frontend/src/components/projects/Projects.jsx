@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Tabs, Tab, Form, Button } from "react-bootstrap";
+import "./Projects.css";
 
 import CANopenSdo from "../evt/can/CANopenSdo.jsx";
 import LVSS from "../evt/lvss/LVSS.jsx";

@@ -17,7 +17,7 @@ function SpinnerLoader() {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   return (
-    <div className="fullscreen-spinner">
+    <div className="fullscreen-spinner" style={{ backgroundColor: "#000" }}>
       {ShowImg ? (
         // Show the spinner image while loading
         <img src="./sp.svg" alt="Loading..." className="spinner-img" />

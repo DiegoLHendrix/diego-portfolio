@@ -17,10 +17,15 @@
   left: 0;
 }
 
+/* Dark Mode */
+[data-theme="dark"] .text-muted {
+  color: var(--muted-color) !important; /* Light muted color for dark mode */
+}
+
 .evt-logo {
   width: 100%;
   height: auto;
-  position: absolute; /* Use absolute positioning */
+  position: absolute;
   top: 50%; /* Centers vertically */
   left: 50%; /* Centers horizontally */
   transform: translate(-50%, -50%); /* Adjusts for the center of the logo */
