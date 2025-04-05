@@ -7,9 +7,9 @@ import {
   OverlayTrigger,
   Tooltip,
 } from "react-bootstrap";
-import "../../styles/evt/LVSS.css";
+import "./LVSS.css";
 
-import SecureImage from "../api/SecureImage";
+import SecureImage from "../../api/SecureImage";
 
 function LVSS({ skills }) {
   return (

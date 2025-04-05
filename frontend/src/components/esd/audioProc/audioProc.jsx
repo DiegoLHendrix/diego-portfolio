@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import "../../styles/esd/audioProc.css";
+import "./audioProc.css";
 
-import SecureImage from "../api/SecureImage";
+import SecureImage from "../../api/SecureImage";
 
 function AUDIOPROC({ skills }) {
   // State to toggle between VHDL and C code

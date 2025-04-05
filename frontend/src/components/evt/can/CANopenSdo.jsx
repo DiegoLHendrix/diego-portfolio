@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import "../../styles/evt/CANopenSdo.css";
+import "./CANopenSdo.css";
 
-import SecureImage from "../api/SecureImage";
+import SecureImage from "../../api/SecureImage";
 
 function CANopenSdo({ skills }) {
   return (

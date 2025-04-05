@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Tabs, Tab, Form, Button } from "react-bootstrap";
 
-import CANopenSdo from "../../components/evt/CANopenSdo.jsx";
-import LVSS from "../../components/evt/LVSS.jsx";
-import AudioProc from "../../components/esd/audioProc.jsx";
-import Tracker from "../../components/esd/tennisTracker.jsx";
+import CANopenSdo from "../evt/can/CANopenSdo.jsx";
+import LVSS from "../evt/lvss/LVSS.jsx";
+import AudioProc from "../../components/esd/audioProc/audioProc.jsx";
+import Tracker from "../esd/tennisTracker.jsx";
 
 function Projects() {
   const location = useLocation();

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import "../../../styles/base/home/PortfolioCarousel.css";
+import "./PortfolioCarousel.css";
 
 import SecureImage from "../../../components/api/SecureImage";
 

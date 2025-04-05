@@ -5,18 +5,18 @@ import "./App.css";
 
 // Utilities
 import { DynamicTitle } from "./components/base/DynamicTitle.ts";
-import SpinnerLoader from "./components/base/SpinnerLoader.jsx";
+import SpinnerLoader from "./components/base/loader/SpinnerLoader.jsx";
 
 // Components
 import NavigationBar from "./components/base/NavigationBar.jsx";
-import Footer from "./components/base/Footer.jsx";
+import Footer from "./components/base/footer/Footer.jsx";
 
-const Home = lazy(() => import("./pages/base/Home.jsx"));
-const Resume = lazy(() => import("./pages/base/Resume.jsx"));
-const Contact = lazy(() => import("./pages/base/Contact.jsx"));
-const NotFound = lazy(() => import("./pages/base/NotFound.jsx"));
-const Projects = lazy(() => import("./pages/projects/projects.jsx"));
-const Experience = lazy(() => import("./pages/projects/Experience.jsx"));
+const Home = lazy(() => import("./components/base/home/Home.jsx"));
+const Resume = lazy(() => import("./components/base/resume/Resume.jsx"));
+const Contact = lazy(() => import("./components/base/contact/Contact.jsx"));
+const NotFound = lazy(() => import("./components/base/NotFound.jsx"));
+const Projects = lazy(() => import("./components/projects/Projects.jsx"));
+const Experience = lazy(() => import("./components/projects/Experience.jsx"));
 
 function App() {
   return (

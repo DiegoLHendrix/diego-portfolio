@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/base/home/PortfolioFeaturette.css";
+import "./PortfolioFeaturette.css";
 
 import SecureImage from "../../../components/api/SecureImage";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../../styles/esd/audioProc.css";
+import "./audioProc/audioProc.css";
 
 function TRACKER({ skills }) {
   return (

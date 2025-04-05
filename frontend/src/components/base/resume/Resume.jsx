@@ -1,4 +1,4 @@
-import "../../styles/base/Resume.css";
+import "./Resume.css";
 
 const Resume = () => {
   return (

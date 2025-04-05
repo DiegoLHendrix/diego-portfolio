@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../../../styles/base/home/ProjectsGrid.css"; // Import the CSS file
+import "./ProjectsGrid.css"; // Import the CSS file
 
 const ProjectsGrid = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import { useForm } from "@formspree/react";
-import "../../styles/base/Contact.css";
+import "./Contact.css";
 
 const Contact = () => {
   const formID = import.meta.env.VITE_FORM_ID;

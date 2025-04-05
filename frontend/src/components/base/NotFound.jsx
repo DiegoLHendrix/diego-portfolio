@@ -1,4 +1,4 @@
-import "../../styles/base/Contact.css";
+import "./contact/Contact.css";
 
 const NotFound = () => {
   return (

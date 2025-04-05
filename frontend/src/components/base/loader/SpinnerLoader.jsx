@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/base/SpinnerLoader.css";
+import "./SpinnerLoader.css";
 
 function SpinnerLoader() {
   // State to control the text message displayed after loading
