@@ -1,11 +1,7 @@
 import React from "react";
 import "../../../styles/base/home/PortfolioFeaturette.css";
 
-// Import local images
-import GreySquare from "../../../assets/base/Grey-Square.png";
-import BlackSquare from "../../../assets/base/BlackSquare.jpg";
-import EVTLogo from "../../../assets/evt/EVT-Logo.jpg";
-import Thinkserver from "../../../assets/base/thinkserver.png";
+import SecureImage from "../../../components/api/SecureImage";
 
 function PortfolioFeaturette() {
   return (
@@ -39,10 +35,10 @@ function PortfolioFeaturette() {
           </p>
         </div>
         <div className="col-md-5">
-          <img
-            className="featurette-image img-fluid mx-auto"
-            src={GreySquare}
+          <SecureImage
+            filename="base/Grey-Square.png"
             alt="Placeholder image"
+            className="featurette-image img-fluid mx-auto"
           />
         </div>
       </div>
@@ -78,12 +74,16 @@ function PortfolioFeaturette() {
         </div>
         <div className="col-md-5 order-md-1">
           <div className="evt-container">
-            <img
-              className="black-square"
-              src={BlackSquare}
+            <SecureImage
+              filename="base/BlackSquare.jpg"
               alt="Black Square"
+              className="black-square"
             />
-            <img className="evt-logo" src={EVTLogo} alt="EVT Logo" />
+            <SecureImage
+              filename="evt/EVT-Logo.jpg"
+              alt="EVT Logo"
+              className="evt-logo"
+            />
           </div>
         </div>
       </div>
@@ -108,10 +108,10 @@ function PortfolioFeaturette() {
           </p>
         </div>
         <div className="col-md-5">
-          <img
-            className="featurette-image img-fluid mx-auto"
-            src={Thinkserver}
+          <SecureImage
+            filename="base/thinkserver.png"
             alt="Placeholder image"
+            className="featurette-image img-fluid mx-auto"
           />
         </div>
       </div>

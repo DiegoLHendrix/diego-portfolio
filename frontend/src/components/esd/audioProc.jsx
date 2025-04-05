@@ -2,20 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "../../styles/esd/audioProc.css";
 
-// Import images
-import filterEntity from "../../assets/esd/vhdl/filter_entity.png";
-import filterArch from "../../assets/esd/vhdl/filter_arch.png";
-import filterDataIn from "../../assets/esd/vhdl/filter_data_in.png";
-import filterCoeffs from "../../assets/esd/vhdl/filter_coeffs.png";
-import filterCoeffProc from "../../assets/esd/vhdl/filter_coeff_proc.png";
-import filterShiftReg from "../../assets/esd/vhdl/filter_shift_reg.png";
-import filterMultiplier from "../../assets/esd/vhdl/filter_multiplier.png";
-
-import preCompiler from "../../assets/esd/audioProc/preCompiler.png";
-import timerISR from "../../assets/esd/audioProc/timerISR.png";
-import readFile from "../../assets/esd/audioProc/readFile.png";
-import switchISR from "../../assets/esd/audioProc/switchISR.png";
-import mainFunction from "../../assets/esd/audioProc/mainFunction.png";
+import SecureImage from "../api/SecureImage";
 
 function AUDIOPROC({ skills }) {
   // State to toggle between VHDL and C code
@@ -90,8 +77,8 @@ function AUDIOPROC({ skills }) {
               <h2>Audio Filter Component Entity</h2>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterEntity}
+              <SecureImage
+                filename="esd/vhdl/filter_entity.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -106,8 +93,8 @@ function AUDIOPROC({ skills }) {
               <h2>Audio Filter Component Architecture</h2>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterArch}
+              <SecureImage
+                filename="esd/vhdl/filter_arch.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -128,8 +115,8 @@ function AUDIOPROC({ skills }) {
               </p>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterDataIn}
+              <SecureImage
+                filename="esd/vhdl/filter_data_in.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -149,14 +136,14 @@ function AUDIOPROC({ skills }) {
               </p>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterCoeffs}
+              <SecureImage
+                filename="esd/vhdl/filter_coeffs.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
               />
-              <Image
-                src={filterCoeffProc}
+              <SecureImage
+                filename="esd/vhdl/filter_coeff_proc.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -178,8 +165,8 @@ function AUDIOPROC({ skills }) {
               </p>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterShiftReg}
+              <SecureImage
+                filename="esd/vhdl/filter_shift_reg.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -199,8 +186,8 @@ function AUDIOPROC({ skills }) {
               </p>
             </Col>
             <Col md={5}>
-              <Image
-                src={filterMultiplier}
+              <SecureImage
+                filename="esd/vhdl/filter_multiplier.png"
                 fluid
                 alt="VHDL Audio Processor"
                 className="hover-image"
@@ -287,8 +274,8 @@ function AUDIOPROC({ skills }) {
 
           {/* Right Column - Image */}
           <Col md={5}>
-            <Image
-              src={preCompiler}
+            <SecureImage
+              filename="esd/vhdl/preCompiler.png"
               fluid
               alt="Variables and Pointers"
               className="hover-image"
@@ -311,8 +298,8 @@ function AUDIOPROC({ skills }) {
             </p>
           </Col>
           <Col md={5}>
-            <Image
-              src={timerISR}
+            <SecureImage
+              filename="esd/vhdl/timerISR.png"
               fluid
               alt="Timer ISR"
               className="hover-image"
@@ -355,8 +342,8 @@ function AUDIOPROC({ skills }) {
 
           {/* Right Column - Image */}
           <Col md={5}>
-            <Image
-              src={readFile}
+            <SecureImage
+              filename="esd/vhdl/readFile.png"
               fluid
               alt="read_file Function"
               className="hover-image"
@@ -395,8 +382,8 @@ function AUDIOPROC({ skills }) {
 
           {/* Right Column - Image */}
           <Col md={5}>
-            <Image
-              src={switchISR}
+            <SecureImage
+              filename="esd/vhdl/switchISR.png"
               fluid
               alt="sw_isr Function"
               className="hover-image"
@@ -440,8 +427,8 @@ function AUDIOPROC({ skills }) {
 
           {/* Right Column - Image */}
           <Col md={5}>
-            <Image
-              src={mainFunction}
+            <SecureImage
+              filename="esd/vhdl/mainFunction.png"
               fluid
               alt="main Function"
               className="hover-image"

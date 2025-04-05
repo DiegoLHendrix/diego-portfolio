@@ -9,10 +9,7 @@ import {
 } from "react-bootstrap";
 import "../../styles/evt/LVSS.css";
 
-// Import images
-import nucleo from "../../assets/evt/lvss/nucleo.png";
-import HSSEVM from "../../assets/evt/lvss/HSSEVM.png";
-import PCB from "../../assets/evt/lvss/LVSSPCB.png";
+import SecureImage from "../api/SecureImage";
 
 function LVSS({ skills }) {
   return (
@@ -41,7 +38,7 @@ function LVSS({ skills }) {
 
       {/* Hardware Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={4}>
           <h2>Hardware Used</h2>
           <ul>
             <li>High Side Switch Motherboard Evaluation Module</li>
@@ -51,26 +48,26 @@ function LVSS({ skills }) {
         </Col>
         <Col md={5}>
           <Row className="mt-3">
-            <Col xs={6}>
+            <Col xs={5} className="image-spacing">
               <OverlayTrigger
                 placement="left"
                 overlay={<Tooltip>High Side Switch Evaluation Module</Tooltip>}
               >
-                <Image
-                  src={HSSEVM}
+                <SecureImage
+                  filename="evt/lvss/HSSEVM.png"
                   fluid
                   alt="High Side Switch Evaluation Module"
                   className="hover-image"
                 />
               </OverlayTrigger>
             </Col>
-            <Col xs={6}>
+            <Col xs={5}>
               <OverlayTrigger
                 placement="right"
                 overlay={<Tooltip>STM32 Nucleo Development Board</Tooltip>}
               >
-                <Image
-                  src={nucleo}
+                <SecureImage
+                  filename="evt/lvss/nucleo.png"
                   fluid
                   alt="STM32 Nucleo Development Board"
                   className="hover-image"
@@ -84,8 +81,8 @@ function LVSS({ skills }) {
                 placement="left"
                 overlay={<Tooltip>LVSS Custom PCB</Tooltip>}
               >
-                <Image
-                  src={PCB}
+                <SecureImage
+                  filename="evt/lvss/LVSSPCB.png"
                   fluid
                   alt="LVSS Custom PCB"
                   className="hover-image"

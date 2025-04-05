@@ -2,13 +2,7 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "../../styles/evt/CANopenSdo.css";
 
-// Import images
-import mainLoop from "../../assets/evt/sdo/main-loop.png";
-import receiveData from "../../assets/evt/sdo/receiveData.png";
-import transferData from "../../assets/evt/sdo/transferData.png";
-import SDOReceive from "../../assets/evt/sdo/SDOReceive.png";
-import SDOTransfer from "../../assets/evt/sdo/SDOTransfer.png";
-import registerCallBack from "../../assets/evt/sdo/registerCallBack.png";
+import SecureImage from "../api/SecureImage";
 
 function CANopenSdo({ skills }) {
   return (
@@ -30,7 +24,7 @@ function CANopenSdo({ skills }) {
 
       {/* Main Loop Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>Main Loop</h2>
           <p>
             The client node receives data from the server every second and sends
@@ -38,8 +32,8 @@ function CANopenSdo({ skills }) {
           </p>
         </Col>
         <Col md={5}>
-          <Image
-            src={mainLoop}
+          <SecureImage
+            filename="evt/sdo/main-loop.png"
             fluid
             alt="Main Loop Visualization"
             className="hover-image"
@@ -51,7 +45,7 @@ function CANopenSdo({ skills }) {
 
       {/* receiveData Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>receiveData</h2>
           <p>Retrieves data from the server to the client:</p>
           <ol>
@@ -64,8 +58,8 @@ function CANopenSdo({ skills }) {
           </ol>
         </Col>
         <Col md={5}>
-          <Image
-            src={receiveData}
+          <SecureImage
+            filename="evt/sdo/receiveData.png"
             fluid
             alt="receiveData Code"
             className="hover-image"
@@ -77,7 +71,7 @@ function CANopenSdo({ skills }) {
 
       {/* transferData Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>transferData</h2>
           <p>Sends data from the client to the server:</p>
           <ol>
@@ -93,8 +87,8 @@ function CANopenSdo({ skills }) {
           </ol>
         </Col>
         <Col md={5}>
-          <Image
-            src={transferData}
+          <SecureImage
+            filename="evt/sdo/transferData.png"
             fluid
             alt="transferData Code"
             className="hover-image"
@@ -106,7 +100,7 @@ function CANopenSdo({ skills }) {
 
       {/* SDOReceive Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>SDOReceive</h2>
           <p>
             This function initiates an SDO upload (read) request to retrieve
@@ -124,8 +118,8 @@ function CANopenSdo({ skills }) {
           </ol>
         </Col>
         <Col md={5}>
-          <Image
-            src={SDOReceive}
+          <SecureImage
+            filename="evt/sdo/SDOReceive.png"
             fluid
             alt="SDOReceive Diagram"
             className="hover-image"
@@ -137,7 +131,7 @@ function CANopenSdo({ skills }) {
 
       {/* SDOTransfer Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>SDOTransfer</h2>
           <p>
             This function prepares and initiates an SDO download (write) request
@@ -156,8 +150,8 @@ function CANopenSdo({ skills }) {
           </ol>
         </Col>
         <Col md={5}>
-          <Image
-            src={SDOTransfer}
+          <SecureImage
+            filename="evt/sdo/SDOTransfer.png"
             fluid
             alt="SDOTransfer Diagram"
             className="hover-image"
@@ -169,7 +163,7 @@ function CANopenSdo({ skills }) {
 
       {/* registerCallBack Section */}
       <Row className="align-items-center">
-        <Col md={7}>
+        <Col md={5}>
           <h2>registerCallBack</h2>
           <p>Assigns a user-defined callback function for SDO operations:</p>
           <ol>
@@ -196,8 +190,8 @@ function CANopenSdo({ skills }) {
           </ol>
         </Col>
         <Col md={5}>
-          <Image
-            src={registerCallBack}
+          <SecureImage
+            filename="evt/sdo/registerCallBack.png"
             fluid
             alt="registerCallBack Diagram"
             className="hover-image"
