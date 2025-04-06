@@ -19,10 +19,13 @@ const SecureImage: React.FC<SecureImageProps> = ({
     const fetchSecureImage = async () => {
       try {
         const apiUrl = import.meta.env.VITE_API_URL;
-        const res = await fetch(`${apiUrl}/${filename}`, {
-          method: "GET",
-          credentials: "include", // Optional: if you use cookies/auth
-        });
+        const res = await fetch(
+          `https://db.diegolopezportfolio.net/media/images/${filename}`,
+          {
+            method: "GET",
+            credentials: "include", // Optional: if you use cookies/auth
+          }
+        );
 
         if (!res.ok)
           throw new Error(`Failed to fetch image: ${res.statusText}`);

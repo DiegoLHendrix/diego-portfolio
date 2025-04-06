@@ -15,6 +15,9 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /backend/requirements.txt
 
+# Collect static files (ensure that they are properly gathered before starting the server)
+RUN /py/bin/python manage.py collectstatic --noinput
+
 # Expose port 8000 for the Django app
 EXPOSE 8000
 
