@@ -19,7 +19,7 @@ const SecureImage: React.FC<SecureImageProps> = ({
     const fetchSecureImage = async () => {
       try {
         const apiUrl = import.meta.env.VITE_API_URL;
-        const res = await fetch(`${apiUrl}/api/secure-image/${filename}/`, {
+        const res = await fetch(`${apiUrl}/${filename}`, {
           method: "GET",
           credentials: "include", // Optional: if you use cookies/auth
         });
