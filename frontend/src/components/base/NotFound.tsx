@@ -1,6 +1,6 @@
-import "./contact/Contact.css";
+import React from "react";
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <main role="main">
       <div className="contact-container">

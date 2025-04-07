@@ -18,7 +18,6 @@ const SecureImage: React.FC<SecureImageProps> = ({
   useEffect(() => {
     const fetchSecureImage = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL;
         const res = await fetch(
           `https://db.diegolopezportfolio.net/media/images/${filename}`,
           {

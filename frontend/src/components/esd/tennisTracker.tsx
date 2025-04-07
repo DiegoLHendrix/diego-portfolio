@@ -1,37 +1,41 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import "./audioProc/audioProc.css";
 
-function TRACKER({ skills }) {
+interface TRACKERProps {
+  skills: string[];
+}
+
+const TRACKER: React.FC<TRACKERProps> = ({ skills }) => {
   return (
-    <Container className="project-content">
-      <h1 className="display-4 text-center">Tennis Tracker System</h1>
-      <p className="lead text-center">3/17/2025 - Present</p>
+    <div className="max-w-7xl mx-auto p-4">
+      <h1 className="text-4xl font-extrabold text-center">
+        Tennis Tracker System
+      </h1>
+      <p className="text-xl text-center">3/17/2025 - Present</p>
 
       {/* Skills Section */}
-      <p className="text-center">
+      <p className="text-center my-4">
         <strong>Skills:</strong> {skills.join(", ")}
       </p>
 
-      <p className="lead text-center">
+      <p className="text-xl text-center my-4">
         An FPGA-based tennis ball tracking system designed for high accuracy in
         various conditions.
       </p>
 
-      <p className="lead text-center">
+      <p className="text-xl text-center my-4">
         This project is part of the Embedded Systems Design II course and aims
         to develop a precise tennis ball tracking system using FPGA technology.
         Designed as a replacement for the Hawk-Eye system, it ensures reliable
         tracking even in challenging environments such as windy conditions.
       </p>
 
-      <p className="lead text-center">
+      <p className="text-xl text-center my-4">
         The project consists of multiple phases, including design reviews,
         technical and financial analysis, and the development of a fully
         functional demonstration. Key features include:
       </p>
 
-      <ul className="lead">
+      <ul className="list-none pl-6 text-xl mb-4">
         <li>Camera calibration for improved tracking accuracy</li>
         <li>System accuracy analysis for both static and dynamic conditions</li>
         <li>Ball restitution measurement</li>
@@ -39,83 +43,82 @@ function TRACKER({ skills }) {
         <li>Real-time tracking and instant replay integration using Blender</li>
       </ul>
 
-      <p className="lead text-center">
+      <p className="text-xl text-center my-4">
         Check out the full project on{" "}
         <a
           href="https://github.com/ESD-II/Tennis-Tracker"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-blue-500 underline"
         >
           GitHub
         </a>
         .
       </p>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* Roles Section */}
-      <Row className="align-items-center justify-content-center">
-        <Col md={12} className="text-center">
-          <h2>Team Roles</h2>
-          <ul className="list-unstyled">
-            <li>
-              <strong>Diego Lopez:</strong> C/C++, Python/Matlab
-            </li>
-            <li>
-              <strong>Benjamin Fauteux:</strong> VHDL, GUI
-            </li>
-            <li>
-              <strong>Leila Daly:</strong> C++, Python/Matlab
-            </li>
-            <li>
-              <strong>Siare Williams:</strong> Matlab, VHDL
-            </li>
-            <li>
-              <strong>Keyon Vassell:</strong> Python/Matlab, C/C++
-            </li>
-            <li>
-              <strong>Saeed Sharifi:</strong> Business, VHDL
-            </li>
-            <li>
-              <strong>Jackson Reed:</strong> Business, Blender
-            </li>
-          </ul>
-        </Col>
-      </Row>
+      <div className="text-center">
+        <h2 className="text-2xl font-semibold">Team Roles</h2>
+        <ul className="list-none space-y-2">
+          <li>
+            <strong>Diego Lopez:</strong> C/C++, Python/Matlab
+          </li>
+          <li>
+            <strong>Benjamin Fauteux:</strong> VHDL, GUI
+          </li>
+          <li>
+            <strong>Leila Daly:</strong> C++, Python/Matlab
+          </li>
+          <li>
+            <strong>Siare Williams:</strong> Matlab, VHDL
+          </li>
+          <li>
+            <strong>Keyon Vassell:</strong> Python/Matlab, C/C++
+          </li>
+          <li>
+            <strong>Saeed Sharifi:</strong> Business, VHDL
+          </li>
+          <li>
+            <strong>Jackson Reed:</strong> Business, Blender
+          </li>
+        </ul>
+      </div>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* Hardware Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>Hardware Used</h2>
-          <ul>
+      <div className="grid md:grid-cols-1 gap-8">
+        <div>
+          <h2 className="text-2xl font-semibold">Hardware Used</h2>
+          <ul className="list-none pl-6">
             <li>Intel Cyclone V FPGA</li>
             <li>Speakers</li>
           </ul>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* Software Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>Software Used</h2>
-          <ul>
+      <div className="grid md:grid-cols-1 gap-8">
+        <div>
+          <h2 className="text-2xl font-semibold">Software Used</h2>
+          <ul className="list-none pl-6">
             <li>AMD Vivado</li>
             <li>MATLAB</li>
             <li>Blender</li>
           </ul>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* MATLAB Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>MATLAB Image Processing</h2>
+      <div className="grid md:grid-cols-1 gap-8">
+        <div>
+          <h2 className="text-2xl font-semibold">MATLAB Image Processing</h2>
           <p>
             MATLAB is used to develop a GUI for determining the distance of a
             tennis ball using stereo images. The system processes images
@@ -129,18 +132,16 @@ function TRACKER({ skills }) {
             for images taken from 3 to 5 meters away, ensuring the reliability
             of the tracking system.
           </p>
-        </Col>
-        <Col md={5}>
-          {/*<Image src={filterEntity} fluid alt="VHDL Audio Processor" className="hover-image" />*/}
-        </Col>
-      </Row>
+        </div>
+        <div>{/* Image or content */}</div>
+      </div>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* Blender Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>Blender</h2>
+      <div className="grid md:grid-cols-1 gap-8">
+        <div>
+          <h2 className="text-2xl font-semibold">Blender</h2>
           <p>
             Blender is used to generate realistic 3D images of a tennis court
             and ball, which are essential for testing the accuracy of the
@@ -154,30 +155,26 @@ function TRACKER({ skills }) {
             well under various conditions. This integration with MATLAB helps
             refine the algorithms needed for precise ball detection.
           </p>
-        </Col>
-        <Col md={5}>
-          {/*<Image src={filterEntity} fluid alt="Blender Tennis Simulation" className="hover-image" />*/}
-        </Col>
-      </Row>
+        </div>
+        <div>{/* Image or content */}</div>
+      </div>
 
-      <hr />
+      <hr className="my-8" />
 
       {/* To Do Section */}
-      <Row className="align-items-center">
-        <Col md={7}>
-          <h2>What Has to Be Done</h2>
-          <ul>
+      <div className="grid md:grid-cols-1 gap-1">
+        <div>
+          <h2 className="text-2xl font-semibold">What Has to Be Done</h2>
+          <ul className="list-none pl-6">
             <li>Write C++</li>
             <li>Write VHDL</li>
             <li>Test with hardware</li>
           </ul>
-        </Col>
-        <Col md={5}>
-          {/*<Image src={mainLoop} fluid alt="Main Loop Visualization" className="hover-image" />*/}
-        </Col>
-      </Row>
-    </Container>
+        </div>
+        <div>{/* Image or content */}</div>
+      </div>
+    </div>
   );
-}
+};
 
 export default TRACKER;

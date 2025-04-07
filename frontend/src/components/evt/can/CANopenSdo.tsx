@@ -1,10 +1,13 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import "./CANopenSdo.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 import SecureImage from "../../api/SecureImage";
 
-function CANopenSdo({ skills }) {
+interface CANopenSdoProps {
+  skills: string[];
+}
+
+const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
   return (
     <Container className="project-content">
       <h1 className="display-4 text-center">CANopen Service Data Objects</h1>
@@ -34,7 +37,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/main-loop.png"
-            fluid
             alt="Main Loop Visualization"
             className="hover-image"
           />
@@ -60,7 +62,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/receiveData.png"
-            fluid
             alt="receiveData Code"
             className="hover-image"
           />
@@ -89,7 +90,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/transferData.png"
-            fluid
             alt="transferData Code"
             className="hover-image"
           />
@@ -120,7 +120,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/SDOReceive.png"
-            fluid
             alt="SDOReceive Diagram"
             className="hover-image"
           />
@@ -152,7 +151,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/SDOTransfer.png"
-            fluid
             alt="SDOTransfer Diagram"
             className="hover-image"
           />
@@ -192,7 +190,6 @@ function CANopenSdo({ skills }) {
         <Col md={5}>
           <SecureImage
             filename="evt/sdo/registerCallBack.png"
-            fluid
             alt="registerCallBack Diagram"
             className="hover-image"
           />
@@ -200,6 +197,6 @@ function CANopenSdo({ skills }) {
       </Row>
     </Container>
   );
-}
+};
 
 export default CANopenSdo;

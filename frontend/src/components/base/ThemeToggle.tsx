@@ -1,38 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const ThemeToggle: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "dark";
+const ThemeToggle = () => {
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    // Check for dark theme preference in localStorage or system preference on initial load
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("color-theme");
+      if (stored) return stored === "dark";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false; // Default to false in SSR or static rendering
   });
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "dark" : "light"
-    );
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+    const root = document.documentElement;
+    console.log("Applying theme:", isDark ? "dark" : "light"); // Debugging
 
-  const iconSrc = isDarkMode ? "/moon.svg" : "/sun.svg";
+    // Apply or remove the dark class based on the isDark state
+    if (isDark) {
+      root.classList.add("dark");
+      // localStorage.setItem("color-theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      // localStorage.setItem("color-theme", "light");
+    }
+    // Force reload to ensure styles apply correctly
+    // window.location.reload();
+  }, [isDark]); // Re-run effect whenever isDark changes
+
+  const toggleTheme = () => {
+    setIsDark((prev) => !prev); // Toggle theme state
+  };
+
+  const iconSrc = isDark ? "/moon.svg" : "/sun.svg";
+  const altText = isDark ? "Switch to light mode" : "Switch to dark mode";
 
   return (
     <button
-      onClick={() => setIsDarkMode((prev) => !prev)}
-      aria-label="Toggle theme"
-      style={{
-        padding: 0,
-        border: "none",
-        background: "transparent",
-        display: "flex",
-        alignItems: "center",
-      }}
+      onClick={toggleTheme}
+      className="p-2 rounded bg-gray-200 dark:bg-gray-700"
+      aria-label={altText}
+      title={altText}
     >
       <img
         src={iconSrc}
-        alt={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        alt={altText}
         width={30}
         height={30}
+        className="w-8 h-8"
       />
     </button>
   );

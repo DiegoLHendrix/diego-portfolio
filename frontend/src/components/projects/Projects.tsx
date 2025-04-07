@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Container, Tabs, Tab, Form, Button } from "react-bootstrap";
-import "./Projects.css";
-
 import CANopenSdo from "../evt/can/CANopenSdo.jsx";
 import LVSS from "../evt/lvss/LVSS.jsx";
 import AudioProc from "../../components/esd/audioProc/audioProc.jsx";
@@ -13,8 +10,8 @@ function Projects() {
   const queryParams = new URLSearchParams(location.search);
   const projectQuery = queryParams.get("project");
 
-  const [selectedSkills, setSelectedSkills] = useState([]);
-  const [activeTab, setActiveTab] = useState("audio"); // Default to first project key
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+  const [activeTab, setActiveTab] = useState<string>("audio"); // Default to first project key
 
   useEffect(() => {
     if (projectQuery) {
@@ -76,7 +73,7 @@ function Projects() {
   const allSkills = [...new Set(projects.flatMap((p) => p.skills))].sort();
 
   // Toggle skill selection
-  const toggleSkill = (skill) => {
+  const toggleSkill = (skill: string) => {
     setSelectedSkills(
       (prev) =>
         prev.includes(skill)
@@ -106,58 +103,74 @@ function Projects() {
   };
 
   return (
-    <Container>
-      <h1 className="text-center my-4">Projects</h1>
+    <div className="max-w-screen-xl mx-auto px-4 py-8">
+      <h1 className="text-center text-3xl font-semibold my-4">Projects</h1>
 
       {/* Skill Filter Buttons */}
-      <Form.Group className="mb-3 text-center">
-        <Form.Label>
-          <strong>Filter by Skills:</strong>
-        </Form.Label>
-        <div className="d-flex flex-wrap justify-content-center">
+      <div className="text-center mb-6">
+        <strong className="mr-2">Filter by Skills:</strong>
+        <div className="flex flex-wrap justify-center gap-2">
           {allSkills.map((skill) => (
-            <Button
+            <button
               key={skill}
-              variant={
-                selectedSkills.includes(skill) ? "primary" : "outline-primary"
-              }
-              className="m-1"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                selectedSkills.includes(skill)
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "bg-transparent text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white"
+              }`}
               onClick={() => toggleSkill(skill)}
             >
               {skill}
-            </Button>
+            </button>
           ))}
         </div>
-      </Form.Group>
-
-      {/* Clear All Filters Button */}
-      <div className="text-center mb-3">
-        <Button variant="danger" onClick={clearFilters}>
-          Clear All Filters
-        </Button>
       </div>
 
-      {/* Tabs for Filtered Projects */}
-      <Tabs
-        activeKey={activeTab}
-        onSelect={(key) => setActiveTab(key)}
-        id="project-tabs"
-        className="mb-3"
-      >
+      {/* Clear All Filters Button */}
+      <div className="text-center mb-6">
+        <button
+          className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors"
+          onClick={clearFilters}
+        >
+          Clear All Filters
+        </button>
+      </div>
+
+      {/* Custom Tabs for Filtered Projects */}
+      <ul className="flex flex-wrap text-sm font-medium text-center border-b border-gray-200">
         {filteredProjects.map((project) => (
-          <Tab key={project.key} eventKey={project.key} title={project.title}>
-            {project.component}
-          </Tab>
+          <li key={project.key} className="me-2">
+            <button
+              onClick={() => setActiveTab(project.key)}
+              className={`inline-block border p-4 rounded-t-lg transition-colors ${
+                activeTab === project.key
+                  ? "text-blue-600 bg-white"
+                  : "text-gray-600 hover:text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              {project.title}
+            </button>
+          </li>
         ))}
-      </Tabs>
+      </ul>
+
+      {/* Display Selected Project */}
+      {filteredProjects.map(
+        (project) =>
+          project.key === activeTab && (
+            <div key={project.key} className="text-center mt-6">
+              {project.component}
+            </div>
+          )
+      )}
 
       {/* No Results Message */}
       {filteredProjects.length === 0 && (
-        <p className="text-center mt-4">
+        <p className="text-center mt-4 text-lg text-red-500">
           No projects match the selected skills.
         </p>
       )}
-    </Container>
+    </div>
   );
 }
 

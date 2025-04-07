@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Tabs, Tab, Table } from "react-bootstrap";
 
-function Experience() {
+const Experience: React.FC = () => {
   return (
     <Container className="text-center">
       <h1 className="my-4">Experience</h1>
@@ -43,6 +43,6 @@ function Experience() {
       </Tabs>
     </Container>
   );
-}
+};
 
 export default Experience;

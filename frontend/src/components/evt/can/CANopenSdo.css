@@ -1,9 +1,0 @@
-/* Default image size */
-.hover-image {
-  max-width: 150%; /* Ensures image fits within its container */
-  height: auto; /* Maintains aspect ratio */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-.hover-image:hover {
-  transform: scale(2);
-}

@@ -1,70 +1,65 @@
-/* App.css */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --bg-color: #fff;
+/* ===================== */
+/* Root Theme Variables  */
+/* ===================== */
+
+.light {
+  --bg-color: 255, 255, 255;
   --text-color: 0, 0, 0;
   --text-opacity: 1;
+  --gray: rgb(33, 37, 41);
 
   /* Cards */
-  --card-bg-color: #f8f9fa;
-  --card-content-color: #f8f9fa;
-  --card-text-color: #000000;
+  --card-bg-color: 255, 255, 255;
+  --card-content-color: 255, 255, 255;
+  --card-text-color: 0, 0, 0;
 
   /* Contact Page */
-  --contact-bg-color: #f8f9fa;
-  --contact-textarea-color: #f8f9fa;
-  --contact-text-color: #000000;
-}
-
-[data-theme="dark"] {
-  --bg-color: #000000;
-  --text-color: 255, 255, 255;
-  --text-color-alt: #0275d8;
-  --text-opacity: 0.9;
-
-  /* Home */
-  --muted-color: #6c757d;
-
-  /* Cards */
-  --card-bg-color: #000000;
-  --card-content-color: #464343;
-  --card-text-color: #f8f9fa;
-
-  /* Contact Page */
-  --contact-bg-color: #464343;
-  --contact-textarea-color: #444;
-  --contact-text-color: #f8f9fa;
+  --contact-bg-color: 255, 255, 255;
+  --contact-textarea-color: 255, 255, 255;
+  --contact-text-color: 0, 0, 0;
 
   /* Projects */
-  --projects-tab-color: #000000;
+  --projects-tab-color: 255, 255, 255;
+
+  background: rgba(var(--bg-color));
 }
 
-/* Ensure the page takes full height */
+/* ===================== */
+/* Global Page Styling   */
+/* ===================== */
+
 html,
 body {
-  background-color: var(--bg-color);
-  color: rgba(var(--text-color), var(--text-opacity));
   height: 100%;
   margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: rgba(var(--text-color), var(--text-opacity));
   display: flex;
   flex-direction: column;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Main container that ensures content expands */
+/* ===================== */
+/* Layout Styling        */
+/* ===================== */
+
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
 }
 
-/* Main content wrapper grows to push footer down */
 .content-wrap {
   flex: 1;
-  padding-top: 60px; /* Adjust this value based on the navbar height */
+  padding-top: 45px; /* Adjust based on navbar height */
 }
 
-/* Footer stays at the bottom */
 footer {
   background-color: #0275d8;
   color: aliceblue;
@@ -72,5 +67,5 @@ footer {
   padding: 10px 0;
   text-align: center;
   width: 100%;
-  margin-top: auto; /* Pushes footer down */
+  margin-top: auto;
 }
