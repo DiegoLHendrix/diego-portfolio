@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SecureImage from "../../../components/api/SecureImage";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface CarouselItem {
   image: string;
@@ -8,9 +9,8 @@ interface CarouselItem {
 }
 
 const PortfolioCarousel: React.FC = () => {
-  const [index, setIndex] = useState<number>(0);
+  const [index, setIndex] = useState(0);
 
-  // Array of carousel items
   const carouselItems: CarouselItem[] = [
     {
       image: "base/carouselImage1.png",
@@ -29,53 +29,56 @@ const PortfolioCarousel: React.FC = () => {
     },
   ];
 
-  // Handle the carousel item change
-  const handlePrev = () => {
-    setIndex(index === 0 ? carouselItems.length - 1 : index - 1);
+  const goToPrev = () => {
+    setIndex((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1));
   };
 
-  const handleNext = () => {
-    setIndex(index === carouselItems.length - 1 ? 0 : index + 1);
+  const goToNext = () => {
+    setIndex((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full pt-2 z-0">
       {/* Carousel Wrapper */}
-      <div
-        className="flex transition-transform duration-500"
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
+      <div className="relative h-80 md:h-[600px] overflow-hidden rounded-lg">
         {carouselItems.map((item, idx) => (
-          <div className="w-full flex-shrink-0 relative" key={idx}>
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-200 ease-linear ${
+              idx === index ? "opacity-100 z-20" : "opacity-0 z-10"
+            }`}
+          >
             <SecureImage
               filename={item.image}
-              className="w-full object-cover h-80 sm:h-[500px] md:h-[600px]"
+              className="absolute w-full h-full object-cover top-0 left-0"
             />
             <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black via-transparent to-transparent w-full text-white">
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <h3 className="text-3xl font-semibold">{item.title}</h3>
               <p>{item.description}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Carousel Controls */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-4">
-        <button
-          className="bg-gray-700 text-white p-2 rounded-full"
-          onClick={handlePrev}
-        >
-          &#10094;
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-4">
-        <button
-          className="bg-gray-700 text-white p-2 rounded-full"
-          onClick={handleNext}
-        >
-          &#10095;
-        </button>
-      </div>
+      {/* Controls */}
+      <button
+        onClick={goToPrev}
+        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+          <FaChevronLeft className="text-white" />
+          <span className="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+          <FaChevronRight className="text-white" />
+          <span className="sr-only">Next</span>
+        </span>
+      </button>
     </div>
   );
 };

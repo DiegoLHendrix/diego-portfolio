@@ -1,7 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
-import SecureImage from "../../api/SecureImage";
 
 interface CANopenSdoProps {
   skills: string[];
@@ -9,193 +6,109 @@ interface CANopenSdoProps {
 
 const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
   return (
-    <Container className="project-content">
-      <h1 className="display-4 text-center">CANopen Service Data Objects</h1>
-      <p className="lead text-center"> 1/20/2024 </p>
+    <div className="max-w-7xl mx-auto p-8 space-y-8">
+      <h1 className="text-4xl font-extrabold text-center text-gray-800">
+        CANopen Service Data Objects (SDO)
+      </h1>
+      <p className="text-xl text-center text-gray-600">1/20/2024 - Present</p>
 
       {/* Skills Section */}
-      <p className="text-center">
-        <strong>Skills:</strong> {skills.join(", ")}
-      </p>
+      <div className="text-center my-4">
+        <strong className="font-semibold">Skills:</strong>{" "}
+        <span className="text-gray-700">{skills.join(", ")}</span>
+      </div>
 
-      <p className="lead text-center">
+      <p className="text-xl text-center text-gray-700 my-4">
         This project demonstrates communication between two STM32
-        microcontrollers using the CANopen SDO protocol.
+        microcontrollers using the CANopen SDO protocol. It is designed to
+        showcase how devices can exchange data reliably using the CANopen
+        protocol, focusing on sending and receiving data between client and
+        server nodes.
       </p>
 
-      <hr />
+      <p className="text-xl text-center text-gray-700 my-4">
+        The project focuses on the implementation of the CANopen protocol for
+        inter-device communication. Specifically, it involves the use of Service
+        Data Objects (SDOs) to manage data exchange between a client and a
+        server using the CANopen protocol. The client node regularly
+        communicates with the server by receiving data every second and sending
+        data back every five seconds, thus demonstrating continuous data
+        exchange in a microcontroller environment.
+      </p>
 
-      {/* Main Loop Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>Main Loop</h2>
-          <p>
-            The client node receives data from the server every second and sends
-            data back every five seconds.
-          </p>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/main-loop.png"
-            alt="Main Loop Visualization"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
+      <hr className="my-8 border-t-2 border-gray-200" />
 
-      <hr />
+      <p className="text-xl text-center text-gray-700 my-4">
+        The Main Loop in the system is at the heart of communication, ensuring
+        that the client node and server are continuously exchanging data. The
+        client receives data from the server every second and responds back
+        every five seconds. This ongoing interaction illustrates the protocol’s
+        ability to facilitate real-time communication in embedded systems.
+      </p>
 
-      {/* receiveData Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>receiveData</h2>
-          <p>Retrieves data from the server to the client:</p>
-          <ol>
-            <li>Instantiates an array to store the received values.</li>
-            <li>
-              Uses the <code>SDOReceive</code> method to request and validate
-              the data.
-            </li>
-            <li>Logs errors or success messages via a UART Logger.</li>
-          </ol>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/receiveData.png"
-            alt="receiveData Code"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
+      <p className="text-xl text-center text-gray-700 my-4">
+        The receiveData function is dedicated to retrieving data from the
+        server. It works by instantiating an array to hold the received data,
+        using the SDOReceive method to request and validate the data.
+        Additionally, it logs any errors or success messages via a UART Logger,
+        ensuring that the data retrieval process is transparent and can be
+        monitored effectively.
+      </p>
 
-      <hr />
+      <p className="text-xl text-center text-gray-700 my-4">
+        The transferData function is responsible for sending data from the
+        client to the server. This function first modifies the data array,
+        incrementing the first element and doubling the value of the second
+        element. It then uses the SDOTransfer method to initiate the transfer
+        and checks for errors in the process. Like the receiveData function, any
+        errors or successful transfers are logged, ensuring the communication is
+        handled efficiently and can be debugged if necessary.
+      </p>
 
-      {/* transferData Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>transferData</h2>
-          <p>Sends data from the client to the server:</p>
-          <ol>
-            <li>
-              Increments the first array element and doubles its value for the
-              second element.
-            </li>
-            <li>
-              Uses the <code>SDOTransfer</code> method to initiate the data
-              transfer and checks for errors.
-            </li>
-            <li>Logs errors or success messages via a UART Logger.</li>
-          </ol>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/transferData.png"
-            alt="transferData Code"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
+      {/* Corrected Ordered List Section */}
+      <div className="text-center my-4">
+        <p className="text-xl text-gray-700">
+          Below are key functions used in the system:
+        </p>
+        <ol className="list-decimal pl-8 text-xl text-gray-700 my-4 space-y-2">
+          <li>
+            <strong className="font-semibold">SDOReceive:</strong> This function
+            initiates an SDO upload (read) request to retrieve data from the
+            target CANopen node. It uses the COCSdoFind method to locate the
+            node and registers a callback function to handle the process. This
+            function returns error codes corresponding to any issues that arise
+            during the data retrieval process.
+          </li>
+          <li>
+            <strong className="font-semibold">SDOTransfer:</strong> Conversely,
+            SDOTransfer initiates an SDO download (write) request to send data
+            to the target node. It follows a similar approach by locating the
+            target node with COCSdoFind, registering a callback, and handling
+            errors that may occur during the transfer.
+          </li>
+          <li>
+            <strong className="font-semibold">registerCallBack:</strong> This
+            function allows the assignment of user-defined callback functions to
+            handle SDO operations. It requires the specification of several
+            parameters, including the client SDO object pointer, object
+            dictionary index and subindex, and the completion status. This
+            ensures that the correct actions are taken once an SDO operation is
+            completed, whether it is successful or not.
+          </li>
+        </ol>
+      </div>
 
-      <hr />
-
-      {/* SDOReceive Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>SDOReceive</h2>
-          <p>
-            This function initiates an SDO upload (read) request to retrieve
-            data from the target CANopen node.
-          </p>
-          <ol>
-            <li>
-              Uses <code>COCSdoFind</code> to locate the target CANopen node.
-            </li>
-            <li>Registers a callback function for completion or errors.</li>
-            <li>
-              Sends the upload request and returns any corresponding error
-              codes.
-            </li>
-          </ol>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/SDOReceive.png"
-            alt="SDOReceive Diagram"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
-
-      <hr />
-
-      {/* SDOTransfer Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>SDOTransfer</h2>
-          <p>
-            This function prepares and initiates an SDO download (write) request
-            to send data to the target CANopen node.
-          </p>
-          <ol>
-            <li>
-              Uses <code>COCSdoFind</code> to locate the target CANopen node.
-            </li>
-            <li>
-              Registers a callback function for monitoring completion or errors.
-            </li>
-            <li>
-              Sends the download request and handles any errors that occur.
-            </li>
-          </ol>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/SDOTransfer.png"
-            alt="SDOTransfer Diagram"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
-
-      <hr />
-
-      {/* registerCallBack Section */}
-      <Row className="align-items-center">
-        <Col md={5}>
-          <h2>registerCallBack</h2>
-          <p>Assigns a user-defined callback function for SDO operations:</p>
-          <ol>
-            <li>
-              <strong>Parameters:</strong>
-              <ul>
-                <li>
-                  <code>CO_CSDO* csdo</code>: Pointer to the client SDO object.
-                </li>
-                <li>
-                  <code>uint16_t index</code>: Object dictionary index.
-                </li>
-                <li>
-                  <code>uint8_t sub</code>: Object dictionary subindex.
-                </li>
-                <li>
-                  <code>uint32_t code</code>: Completion status (0 for success).
-                </li>
-              </ul>
-            </li>
-            <li>
-              <code>AppContext</code> is a pointer to the CSDO node.
-            </li>
-          </ol>
-        </Col>
-        <Col md={5}>
-          <SecureImage
-            filename="evt/sdo/registerCallBack.png"
-            alt="registerCallBack Diagram"
-            className="hover-image"
-          />
-        </Col>
-      </Row>
-    </Container>
+      <p className="text-xl text-center text-gray-700 my-4">
+        This project highlights the robust communication capabilities of the
+        CANopen protocol, specifically through its Service Data Objects (SDOs).
+        By implementing functions such as receiveData, transferData, SDOReceive,
+        SDOTransfer, and registerCallBack, the project demonstrates how to
+        manage data exchanges between embedded devices effectively. The system
+        ensures reliable communication, clear error handling, and effective
+        monitoring, which are crucial for embedded systems operating in
+        real-world applications.
+      </p>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+/* Tailwind Import */
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
@@ -7,9 +8,33 @@
 /* Root Theme Variables  */
 /* ===================== */
 
+/* Light Mode */
 .light {
   --bg-color: 255, 255, 255;
   --text-color: 0, 0, 0;
+  --text-opacity: 1;
+  --gray: rgb(33, 37, 41);
+
+  /* Cards */
+  --card-bg-color: 255, 255, 255;
+  --card-content-color: 255, 255, 255;
+  --card-text-color: 0, 0, 0;
+
+  /* Contact Page */
+  --contact-bg-color: 255, 255, 255;
+  --contact-textarea-color: 255, 255, 255;
+  --contact-text-color: 0, 0, 0;
+
+  /* Projects */
+  --projects-tab-color: 255, 255, 255;
+
+  background: rgba(var(--bg-color));
+}
+
+/* Dark Mode */
+.dark {
+  --bg-color: 0, 0, 0;
+  --text-color: 255, 255, 255;
   --text-opacity: 1;
   --gray: rgb(33, 37, 41);
 
@@ -35,6 +60,9 @@
 
 html,
 body {
+  font-family: var(
+    --font-serif
+  ); /* ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif */
   height: 100%;
   margin: 0;
   padding: 0;

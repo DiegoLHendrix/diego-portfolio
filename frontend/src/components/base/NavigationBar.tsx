@@ -4,14 +4,29 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const NavigationBar: React.FC = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "dark";
+  });
 
   // Toggle the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Toggle the theme between light and dark mode
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  // Apply dark or light theme
+  React.useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
+
   return (
-    <nav className="bg-gray-800 text-white fixed top-0 w-full z-10 shadow-md">
+    <nav className="bg-gray-800 text-white fixed top-0 w-full z-50 shadow-md">
       <div className="w-full px-4 py-4 flex items-center">
         {/* Brand */}
         <a href="/" className="text-2xl">
@@ -28,6 +43,9 @@ const NavigationBar: React.FC = () => {
           </a>
           <a href="/projects" className="text-xl hover:text-gray-400">
             Projects
+          </a>
+          <a href="/experience" className="text-xl hover:text-gray-400">
+            Experience
           </a>
         </div>
 
@@ -49,6 +67,14 @@ const NavigationBar: React.FC = () => {
           >
             <FaLinkedin size={35} />
           </a>
+
+          {/* Theme Toggle Button */}
+          {/* <button
+            onClick={toggleTheme}
+            className="text-white hover:text-gray-400 p-2 rounded-full bg-gray-700"
+          >
+            {isDarkMode ? "Light Mode" : "Dark Mode"}
+          </button> */}
         </div>
 
         {/* Mobile Hamburger Menu */}

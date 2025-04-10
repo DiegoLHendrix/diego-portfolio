@@ -137,15 +137,15 @@ function Projects() {
       </div>
 
       {/* Custom Tabs for Filtered Projects */}
-      <ul className="flex flex-wrap text-sm font-medium text-center border-b border-gray-200">
+      <ul className="flex flex-wrap text-sm font-medium text-center border-gray-500">
         {filteredProjects.map((project) => (
           <li key={project.key} className="me-2">
             <button
               onClick={() => setActiveTab(project.key)}
-              className={`inline-block border p-4 rounded-t-lg transition-colors ${
+              className={`inline-block p-4 rounded-lg transition-colors ${
                 activeTab === project.key
-                  ? "text-blue-600 bg-white"
-                  : "text-gray-600 hover:text-gray-600 hover:bg-gray-50"
+                  ? "text-white bg-gray-600 border"
+                  : "text-gray-600 hover:text-white hover:bg-gray-500"
               }`}
             >
               {project.title}
@@ -153,6 +153,8 @@ function Projects() {
           </li>
         ))}
       </ul>
+
+      <hr className="h-px my-2 bg-gray-200 border-1/2 dark:bg-gray-700" />
 
       {/* Display Selected Project */}
       {filteredProjects.map(

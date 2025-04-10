@@ -1,5 +1,4 @@
 import React from "react";
-import SecureImage from "../../api/SecureImage";
 
 interface LVSSProps {
   skills: string[];
