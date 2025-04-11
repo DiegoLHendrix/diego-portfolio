@@ -1,8 +1,5 @@
 /* Tailwind Import */
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* ===================== */
 /* Root Theme Variables  */
@@ -60,13 +57,11 @@
 
 html,
 body {
-  font-family: var(
-    --font-serif
-  ); /* ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif */
+  font-family: var(--font-serif);
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: 0, 0, 0;
   color: rgba(var(--text-color), var(--text-opacity));
   display: flex;
   flex-direction: column;
@@ -85,7 +80,7 @@ body {
 
 .content-wrap {
   flex: 1;
-  padding-top: 45px; /* Adjust based on navbar height */
+  padding-top: 55px; /* Adjust based on navbar height */
 }
 
 footer {

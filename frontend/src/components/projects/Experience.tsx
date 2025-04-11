@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
   const currentTab = tabData[activeTab];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 text-center">
+    <div className="max-w-5xl mx-auto px-4 py-8 text-center border-gray-300">
       <h1 className="text-4xl font-bold mb-8">Experience</h1>
 
       <div className="flex justify-center mb-6 space-x-4">
@@ -48,12 +48,12 @@ const Experience: React.FC = () => {
         ))}
       </div>
 
-      <div className="bg-white p-4 rounded-lg shadow">
+      <div className="p-4 rounded-lg shadow">
         <h2 className="text-2xl font-semibold mb-4">{currentTab.heading}</h2>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-gray-300 mb-6">
-            <thead className="bg-gray-100">
+            <thead className="border-gray-300">
               <tr>
                 <th className="px-4 py-2 border">Location</th>
                 <th className="px-4 py-2 border">Position Title</th>
@@ -71,7 +71,7 @@ const Experience: React.FC = () => {
         </div>
 
         <h3 className="text-xl font-medium mb-2">Description</h3>
-        <p className="text-base text-gray-700">
+        <p className="text-base">
           {currentTab.description || <em>Coming soon...</em>}
         </p>
       </div>

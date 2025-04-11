@@ -14,7 +14,7 @@ const PortfolioFeaturette: React.FC = () => {
             <br />
             <span className="text-gray-500">About Me</span>
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg mb-6">
             I am an embedded systems engineer with a deep passion for designing
             and integrating embedded software and hardware. I enjoy taking on
             new challenges and finding innovative and efficient solutions.
@@ -52,7 +52,7 @@ const PortfolioFeaturette: React.FC = () => {
             <br />
             <span className="text-gray-500">Firmware Team</span>
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg mb-6">
             I joined the firmware team in September 2023 and have had the
             opportunity to work on amazing projects and collaborate with
             incredible people.
@@ -100,7 +100,7 @@ const PortfolioFeaturette: React.FC = () => {
               Creative & Technical Explorations
             </span>
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg mb-6">
             Outside of academic and team projects, I enjoy working on personal
             projects. Managing a self-hosted server has given me hands-on
             experience with networking, automation, and cloud-based solutions.

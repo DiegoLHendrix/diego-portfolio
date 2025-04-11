@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -8,6 +8,7 @@ import { DynamicTitle } from "./components/base/DynamicTitle.ts";
 // Components
 import NavigationBar from "./components/base/NavigationBar.tsx";
 import Footer from "./components/base/Footer.tsx";
+import Loader from "./components/base/Loader.tsx";
 
 // Lazy Loaded Components
 const Home = lazy(() => import("./components/base/home/Home.tsx"));
@@ -17,23 +18,16 @@ const Projects = lazy(() => import("./components/projects/Projects.tsx"));
 const Experience = lazy(() => import("./components/projects/Experience.tsx"));
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "dark";
-  });
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
-
   return (
     <BrowserRouter>
+      <header>
+        <NavigationBar />
+      </header>
+
       <div className="page-container">
         {/* Flexbox Container */}
-        <NavigationBar />
-        <div className="content-wrap">
-          <Suspense>
+        <main className="content-wrap">
+          <Suspense fallback={<Loader />}>
             {/* Ensures main content expands */}
             <DynamicTitle /> {/* This will update the title dynamically */}
             <Routes>
@@ -45,9 +39,12 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-        </div>
-        <Footer />
+        </main>
       </div>
+
+      <footer>
+        <Footer />
+      </footer>
     </BrowserRouter>
   );
 }

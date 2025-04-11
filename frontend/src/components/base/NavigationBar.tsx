@@ -4,9 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const NavigationBar: React.FC = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  // State for dark mode toggle, defaulting to dark mode if no preference is set
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "dark";
+    return storedTheme ? storedTheme === "dark" : true; // Default to dark mode if no preference is set
   });
 
   // Toggle the mobile menu
@@ -44,9 +46,9 @@ const NavigationBar: React.FC = () => {
           <a href="/projects" className="text-xl hover:text-gray-400">
             Projects
           </a>
-          <a href="/experience" className="text-xl hover:text-gray-400">
+          {/* <a href="/experience" className="text-xl hover:text-gray-400">
             Experience
-          </a>
+          </a> */}
         </div>
 
         {/* Right Side (GitHub, LinkedIn, Theme Toggle) */}
@@ -69,12 +71,16 @@ const NavigationBar: React.FC = () => {
           </a>
 
           {/* Theme Toggle Button */}
-          {/* <button
+          <button
             onClick={toggleTheme}
-            className="text-white hover:text-gray-400 p-2 rounded-full bg-gray-700"
+            className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
           >
-            {isDarkMode ? "Light Mode" : "Dark Mode"}
-          </button> */}
+            <img
+              src={isDarkMode ? "/sun.svg" : "/moon.svg"}
+              alt="Toggle theme"
+              className="w-5 h-5"
+            />
+          </button>
         </div>
 
         {/* Mobile Hamburger Menu */}

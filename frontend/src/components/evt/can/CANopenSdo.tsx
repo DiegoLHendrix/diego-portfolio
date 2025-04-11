@@ -7,18 +7,18 @@ interface CANopenSdoProps {
 const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
   return (
     <div className="max-w-7xl mx-auto p-8 space-y-8">
-      <h1 className="text-4xl font-extrabold text-center text-gray-800">
+      <h1 className="text-4xl font-extrabold text-center">
         CANopen Service Data Objects (SDO)
       </h1>
-      <p className="text-xl text-center text-gray-600">1/20/2024 - Present</p>
+      <p className="text-xl text-center">1/20/2024 - Present</p>
 
       {/* Skills Section */}
       <div className="text-center my-4">
         <strong className="font-semibold">Skills:</strong>{" "}
-        <span className="text-gray-700">{skills.join(", ")}</span>
+        <span>{skills.join(", ")}</span>
       </div>
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         This project demonstrates communication between two STM32
         microcontrollers using the CANopen SDO protocol. It is designed to
         showcase how devices can exchange data reliably using the CANopen
@@ -26,7 +26,7 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
         server nodes.
       </p>
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         The project focuses on the implementation of the CANopen protocol for
         inter-device communication. Specifically, it involves the use of Service
         Data Objects (SDOs) to manage data exchange between a client and a
@@ -38,7 +38,7 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
 
       <hr className="my-8 border-t-2 border-gray-200" />
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         The Main Loop in the system is at the heart of communication, ensuring
         that the client node and server are continuously exchanging data. The
         client receives data from the server every second and responds back
@@ -46,7 +46,7 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
         ability to facilitate real-time communication in embedded systems.
       </p>
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         The receiveData function is dedicated to retrieving data from the
         server. It works by instantiating an array to hold the received data,
         using the SDOReceive method to request and validate the data.
@@ -55,7 +55,7 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
         monitored effectively.
       </p>
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         The transferData function is responsible for sending data from the
         client to the server. This function first modifies the data array,
         incrementing the first element and doubling the value of the second
@@ -67,10 +67,8 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
 
       {/* Corrected Ordered List Section */}
       <div className="text-center my-4">
-        <p className="text-xl text-gray-700">
-          Below are key functions used in the system:
-        </p>
-        <ol className="list-decimal pl-8 text-xl text-gray-700 my-4 space-y-2">
+        <p className="text-xl">Below are key functions used in the system:</p>
+        <ol className="list-decimal pl-8 text-xl my-4 space-y-2">
           <li>
             <strong className="font-semibold">SDOReceive:</strong> This function
             initiates an SDO upload (read) request to retrieve data from the
@@ -98,7 +96,7 @@ const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
         </ol>
       </div>
 
-      <p className="text-xl text-center text-gray-700 my-4">
+      <p className="text-xl text-center my-4">
         This project highlights the robust communication capabilities of the
         CANopen protocol, specifically through its Service Data Objects (SDOs).
         By implementing functions such as receiveData, transferData, SDOReceive,

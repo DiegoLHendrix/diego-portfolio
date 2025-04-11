@@ -87,9 +87,9 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
           products are then sequentially accumulated using a pipelined adder
           structure. The sum of these values forms the final output sample,
           which is made available to the system through the{" "}
-          <code className="bg-gray-200 p-1 rounded">readdata</code> port. This
-          modular design enables efficient parallel processing of filter stages
-          and leverages the spatial architecture of the FPGA for real-time
+          <code className="p-1 rounded">readdata</code> port. This modular
+          design enables efficient parallel processing of filter stages and
+          leverages the spatial architecture of the FPGA for real-time
           performance.
         </p>
 
@@ -104,45 +104,43 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
         <p className="text-l max-w-3xl mx-auto my-4">
           To implement real-time audio playback and filtering, the system uses
           embedded C software running on a Nios II processor. The main software
-          is located in{" "}
-          <code className="bg-gray-200 p-1 rounded">audio_demo.c</code>, which
+          is located in <code className="p-1 rounded">audio_demo.c</code>, which
           integrates audio file parsing, interrupt handling, and filter control.
           Audio samples from a 48kHz, 16-bit stereo WAV file are first read into
-          SDRAM using the{" "}
-          <code className="bg-gray-200 p-1 rounded">read_file()</code> function.
-          This function parses the WAV file header and loads audio data into
-          memory, enabling rapid access during real-time playback.
+          SDRAM using the <code className="p-1 rounded">read_file()</code>{" "}
+          function. This function parses the WAV file header and loads audio
+          data into memory, enabling rapid access during real-time playback.
         </p>
 
         <p className="text-l max-w-3xl mx-auto my-4">
           Real-time playback is managed using a hardware timer configured to
           generate interrupts every 20.83 microseconds—matching the 48kHz
           sampling rate. Within the{" "}
-          <code className="bg-gray-200 p-1 rounded">timer_isr()</code> interrupt
-          service routine, audio samples are read sequentially from SDRAM. If
-          filtering is enabled, each sample is passed to the VHDL audio filter
-          IP core before being output to the audio interface. The filtered or
-          raw samples are written to the audio FIFO for stereo playback.
+          <code className="p-1 rounded">timer_isr()</code> interrupt service
+          routine, audio samples are read sequentially from SDRAM. If filtering
+          is enabled, each sample is passed to the VHDL audio filter IP core
+          before being output to the audio interface. The filtered or raw
+          samples are written to the audio FIFO for stereo playback.
         </p>
 
         <p className="text-l max-w-3xl mx-auto my-4">
           Hardware switches are used to control filtering behavior via the{" "}
-          <code className="bg-gray-200 p-1 rounded">sw_isr()</code>. When switch
-          0 is active, the system applies a low-pass filter by setting the
-          filter control signal to mode 0. If switch 1 is toggled, the filter
-          switches to high-pass mode. When both switches are active, filtering
-          is bypassed, and the raw audio is played. LEDs on the FPGA board
-          indicate the current filter mode, providing visual feedback.
+          <code className="p-1 rounded">sw_isr()</code>. When switch 0 is
+          active, the system applies a low-pass filter by setting the filter
+          control signal to mode 0. If switch 1 is toggled, the filter switches
+          to high-pass mode. When both switches are active, filtering is
+          bypassed, and the raw audio is played. LEDs on the FPGA board indicate
+          the current filter mode, providing visual feedback.
         </p>
 
         <p className="text-l max-w-3xl mx-auto my-4">
-          In the <code className="bg-gray-200 p-1 rounded">main()</code>{" "}
-          function, interrupts are registered for both the timer and switch
-          inputs. If <code className="bg-gray-200 p-1 rounded">FIRST_TIME</code>{" "}
-          is enabled, the audio file is loaded into SDRAM at startup. The system
-          then enters an infinite loop, relying entirely on interrupt-driven
-          processing to manage playback and filtering, which minimizes CPU
-          overhead and ensures smooth, glitch-free audio output.
+          In the <code className="p-1 rounded">main()</code> function,
+          interrupts are registered for both the timer and switch inputs. If{" "}
+          <code className="p-1 rounded">FIRST_TIME</code> is enabled, the audio
+          file is loaded into SDRAM at startup. The system then enters an
+          infinite loop, relying entirely on interrupt-driven processing to
+          manage playback and filtering, which minimizes CPU overhead and
+          ensures smooth, glitch-free audio output.
         </p>
 
         <p className="text-l max-w-3xl mx-auto my-4">
