@@ -8,11 +8,11 @@ import { DynamicTitle } from "./components/base/DynamicTitle.ts";
 // Components
 import NavigationBar from "./components/base/NavigationBar.tsx";
 import Footer from "./components/base/Footer.tsx";
-import Loader from "./components/base/Loader.tsx";
+import LoadingCircleSpinner from "./components/base/LoadingCircleSpinner.tsx";
 
 // Lazy Loaded Components
 const Home = lazy(() => import("./components/base/home/Home.tsx"));
-const Resume = lazy(() => import("./components/base/Resume.tsx"));
+const Resume = lazy(() => import("./components/base/resume/Resume.tsx"));
 const NotFound = lazy(() => import("./components/base/NotFound.tsx"));
 const Projects = lazy(() => import("./components/projects/Projects.tsx"));
 const Experience = lazy(() => import("./components/projects/Experience.tsx"));
@@ -27,7 +27,7 @@ function App() {
       <div className="page-container">
         {/* Flexbox Container */}
         <main className="content-wrap">
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<LoadingCircleSpinner />}>
             {/* Ensures main content expands */}
             <DynamicTitle /> {/* This will update the title dynamically */}
             <Routes>

@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; // Needed for URL-based routing
 
 const Experience: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("evt");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // --- Pull tab from query string, fallback to "evt"
+  const queryTab = new URLSearchParams(location.search).get("tab") || "evt";
+  const [activeTab, setActiveTab] = useState(queryTab);
+
+  // --- Sync state with URL when tab is changed
+  useEffect(() => {
+    navigate(`?tab=${activeTab}`, { replace: true });
+  }, [activeTab]);
 
   const tabData = {
     evt: {
@@ -9,9 +20,9 @@ const Experience: React.FC = () => {
       location: "Rochester, New York",
       position: "Firmware Engineer",
       date: "Sept 2023 - Present",
-      description: `As a Firmware Engineer at EVT, I collaborate with a dedicated team of software engineers to build and enhance the software systems that power our competitive race bike. My main contributions include integrating the ThreadX real-time operating system (RTOS) into a custom library by developing a C++ abstraction layer. I’ve also implemented a custom class to ensure safe UART communication with the RTOS, enabling reliable data exchange. Additionally, I contributed to the development of the core logic for a Low Voltage SubSystem and performed hardware bring-up for the Vehicle Control Unit (VCU) PCB, ensuring seamless functionality and performance of key vehicle components.`,
+      description: `As a Firmware Engineer at EVT...`,
     },
-    rauland: {
+    ametek: {
       heading: "Rauland Ametek",
       location: "Mount Prospect, Illinois",
       position: "Embedded Engineer Intern",
@@ -22,7 +33,7 @@ const Experience: React.FC = () => {
 
   const tabButtons = [
     { key: "evt", label: "EVT" },
-    { key: "rauland", label: "Rauland" },
+    { key: "ametek", label: "Ametek" },
   ];
 
   const currentTab = tabData[activeTab];
@@ -53,7 +64,7 @@ const Experience: React.FC = () => {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border border-gray-300 mb-6">
-            <thead className="border-gray-300">
+            <thead>
               <tr>
                 <th className="px-4 py-2 border">Location</th>
                 <th className="px-4 py-2 border">Position Title</th>

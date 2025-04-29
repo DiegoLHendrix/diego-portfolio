@@ -1,29 +1,22 @@
 /* Tailwind Import */
 @import "tailwindcss";
+@import "flowbite/src/themes/default";
 
 /* ===================== */
 /* Root Theme Variables  */
 /* ===================== */
+
+@theme {
+  --color-primary-blue: oklch(2 117 216); /* #0275d8 */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Light Mode */
 .light {
   --bg-color: 255, 255, 255;
   --text-color: 0, 0, 0;
   --text-opacity: 1;
-  --gray: rgb(33, 37, 41);
-
-  /* Cards */
-  --card-bg-color: 255, 255, 255;
-  --card-content-color: 255, 255, 255;
-  --card-text-color: 0, 0, 0;
-
-  /* Contact Page */
-  --contact-bg-color: 255, 255, 255;
-  --contact-textarea-color: 255, 255, 255;
-  --contact-text-color: 0, 0, 0;
-
-  /* Projects */
-  --projects-tab-color: 255, 255, 255;
 
   background: rgba(var(--bg-color));
 }
@@ -33,20 +26,6 @@
   --bg-color: 0, 0, 0;
   --text-color: 255, 255, 255;
   --text-opacity: 1;
-  --gray: rgb(33, 37, 41);
-
-  /* Cards */
-  --card-bg-color: 255, 255, 255;
-  --card-content-color: 255, 255, 255;
-  --card-text-color: 0, 0, 0;
-
-  /* Contact Page */
-  --contact-bg-color: 255, 255, 255;
-  --contact-textarea-color: 255, 255, 255;
-  --contact-text-color: 0, 0, 0;
-
-  /* Projects */
-  --projects-tab-color: 255, 255, 255;
 
   background: rgba(var(--bg-color));
 }
@@ -57,11 +36,11 @@
 
 html,
 body {
-  font-family: var(--font-serif);
+  font-family: "Times New Roman", serif;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: 0, 0, 0;
+  background-color: rgba(var(--bg-color));
   color: rgba(var(--text-color), var(--text-opacity));
   display: flex;
   flex-direction: column;

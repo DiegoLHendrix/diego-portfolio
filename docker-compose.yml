@@ -36,13 +36,10 @@ services:
       - traefik_network
     labels:
       - "traefik.enable=true"
-
-      # Subdomain pointing to Django app
-      - "traefik.http.routers.backend.rule=Host(`db.diegolopezportfolio.net`)"
+      - "traefik.http.routers.backend.rule=Host(`db.diegolopezportfolio.net`)" # Subdomain pointing to Django app
       - "traefik.http.routers.backend.entrypoints=websecure"
       - "traefik.http.routers.backend.tls=true"
       - "traefik.http.routers.backend.tls.certresolver=myresolver"
-
       - "traefik.http.services.backend.loadbalancer.server.port=8000"
 
 networks:

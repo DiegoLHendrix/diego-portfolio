@@ -43,12 +43,12 @@ const NavigationBar: React.FC = () => {
           <a href="/resume" className="text-xl hover:text-gray-400">
             Resume
           </a>
+          <a href="/experience" className="text-xl hover:text-gray-400">
+            Experience
+          </a>
           <a href="/projects" className="text-xl hover:text-gray-400">
             Projects
           </a>
-          {/* <a href="/experience" className="text-xl hover:text-gray-400">
-            Experience
-          </a> */}
         </div>
 
         {/* Right Side (GitHub, LinkedIn, Theme Toggle) */}
@@ -140,6 +140,18 @@ const NavigationBar: React.FC = () => {
             >
               <FaLinkedin size={35} />
             </a>
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
+            >
+              <img
+                src={isDarkMode ? "/sun.svg" : "/moon.svg"}
+                alt="Toggle theme"
+                className="w-5 h-5"
+              />
+            </button>
           </div>
         </div>
       </div>

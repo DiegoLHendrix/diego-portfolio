@@ -61,6 +61,7 @@ const ProjectsGrid: React.FC = () => {
               Programmed an FPGA to process audio input and output it through
               high-pass and low-pass filters.
             </p>
+            <br />
             <button
               className="btn bg-gray-700 text-white hover:bg-gray-800 px-4 py-2 rounded"
               onClick={() => handleProjectClick("audio")}
