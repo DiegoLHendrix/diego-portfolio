@@ -29,8 +29,6 @@ const skillIcons: SkillIcons = {
   LTSpice: "/icons/circuit-board.svg",
 };
 
-interface ResumeProps {}
-
 const Resume: React.FC = () => {
   return (
     <main

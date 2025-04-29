@@ -1,6 +1,8 @@
 import React from "react";
 import SecureImage from "../../api/SecureImage";
 
+import Headshot from "../../../assets/base/Headshot.jpg";
+
 const PortfolioFeaturette: React.FC = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-8">
@@ -34,10 +36,10 @@ const PortfolioFeaturette: React.FC = () => {
           </p>
         </div>
         <div className="md:w-5/12 mb-6 md:mb-0">
-          <SecureImage
-            filename="base/Grey-Square.png"
-            alt="Placeholder image"
-            className="w-full h-auto max-w-[500px] max-h-[500px] rounded-lg shadow-lg"
+          <img
+            className="rounded-t-lg w-full object-cover"
+            src={Headshot}
+            alt="Diego Lopez Headshot"
           />
         </div>
       </div>
