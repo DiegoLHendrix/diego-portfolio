@@ -118,6 +118,9 @@ const NavigationBar: React.FC = () => {
           <a href="/resume" className="hover:text-gray-400">
             Resume
           </a>
+          <a href="/experience" className="hover:text-gray-400">
+            Experience
+          </a>
           <a href="/projects" className="hover:text-gray-400">
             Projects
           </a>
