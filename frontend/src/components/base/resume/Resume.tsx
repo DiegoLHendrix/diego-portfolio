@@ -148,7 +148,7 @@ const Resume: React.FC = () => {
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 Rochester Institute of Technology
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
                 August 2021
               </time>
               <p className="mb-4">
@@ -170,7 +170,7 @@ const Resume: React.FC = () => {
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 RIT Electric Vehicle Team
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
                 September 2023
               </time>
               <p className="text-base font-normal">
@@ -213,7 +213,7 @@ const Resume: React.FC = () => {
               <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                 Rauland Ametek
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
                 June 2025
               </time>
               <p className="text-base font-normal">

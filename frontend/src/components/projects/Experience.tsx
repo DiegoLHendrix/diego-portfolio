@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
       date: "Sept 2023 - Present",
       description: `The Electric Vehicle Team (EVT) is a student run organization at RIT that builds electric motorcycles. I have been part of the firmware team at EVT since my third year at RIT and I have had the opportunity to work on many awesome projects and meet amazing people. I am currently working on writing the core logic of the Low Voltage SubSystem which will take 400 V at 1 A and distribute that into multiple signals of 12 V at 45 A. Worked with a team to create a C++ abstraction layer to integrate an RTOS into a custom library built on top of STM32 HAL. Another thing I did is collaborated with circuit board designers to ensure functionality on Vehicle Control Unit (VCU) PCB.`,
     },
-    ametek: {
+    rauland: {
       heading: "Rauland Ametek",
       location: "Mount Prospect, Illinois",
       position: "Embedded Engineer Intern",
@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
 
   const tabButtons = [
     { key: "evt", label: "EVT" },
-    { key: "ametek", label: "Ametek" },
+    { key: "rauland", label: "Rauland" },
   ];
 
   const currentTab = tabData[activeTab];

@@ -8,7 +8,7 @@ import { DynamicTitle } from "./components/base/DynamicTitle.ts";
 // Components
 import NavigationBar from "./components/base/NavigationBar.tsx";
 import Footer from "./components/base/Footer.tsx";
-import LoadingCircleSpinner from "./components/base/LoadingCircleSpinner.tsx";
+// import LoadingCircleSpinner from "./components/base/LoadingCircleSpinner.tsx";
 
 // Lazy Loaded Components
 const Home = lazy(() => import("./components/base/home/Home.tsx"));
@@ -27,18 +27,18 @@ function App() {
       <div className="page-container">
         {/* Flexbox Container */}
         <main className="content-wrap">
-          <Suspense fallback={<LoadingCircleSpinner />}>
-            {/* Ensures main content expands */}
-            <DynamicTitle /> {/* This will update the title dynamically */}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/experience" element={<Experience />} />
-              {/* Catch-all route for undefined pages */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+          {/* <Suspense fallback={<LoadingCircleSpinner />}> */}
+          {/* Ensures main content expands */}
+          <DynamicTitle /> {/* This will update the title dynamically */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/experience" element={<Experience />} />
+            {/* Catch-all route for undefined pages */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          {/* </Suspense> */}
         </main>
       </div>
 

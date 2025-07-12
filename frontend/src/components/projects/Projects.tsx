@@ -145,7 +145,7 @@ function Projects() {
               className={`inline-block p-4 rounded-lg transition-colors ${
                 activeTab === project.key
                   ? "text-white bg-gray-600 border"
-                  : "text-gray-600 hover:text-white hover:bg-gray-500"
+                  : "text-gray-300 hover:text-white hover:bg-gray-500"
               }`}
             >
               {project.title}
