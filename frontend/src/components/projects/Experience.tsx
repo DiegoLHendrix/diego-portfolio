@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Needed for URL-based routing
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom'; // Needed for URL-based routing
 
 const Experience: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   // --- Pull tab from query string, fallback to "evt"
-  const queryTab = new URLSearchParams(location.search).get("tab") || "evt";
+  const queryTab = new URLSearchParams(location.search).get('tab') || 'evt';
   const [activeTab, setActiveTab] = useState(queryTab);
 
   // --- Sync state with URL when tab is changed
@@ -16,24 +16,25 @@ const Experience: React.FC = () => {
 
   const tabData = {
     evt: {
-      heading: "Electric Vehicle Team",
-      location: "Rochester, New York",
-      position: "Firmware Engineer",
-      date: "Sept 2023 - Present",
+      heading: 'Electric Vehicle Team',
+      location: 'Rochester, New York',
+      position: 'Firmware Engineer',
+      date: 'Sept 2023 - Present',
       description: `The Electric Vehicle Team (EVT) is a student run organization at RIT that builds electric motorcycles. I have been part of the firmware team at EVT since my third year at RIT and I have had the opportunity to work on many awesome projects and meet amazing people. I am currently working on writing the core logic of the Low Voltage SubSystem which will take 400 V at 1 A and distribute that into multiple signals of 12 V at 45 A. Worked with a team to create a C++ abstraction layer to integrate an RTOS into a custom library built on top of STM32 HAL. Another thing I did is collaborated with circuit board designers to ensure functionality on Vehicle Control Unit (VCU) PCB.`,
     },
     rauland: {
-      heading: "Rauland Ametek",
-      location: "Mount Prospect, Illinois",
-      position: "Embedded Engineer Intern",
-      date: "June 2025 - December 2025",
-      description: "",
+      heading: 'Rauland Ametek',
+      location: 'Mount Prospect, Illinois',
+      position: 'Embedded Engineer Intern',
+      date: 'June 2025 - December 2025',
+      description:
+        'Rauland is a division of Ametek that designs communication, workflow optimization, and life-safety systems for healthcare and education around the world. As an Embedded Engineer Intern at Rauland Ametek, I developed a C# application to analyze hexadecimal data from a proprietary RS-485 communication bus called the DNet. This tool enhanced the diagnostic capabilities for proprietary systems by implementing data filtering algorithms that suppressed empty poll replies, displayed specific poll replies, and excluded messages based on device IDs or types. By leveraging this custom data monitoring tool, I collaborated with senior engineers to troubleshoot and debug firmware issues, contributing to faster problem resolution and improved system stability. I designed and implemented a custom firmware using embedded C programming for a proprietary Ethernet Corridor Light. This project involved working with C programming language to process data from another RS-485 bus called the VNet. I created a VNet Dissector with data filters that could exclude messages based on specific VNet IDs and message types, streamlining the debugging process and improving system efficiency.',
     },
   };
 
   const tabButtons = [
-    { key: "evt", label: "EVT" },
-    { key: "rauland", label: "Rauland" },
+    { key: 'evt', label: 'EVT' },
+    { key: 'rauland', label: 'Rauland' },
   ];
 
   const currentTab = tabData[activeTab];
@@ -49,8 +50,8 @@ const Experience: React.FC = () => {
             onClick={() => setActiveTab(tab.key)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
               activeTab === tab.key
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
             aria-selected={activeTab === tab.key}
           >
