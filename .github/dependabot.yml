@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/frontend/"
+    schedule: # Schedule for how often dependabot checks for package updates
+      interval: "weekly"
