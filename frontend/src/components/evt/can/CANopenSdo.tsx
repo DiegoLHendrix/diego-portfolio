@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface CANopenSdoProps {
   skills: string[];
@@ -6,16 +6,16 @@ interface CANopenSdoProps {
 
 const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
   return (
-    <div className="max-w-7xl mx-auto p-8 space-y-8">
+    <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-4xl font-extrabold text-center">
         CANopen Service Data Objects (SDO)
       </h1>
-      <p className="text-xl text-center">1/20/2024 - Present</p>
+      <p className="text-xl text-center my-2">1/20/2024</p>
 
       {/* Skills Section */}
       <div className="text-center my-4">
-        <strong className="font-semibold">Skills:</strong>{" "}
-        <span>{skills.join(", ")}</span>
+        <strong className="font-semibold">Skills:</strong>{' '}
+        <span>{skills.join(', ')}</span>
       </div>
 
       <p className="text-xl text-center my-4">

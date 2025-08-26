@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   FaShareAlt,
   FaPrint,
   FaDownload,
   FaCopy,
   FaPlus,
-} from "react-icons/fa"; // Using more semantic icons
+} from 'react-icons/fa'; // Using more semantic icons
 
 const SpeedDial: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ const SpeedDial: React.FC = () => {
       <div
         id="speed-dial-menu-text-outside-button"
         className={`flex flex-col items-center mb-4 space-y-2 transition-all duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
         <div className="relative">
@@ -56,7 +56,7 @@ const SpeedDial: React.FC = () => {
       >
         <FaPlus
           className={`w-5 h-5 transition-transform duration-300 ${
-            isOpen ? "rotate-45" : "rotate-0"
+            isOpen ? 'rotate-45' : 'rotate-0'
           }`}
           aria-hidden="true"
         />

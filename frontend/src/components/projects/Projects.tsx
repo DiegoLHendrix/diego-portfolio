@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import CANopenSdo from "../evt/can/CANopenSdo.jsx";
-import LVSS from "../evt/lvss/LVSS.jsx";
-import AudioProc from "../../components/esd/audioProc/audioProc.jsx";
-import Tracker from "../esd/tennisTracker.jsx";
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import CANopenSdo from '../evt/can/CANopenSdo.jsx';
+import LVSS from '../evt/lvss/LVSS.jsx';
+import AudioProc from '../../components/esd/audioProc/audioProc.jsx';
 
 function Projects() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const projectQuery = queryParams.get("project");
+  const projectQuery = queryParams.get('project');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [activeTab, setActiveTab] = useState<string>("audio"); // Default to first project key
+  const [activeTab, setActiveTab] = useState<string>('audio'); // Default to first project key
 
   useEffect(() => {
     if (projectQuery) {
@@ -22,50 +21,42 @@ function Projects() {
   // Project data with skills
   const projects = [
     {
-      key: "audio",
-      title: "Audio Processor",
-      component: <AudioProc skills={["Embedded C", "VHDL"]} />,
-      skills: ["Embedded C", "VHDL"].sort(),
+      key: 'audio',
+      title: 'Audio Processor',
+      component: <AudioProc skills={['Embedded C', 'VHDL']} />,
+      skills: ['Embedded C', 'VHDL'].sort(),
     },
     {
-      key: "canopen",
-      title: "CANopen SDO",
+      key: 'canopen',
+      title: 'CANopen SDO',
       component: (
-        <CANopenSdo skills={["CAN Protocol", "Embedded C++", "EVT"]} />
+        <CANopenSdo skills={['CAN Protocol', 'Embedded C++', 'EVT']} />
       ),
-      skills: ["CAN Protocol", "Embedded C++", "EVT"].sort(),
+      skills: ['CAN Protocol', 'Embedded C++', 'EVT'].sort(),
     },
     {
-      key: "lvss",
-      title: "LVSS",
+      key: 'lvss',
+      title: 'LVSS',
       component: (
         <LVSS
           skills={[
-            "PCB Schematic Analysis",
-            "Circuit Analysis",
-            "Hardware Testing",
-            "Embedded C++",
-            "CAN Protocol",
-            "EVT",
+            'PCB Schematic Analysis',
+            'Circuit Analysis',
+            'Hardware Testing',
+            'Embedded C++',
+            'CAN Protocol',
+            'EVT',
           ]}
         />
       ),
       skills: [
-        "PCB Schematic Analysis",
-        "Circuit Analysis",
-        "Hardware Testing",
-        "Embedded C++",
-        "CAN Protocol",
-        "EVT",
+        'PCB Schematic Analysis',
+        'Circuit Analysis',
+        'Hardware Testing',
+        'Embedded C++',
+        'CAN Protocol',
+        'EVT',
       ].sort(),
-    },
-    {
-      key: "tracker",
-      title: "Tennis Tracker",
-      component: (
-        <Tracker skills={["MATLAB", "Embedded C++", "Blender", "VHDL"]} />
-      ),
-      skills: ["MATLAB", "Embedded C++", "Blender", "VHDL"].sort(),
     },
   ];
 
@@ -78,7 +69,7 @@ function Projects() {
       (prev) =>
         prev.includes(skill)
           ? prev.filter((s) => s !== skill) // Remove skill if already selected
-          : [...prev, skill] // Add skill if not selected
+          : [...prev, skill], // Add skill if not selected
     );
   };
 
@@ -87,13 +78,13 @@ function Projects() {
     selectedSkills.length === 0
       ? projects
       : projects.filter((p) =>
-          selectedSkills.every((skill) => p.skills.includes(skill))
+          selectedSkills.every((skill) => p.skills.includes(skill)),
         );
 
   // Automatically switch the active tab if the currently selected project is filtered out
   useEffect(() => {
     if (!filteredProjects.some((p) => p.key === activeTab)) {
-      setActiveTab(filteredProjects.length > 0 ? filteredProjects[0].key : "");
+      setActiveTab(filteredProjects.length > 0 ? filteredProjects[0].key : '');
     }
   }, [selectedSkills, filteredProjects]);
 
@@ -104,19 +95,19 @@ function Projects() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-8">
-      <h1 className="text-center text-3xl font-semibold my-4">Projects</h1>
+      <h1 className="text-center text-4xl font-bold mb-8">Projects</h1>
 
       {/* Skill Filter Buttons */}
       <div className="text-center mb-6">
-        <strong className="mr-2">Filter by Skills:</strong>
+        <strong className="text-xl">Filter by Skills:</strong>
         <div className="flex flex-wrap justify-center gap-2">
           {allSkills.map((skill) => (
             <button
               key={skill}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 selectedSkills.includes(skill)
-                  ? "bg-blue-500 text-white hover:bg-blue-600"
-                  : "bg-transparent text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white"
+                  ? 'bg-blue-500 text-white hover:bg-blue-600'
+                  : 'bg-transparent text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white'
               }`}
               onClick={() => toggleSkill(skill)}
             >
@@ -144,8 +135,8 @@ function Projects() {
               onClick={() => setActiveTab(project.key)}
               className={`inline-block p-4 rounded-lg transition-colors ${
                 activeTab === project.key
-                  ? "text-white bg-gray-600 border"
-                  : "text-gray-300 hover:text-white hover:bg-gray-500"
+                  ? 'text-white bg-gray-600 border'
+                  : 'text-gray-600 hover:text-white hover:bg-gray-500 dark:text-gray-200'
               }`}
             >
               {project.title}
@@ -163,7 +154,7 @@ function Projects() {
             <div key={project.key} className="text-center mt-6">
               {project.component}
             </div>
-          )
+          ),
       )}
 
       {/* No Results Message */}

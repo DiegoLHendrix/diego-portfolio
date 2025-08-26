@@ -1,19 +1,19 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Define the type for the pathname to ensure correct typing
 type TitleMap = { [key: string]: string };
 
 function getTitle(pathname: string): string {
   const titles: TitleMap = {
-    "/": "Diego Lopez - Portfolio",
-    "/resume": "Diego Lopez - Resume",
-    "/contact": "Diego Lopez - Contact",
-    "/projects": "Diego Lopez - Projects",
-    "/experience": "Diego Lopez - Experience",
+    '/': 'Diego Lopez - Portfolio',
+    '/resume': 'Diego Lopez - Resume',
+    '/contact': 'Diego Lopez - Contact',
+    '/projects': 'Diego Lopez - Projects',
+    '/experience': 'Diego Lopez - Experience',
   };
 
-  return titles[pathname] || "Page Not Found";
+  return titles[pathname] || 'Page Not Found';
 }
 
 export function DynamicTitle(): null {
@@ -30,7 +30,7 @@ export function StaticTitle(): null {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = "My Portfolio";
+    document.title = 'My Portfolio';
   }, [location.pathname]);
 
   return null;

@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsGrid: React.FC = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const ProjectsGrid: React.FC = () => {
             </p>
             <button
               className="btn bg-gray-700 text-white hover:bg-gray-800 px-4 py-2 rounded"
-              onClick={() => handleProjectClick("lvss")}
+              onClick={() => handleProjectClick('lvss')}
             >
               View details &raquo;
             </button>
@@ -44,7 +44,7 @@ const ProjectsGrid: React.FC = () => {
             </p>
             <button
               className="btn bg-gray-700 text-white hover:bg-gray-800 px-4 py-2 rounded"
-              onClick={() => handleProjectClick("canopen")}
+              onClick={() => handleProjectClick('canopen')}
             >
               View details &raquo;
             </button>
@@ -64,7 +64,7 @@ const ProjectsGrid: React.FC = () => {
             <br />
             <button
               className="btn bg-gray-700 text-white hover:bg-gray-800 px-4 py-2 rounded"
-              onClick={() => handleProjectClick("audio")}
+              onClick={() => handleProjectClick('audio')}
             >
               View details &raquo;
             </button>

@@ -1,6 +1,6 @@
 /* Tailwind Import */
-@import "tailwindcss";
-@import "flowbite/src/themes/default";
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
 
 /* ===================== */
 /* Root Theme Variables  */
@@ -39,7 +39,7 @@
 
 html,
 body {
-  font-family: "Times New Roman", serif;
+  font-family: 'Times New Roman', serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -47,7 +47,9 @@ body {
   color: rgba(var(--text-color), var(--text-opacity));
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ===================== */

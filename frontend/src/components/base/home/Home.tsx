@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import PortfolioCarousel from "./PortfolioCarousel";
-import ProjectsGrid from "./ProjectsGrid";
-import PortfolioFeaturette from "./PortfolioFeaturette";
+import PortfolioCarousel from './PortfolioCarousel';
+import ProjectsGrid from './ProjectsGrid';
+import PortfolioFeaturette from './PortfolioFeaturette';
 
 const Home: React.FC = () => {
   return (

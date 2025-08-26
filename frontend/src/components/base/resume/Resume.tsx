@@ -1,14 +1,14 @@
-import React from "react";
-import Headshot from "../../../assets/base/Headshot.jpg";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Import the icons
-import { HiOutlineCpuChip } from "react-icons/hi2";
+import React from 'react';
+import Headshot from '../../../assets/base/Headshot.jpg';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Import the icons
+import { HiOutlineCpuChip } from 'react-icons/hi2';
 
 interface Docs {
   [key: string]: string;
 }
 
 const docs: Docs = {
-  Resume: "Diego_Lopez_ComputerEngineer.pdf",
+  Resume: 'Diego_Lopez_ComputerEngineer.pdf',
 };
 
 type ISkills = {
@@ -16,32 +16,32 @@ type ISkills = {
 };
 
 const programmingLanguages: ISkills = {
-  "C++": "/icons/cpp-svgrepo-com.svg",
-  C: "/icons/c-svgrepo-com.svg",
-  VHDL: "/icons/microcontroller.svg",
-  Python: "/icons/python-svgrepo-com.svg",
-  "ARM Assembly": "/icons/embedded-system.svg",
+  'C++': '/icons/cpp-svgrepo-com.svg',
+  C: '/icons/c-svgrepo-com.svg',
+  VHDL: '/icons/microcontroller.svg',
+  Python: '/icons/python-svgrepo-com.svg',
+  'ARM Assembly': '/icons/embedded-system.svg',
 };
 
 const environments: ISkills = {
-  Git: "/icons/git-svgrepo-com.svg",
-  GitHub: "/icons/github-svgrepo-com.svg",
-  MATLAB: "/icons/matlab-svgrepo-com.svg",
-  "Quartus Prime": "/icons/intel-svgrepo-com.svg",
-  Modelsim: "/icons/intel-svgrepo-com.svg",
-  "Ubuntu Linux": "/icons/ubuntu-svgrepo-com.svg",
-  LTSpice: "/icons/circuit-board.svg",
+  Git: '/icons/git-svgrepo-com.svg',
+  GitHub: '/icons/github-svgrepo-com.svg',
+  MATLAB: '/icons/matlab-svgrepo-com.svg',
+  'Quartus Prime': '/icons/intel-svgrepo-com.svg',
+  Modelsim: '/icons/intel-svgrepo-com.svg',
+  'Ubuntu Linux': '/icons/ubuntu-svgrepo-com.svg',
+  LTSpice: '/icons/circuit-board.svg',
 };
 
 const embeddedSystems: ISkills = {
   FPGA: 1,
-  "STM32 Microcontrollers": 2,
+  'STM32 Microcontrollers': 2,
   FreeRTOS: 3,
   UART: 4,
   I2C: 5,
   SPI: 6,
-  "ThreadX RTOS": 7,
-  "Logic Analyzer": 8,
+  'ThreadX RTOS': 7,
+  'Logic Analyzer': 8,
   Oscilloscopes: 9,
 };
 
@@ -145,10 +145,10 @@ const Resume: React.FC = () => {
                   <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="flex items-center mb-1 text-lg font-semibold">
                 Rochester Institute of Technology
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
+              <time className="block mb-2 text-sm font-normal leading-none">
                 August 2021
               </time>
               <p className="mb-4">
@@ -167,10 +167,10 @@ const Resume: React.FC = () => {
                   <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="flex items-center mb-1 text-lg font-semibold">
                 RIT Electric Vehicle Team
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
+              <time className="block mb-2 text-sm font-normal leading-none">
                 September 2023
               </time>
               <p className="text-base font-normal">
@@ -210,10 +210,10 @@ const Resume: React.FC = () => {
                   <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                 </svg>
               </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="flex items-center mb-1 text-lg font-semibold">
                 Rauland Ametek
               </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
+              <time className="block mb-2 text-sm font-normal leading-none">
                 June 2025
               </time>
               <p className="text-base font-normal">
@@ -316,7 +316,7 @@ const Resume: React.FC = () => {
           <div className="mt-6 bg-card-blue rounded-lg p-6 shadow-sm border w-full sm:w-fit">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-dark-blue/10 text-dark-blue rounded-md">
-                <HiOutlineCpuChip className="h-7 w-7" />{" "}
+                <HiOutlineCpuChip className="h-7 w-7" />{' '}
                 {/* Use the FaMicrochip icon */}
               </div>
               <h3 className="text-lg font-semibold">Embedded Systems</h3>
@@ -332,7 +332,7 @@ const Resume: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>{" "}
+        </div>{' '}
         {/* Col 3 */}
       </div>
     </main>

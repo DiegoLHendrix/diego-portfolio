@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import SecureImage from "../../../components/api/SecureImage";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import carouselImage1 from '../../../assets/base/carouselImage1.png';
+import carouselImage2 from '../../../assets/base/carouselImage2.jpg'; // Assuming you have this file
+import carouselImage3 from '../../../assets/base/carouselImage3.png'; // Assuming you have this file
 
 interface CarouselItem {
   image: string;
@@ -13,19 +15,19 @@ const PortfolioCarousel: React.FC = () => {
 
   const carouselItems: CarouselItem[] = [
     {
-      image: "base/carouselImage1.png",
-      title: "Electric Vehicle Team",
-      description: "Designing firmware for an electric motorcycle.",
+      image: carouselImage1,
+      title: 'Electric Vehicle Team',
+      description: 'Designing firmware for an electric motorcycle.',
     },
     {
-      image: "base/carouselImage2.jpg",
-      title: "Embedded Systems Design",
-      description: "Developing real-time, low-level software solutions.",
+      image: carouselImage2,
+      title: 'Embedded Systems Design',
+      description: 'Developing real-time, low-level software solutions.',
     },
     {
-      image: "base/carouselImage3.png",
-      title: "Digital Signal Processing",
-      description: "Enhancing data processing through advanced algorithms.",
+      image: carouselImage3,
+      title: 'Digital Signal Processing',
+      description: 'Enhancing data processing through advanced algorithms.',
     },
   ];
 
@@ -45,14 +47,15 @@ const PortfolioCarousel: React.FC = () => {
           <div
             key={idx}
             className={`absolute inset-0 transition-opacity duration-200 ease-linear ${
-              idx === index ? "opacity-100 z-20" : "opacity-0 z-10"
+              idx === index ? 'opacity-100 z-20' : 'opacity-0 z-10'
             }`}
           >
-            <SecureImage
-              filename={item.image}
+            <img
+              src={item.image}
+              alt={item.title}
               className="absolute w-full h-full object-cover top-0 left-0"
             />
-            <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black via-transparent to-transparent w-full text-white">
+            <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-white via-transparent to-transparent w-full text-white dark:from-black">
               <h3 className="text-3xl font-semibold">{item.title}</h3>
               <p>{item.description}</p>
             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface LVSSProps {
   skills: string[];
@@ -14,7 +14,7 @@ const LVSS: React.FC<LVSSProps> = ({ skills }) => {
 
       {/* Skills Section */}
       <p className="text-center my-4">
-        <strong>Skills:</strong> {skills.join(", ")}
+        <strong>Skills:</strong> {skills.join(', ')}
       </p>
 
       <p className="text-xl text-center my-4">
@@ -87,14 +87,14 @@ const LVSS: React.FC<LVSSProps> = ({ skills }) => {
           <sub>SNSI</sub>) is as follows: for an output current of 3A, the sense
           current is 1.5mA; for 1A, it is 0.5mA; for 300mA, it is 0.150mA; for
           100mA, it is 0.05mA; and for 50mA, it is 0.025mA. Based on this data,
-          the equation governing this relationship is{" "}
+          the equation governing this relationship is{' '}
           <i>
             I<sub>SNS</sub>
-          </i>{" "}
-          (in nA) × 2 ={" "}
+          </i>{' '}
+          (in nA) × 2 ={' '}
           <i>
             I<sub>OUT</sub>
-          </i>{" "}
+          </i>{' '}
           (in mA).
         </p>
       </div>
@@ -105,23 +105,23 @@ const LVSS: React.FC<LVSSProps> = ({ skills }) => {
       <div className="text-center my-8">
         <h2 className="text-2xl font-semibold">Temperature Sensing</h2>
         <p className="text-xl max-w-3xl mx-auto">
-          According to the datasheet, the equation for{" "}
+          According to the datasheet, the equation for{' '}
           <i>
             I<sub>SNST</sub>
-          </i>{" "}
+          </i>{' '}
           is given by:
           <br />
           <i>
             I<sub>SNST</sub>
-          </i>{" "}
-          = ({" "}
+          </i>{' '}
+          = ({' '}
           <i>
             T<sub>J</sub>
-          </i>{" "}
+          </i>{' '}
           − 25&deg;C ) × 0.011 + 0.85.
           <br />
           <br />
-          Solving for junction temperature{" "}
+          Solving for junction temperature{' '}
           <i>
             T<sub>J</sub>
           </i>
@@ -129,11 +129,11 @@ const LVSS: React.FC<LVSSProps> = ({ skills }) => {
           <br />
           <i>
             T<sub>J</sub>
-          </i>{" "}
-          = ( ({" "}
+          </i>{' '}
+          = ( ({' '}
           <i>
             I<sub>SNST</sub>
-          </i>{" "}
+          </i>{' '}
           × 10<sup>3</sup> ) − 575 ) / 11.
         </p>
       </div>

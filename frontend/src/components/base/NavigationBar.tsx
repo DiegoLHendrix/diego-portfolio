@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const NavigationBar: React.FC = () => {
   // State for mobile menu toggle
@@ -7,8 +7,8 @@ const NavigationBar: React.FC = () => {
 
   // State for dark mode toggle, defaulting to dark mode if no preference is set
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme ? storedTheme === "dark" : true; // Default to dark mode if no preference is set
+    const storedTheme = localStorage.getItem('theme');
+    return storedTheme ? storedTheme === 'dark' : true; // Default to dark mode if no preference is set
   });
 
   // Toggle the mobile menu
@@ -23,8 +23,8 @@ const NavigationBar: React.FC = () => {
 
   // Apply dark or light theme
   React.useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    document.documentElement.classList.toggle('dark', isDarkMode);
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
   return (
@@ -41,7 +41,7 @@ const NavigationBar: React.FC = () => {
             Home
           </a>
           <a href="/resume" className="text-xl hover:text-gray-400">
-            Resume
+            About
           </a>
           <a href="/experience" className="text-xl hover:text-gray-400">
             Experience
@@ -76,7 +76,7 @@ const NavigationBar: React.FC = () => {
             className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
           >
             <img
-              src={isDarkMode ? "/sun.svg" : "/moon.svg"}
+              src={isDarkMode ? '/sun.svg' : '/moon.svg'}
               alt="Toggle theme"
               className="w-5 h-5"
             />
@@ -109,7 +109,7 @@ const NavigationBar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"} mt-4`}
+        className={`lg:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} mt-4`}
       >
         <div className="flex flex-col items-center space-y-4">
           <a href="/" className="hover:text-gray-400">
@@ -150,7 +150,7 @@ const NavigationBar: React.FC = () => {
               className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
             >
               <img
-                src={isDarkMode ? "/sun.svg" : "/moon.svg"}
+                src={isDarkMode ? '/sun.svg' : '/moon.svg'}
                 alt="Toggle theme"
                 className="w-5 h-5"
               />

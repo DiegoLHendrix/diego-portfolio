@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface AUDIOPROCProps {
   skills: string[];
@@ -14,7 +14,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
 
       {/* Skills Section */}
       <p className="text-center my-4">
-        <strong>Skills:</strong> {skills.join(", ")}
+        <strong>Skills:</strong> {skills.join(', ')}
       </p>
 
       <p className="text-xl text-center my-4">
@@ -31,7 +31,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
       </p>
 
       <p className="text-xl text-center my-4">
-        Check out the full project on{" "}
+        Check out the full project on{' '}
         <a
           href="https://github.com/DiegoLHendrix/CPET561/tree/main/Labs/lab9/filters_lab"
           target="_blank"
@@ -86,7 +86,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
           sample and multiplies it by the corresponding coefficient. These
           products are then sequentially accumulated using a pipelined adder
           structure. The sum of these values forms the final output sample,
-          which is made available to the system through the{" "}
+          which is made available to the system through the{' '}
           <code className="p-1 rounded">readdata</code> port. This modular
           design enables efficient parallel processing of filter stages and
           leverages the spatial architecture of the FPGA for real-time
@@ -107,7 +107,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
           is located in <code className="p-1 rounded">audio_demo.c</code>, which
           integrates audio file parsing, interrupt handling, and filter control.
           Audio samples from a 48kHz, 16-bit stereo WAV file are first read into
-          SDRAM using the <code className="p-1 rounded">read_file()</code>{" "}
+          SDRAM using the <code className="p-1 rounded">read_file()</code>{' '}
           function. This function parses the WAV file header and loads audio
           data into memory, enabling rapid access during real-time playback.
         </p>
@@ -115,7 +115,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
         <p className="text-l max-w-3xl mx-auto my-4">
           Real-time playback is managed using a hardware timer configured to
           generate interrupts every 20.83 microseconds—matching the 48kHz
-          sampling rate. Within the{" "}
+          sampling rate. Within the{' '}
           <code className="p-1 rounded">timer_isr()</code> interrupt service
           routine, audio samples are read sequentially from SDRAM. If filtering
           is enabled, each sample is passed to the VHDL audio filter IP core
@@ -124,7 +124,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
         </p>
 
         <p className="text-l max-w-3xl mx-auto my-4">
-          Hardware switches are used to control filtering behavior via the{" "}
+          Hardware switches are used to control filtering behavior via the{' '}
           <code className="p-1 rounded">sw_isr()</code>. When switch 0 is
           active, the system applies a low-pass filter by setting the filter
           control signal to mode 0. If switch 1 is toggled, the filter switches
@@ -135,7 +135,7 @@ const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
 
         <p className="text-l max-w-3xl mx-auto my-4">
           In the <code className="p-1 rounded">main()</code> function,
-          interrupts are registered for both the timer and switch inputs. If{" "}
+          interrupts are registered for both the timer and switch inputs. If{' '}
           <code className="p-1 rounded">FIRST_TIME</code> is enabled, the audio
           file is loaded into SDRAM at startup. The system then enters an
           infinite loop, relying entirely on interrupt-driven processing to

@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "motion/react";
+import React from 'react';
+import { motion } from 'motion/react';
 
 /**
  * ==============   Styles   ================
@@ -38,7 +38,7 @@ const LoadingCircleSpinner: React.FC = () => {
         transition={{
           duration: 1.5,
           repeat: Infinity,
-          ease: "linear",
+          ease: 'linear',
         }}
       />
       <StyleSheet />
