@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Import all your image assets directly
-import Headshot from '../../../assets/base/Headshot.jpg';
-import EVTLogo from '../../../assets/evt/EVT-Logo.jpg';
-import ThinkServer from '../../../assets/base/thinkserver.png';
-import BlackSquare from '../../../assets/base/BlackSquare.jpg';
+import Headshot from '@assets/base/Headshot.jpg';
+import EVTLogo from '@assets/evt/EVT-Logo.jpg';
+import ThinkServer from '@assets/base/thinkserver.png';
+import BlackSquare from '@assets/base/BlackSquare.jpg';
 
 interface FeaturetteItem {
   // Now 'image' and 'overlayImage' will directly hold the imported image paths (strings)

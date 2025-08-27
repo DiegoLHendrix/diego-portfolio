@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import carouselImage1 from '../../../assets/base/carouselImage1.png';
-import carouselImage2 from '../../../assets/base/carouselImage2.jpg'; // Assuming you have this file
-import carouselImage3 from '../../../assets/base/carouselImage3.png'; // Assuming you have this file
+import carouselImage1 from '@assets/base/carouselImage1.png';
+import carouselImage2 from '@assets/base/carouselImage2.jpg'; // Assuming you have this file
+import carouselImage3 from '@assets/base/carouselImage3.png'; // Assuming you have this file
 
 interface CarouselItem {
   image: string;

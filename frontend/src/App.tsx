@@ -1,21 +1,18 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
-// Utilities
-import { DynamicTitle } from './components/base/DynamicTitle.ts';
-
 // Components
-import NavigationBar from './components/base/NavigationBar.tsx';
-import Footer from './components/base/Footer.tsx';
-// import LoadingCircleSpinner from "./components/base/LoadingCircleSpinner.tsx";
+import { DynamicTitle } from '@components/DynamicTitle.ts';
+const NavigationBar = lazy(() => import('@components/NavigationBar.tsx'));
+const Footer = lazy(() => import('@components/Footer.tsx'));
+const NotFound = lazy(() => import('@components/NotFound.tsx'));
 
-// Lazy Loaded Components
-const Home = lazy(() => import('./components/base/home/Home.tsx'));
-const Resume = lazy(() => import('./components/base/resume/Resume.tsx'));
-const NotFound = lazy(() => import('./components/base/NotFound.tsx'));
-const Projects = lazy(() => import('./components/projects/Projects.tsx'));
-const Experience = lazy(() => import('./components/projects/Experience.tsx'));
+// Lazy Loaded pages
+const Home = lazy(() => import('@pages/home/Home.tsx'));
+const Resume = lazy(() => import('@pages/resume/Resume.tsx'));
+const Projects = lazy(() => import('@pages/projects/Projects.tsx'));
+const Experience = lazy(() => import('@pages/projects/Experience.tsx'));
 
 function App() {
   return (
@@ -27,7 +24,6 @@ function App() {
       <div className="page-container">
         {/* Flexbox Container */}
         <main className="content-wrap">
-          {/* <Suspense fallback={<LoadingCircleSpinner />}> */}
           {/* Ensures main content expands */}
           <DynamicTitle /> {/* This will update the title dynamically */}
           <Routes>

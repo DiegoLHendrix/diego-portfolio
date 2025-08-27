@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import CANopenSdo from '../evt/can/CANopenSdo.jsx';
-import LVSS from '../evt/lvss/LVSS.jsx';
-import AudioProc from '../../components/esd/audioProc/audioProc.jsx';
+import CANopenSdo from './evt/CANopenSdo.js';
+import LVSS from './evt/LVSS.js';
+import AudioProc from './esd/audioProc.js';
 
 function Projects() {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import React from 'react';
-import Headshot from '../../../assets/base/Headshot.jpg';
+import Headshot from '@assets/base/Headshot.jpg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Import the icons
 import { HiOutlineCpuChip } from 'react-icons/hi2';
 
