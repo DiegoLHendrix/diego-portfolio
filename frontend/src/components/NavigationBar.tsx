@@ -5,27 +5,10 @@ const NavigationBar: React.FC = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  // State for dark mode toggle, defaulting to dark mode if no preference is set
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedTheme = localStorage.getItem('theme');
-    return storedTheme ? storedTheme === 'dark' : true; // Default to dark mode if no preference is set
-  });
-
   // Toggle the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  // Toggle the theme between light and dark mode
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
-
-  // Apply dark or light theme
-  React.useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDarkMode);
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  }, [isDarkMode]);
 
   return (
     <nav className="bg-gray-800 text-white fixed top-0 w-full z-50 shadow-md">
@@ -69,18 +52,6 @@ const NavigationBar: React.FC = () => {
           >
             <FaLinkedin size={35} />
           </a>
-
-          {/* Theme Toggle Button */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
-          >
-            <img
-              src={isDarkMode ? '/sun.svg' : '/moon.svg'}
-              alt="Toggle theme"
-              className="w-5 h-5"
-            />
-          </button>
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -143,18 +114,6 @@ const NavigationBar: React.FC = () => {
             >
               <FaLinkedin size={35} />
             </a>
-
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition duration-300"
-            >
-              <img
-                src={isDarkMode ? '/sun.svg' : '/moon.svg'}
-                alt="Toggle theme"
-                className="w-5 h-5"
-              />
-            </button>
           </div>
         </div>
       </div>
