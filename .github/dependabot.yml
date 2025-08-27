@@ -4,3 +4,6 @@ updates:
     directory: "/frontend/"
     schedule: # Schedule for how often dependabot checks for package updates
       interval: "weekly"
+      day: "friday"
+      time: "08:00"
+      timezone: "America/Chicago"
