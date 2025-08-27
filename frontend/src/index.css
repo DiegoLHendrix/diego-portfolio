@@ -2,6 +2,8 @@
 
 /* Tailwind Import */
 @import 'tailwindcss';
+@plugin 'flowbite-react/plugin/tailwindcss';
+@source '../.flowbite-react/class-list.json';
 
 :root {
   font-family: 'Times New Roman', serif;

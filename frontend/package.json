@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.8.1",
     "flowbite": "^3.1.2",
+    "flowbite-react": "^0.12.7",
     "gsap": "^3.5.1",
     "motion": "^12.7.0",
     "prettier": "^3.6.2",
