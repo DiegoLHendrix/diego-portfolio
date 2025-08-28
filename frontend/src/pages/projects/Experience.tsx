@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'; // Needed for URL-based routing
 
+type ExperienceTabKey = 'evt' | 'rauland';
+
 const Experience: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   // --- Pull tab from query string, fallback to "evt"
-  const queryTab = new URLSearchParams(location.search).get('tab') || 'evt';
-  const [activeTab, setActiveTab] = useState(queryTab);
+  const queryTab =
+    (new URLSearchParams(location.search).get('tab') as ExperienceTabKey) ||
+    'evt';
 
-  // --- Sync state with URL when tab is changed
+  // State variable to hold the active tab, with the correct type.
+  const [activeTab, setActiveTab] = useState<ExperienceTabKey>(queryTab);
+
+  // Sync state with URL when tab is changed
   useEffect(() => {
     navigate(`?tab=${activeTab}`, { replace: true });
-  }, [activeTab]);
+  }, [activeTab, navigate]); // Added 'navigate' to dependency array as a best practice
 
   const tabData = {
     evt: {
@@ -47,7 +53,7 @@ const Experience: React.FC = () => {
         {tabButtons.map((tab) => (
           <button
             key={tab.key}
-            onClick={() => setActiveTab(tab.key)}
+            onClick={() => setActiveTab(tab.key as ExperienceTabKey)} // Type cast the button key
             className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
               activeTab === tab.key
                 ? 'bg-blue-600 text-white'

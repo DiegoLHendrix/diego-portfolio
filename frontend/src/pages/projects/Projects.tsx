@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import CANopenSdo from './evt/CANopenSdo.js';
 import LVSS from './evt/LVSS.js';
@@ -69,7 +69,7 @@ function Projects() {
       (prev) =>
         prev.includes(skill)
           ? prev.filter((s) => s !== skill) // Remove skill if already selected
-          : [...prev, skill], // Add skill if not selected
+          : [...prev, skill] // Add skill if not selected
     );
   };
 
@@ -78,7 +78,7 @@ function Projects() {
     selectedSkills.length === 0
       ? projects
       : projects.filter((p) =>
-          selectedSkills.every((skill) => p.skills.includes(skill)),
+          selectedSkills.every((skill) => p.skills.includes(skill))
         );
 
   // Automatically switch the active tab if the currently selected project is filtered out
@@ -154,7 +154,7 @@ function Projects() {
             <div key={project.key} className="text-center mt-6">
               {project.component}
             </div>
-          ),
+          )
       )}
 
       {/* No Results Message */}
