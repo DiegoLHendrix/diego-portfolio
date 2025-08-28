@@ -17,13 +17,13 @@ interface FeaturetteItem {
 const PortfolioFeaturette: React.FC = () => {
   const featuretteItems: FeaturetteItem[] = [
     {
-      image: Headshot, // Directly use the imported image variable
+      image: Headshot,
       title: 'Headshot',
       description: 'A picture of Diego Lopez.',
     },
     {
-      image: BlackSquare, // Directly use the imported image variable
-      overlayImage: EVTLogo, // Directly use the imported image variable for the logo
+      image: BlackSquare,
+      overlayImage: EVTLogo,
       title: 'Electric Vehicle Team',
       description: `I joined the firmware team in September 2023 and have had the
         opportunity to work on amazing projects and collaborate with
@@ -37,7 +37,7 @@ const PortfolioFeaturette: React.FC = () => {
         vehicle's architecture.`,
     },
     {
-      image: ThinkServer, // Directly use the imported image variable
+      image: ThinkServer,
       title: 'Skills & Personal Projects',
       description: `Outside of academic and team projects, I enjoy working on personal
         projects. Managing a self-hosted server has given me hands-on
