@@ -23,7 +23,7 @@ const NavigationBar: React.FC = () => {
           <a href="/" className="text-xl hover:text-gray-400">
             Home
           </a>
-          <a href="/resume" className="text-xl hover:text-gray-400">
+          <a href="/about" className="text-xl hover:text-gray-400">
             About
           </a>
           <a href="/experience" className="text-xl hover:text-gray-400">
@@ -86,8 +86,8 @@ const NavigationBar: React.FC = () => {
           <a href="/" className="hover:text-gray-400">
             Home
           </a>
-          <a href="/resume" className="hover:text-gray-400">
-            Resume
+          <a href="/about" className="hover:text-gray-400">
+            About
           </a>
           <a href="/experience" className="hover:text-gray-400">
             Experience

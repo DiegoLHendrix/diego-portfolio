@@ -3,7 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Django stuff:
+# React files
+.flowbite-react/
+
+# Django files
 *.log
 local_settings.py
 db.sqlite3

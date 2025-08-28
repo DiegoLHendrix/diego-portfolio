@@ -10,7 +10,7 @@ const NotFound = lazy(() => import('@components/NotFound'));
 
 // Lazy Loaded pages
 const Home = lazy(() => import('@pages/Home'));
-const Resume = lazy(() => import('@pages/Resume'));
+const About = lazy(() => import('@pages/About'));
 const Projects = lazy(() => import('@pages/Projects'));
 const Experience = lazy(() => import('@pages/Experience'));
 
@@ -28,7 +28,7 @@ const App = () => {
           <DynamicTitle /> {/* This will update the title dynamically */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/experience" element={<Experience />} />
             {/* Catch-all route for undefined pages */}

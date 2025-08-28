@@ -8,3 +8,18 @@
 - `pages/` : Files the router points to.
 - `utils/` : Small functions that do a single task.
 - `styles/` : CSS files, fonts, and themes.
+
+## Set up
+
+```bash
+cd frontend
+npm install
+npx flowbite-react@latest init
+npm run build
+
+# For development
+npm run dev
+
+# For production
+npm run preview
+```

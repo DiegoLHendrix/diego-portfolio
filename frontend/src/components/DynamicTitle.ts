@@ -7,7 +7,7 @@ type TitleMap = { [key: string]: string };
 function getTitle(pathname: string): string {
   const titles: TitleMap = {
     '/': 'Diego Lopez - Portfolio',
-    '/resume': 'Diego Lopez - Resume',
+    '/about': 'Diego Lopez - About',
     '/contact': 'Diego Lopez - Contact',
     '/projects': 'Diego Lopez - Projects',
     '/experience': 'Diego Lopez - Experience',
