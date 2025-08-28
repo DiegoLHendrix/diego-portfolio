@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface AUDIOPROCProps {
   skills: string[];
 }
 
-const AUDIOPROC: React.FC<AUDIOPROCProps> = ({ skills }) => {
+const AUDIOPROC = ({ skills }: AUDIOPROCProps) => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-4xl font-extrabold text-center">

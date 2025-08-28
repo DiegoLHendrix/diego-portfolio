@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface CANopenSdoProps {
   skills: string[];
 }
 
-const CANopenSdo: React.FC<CANopenSdoProps> = ({ skills }) => {
+const CANopenSdo = ({ skills }: CANopenSdoProps) => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-4xl font-extrabold text-center">

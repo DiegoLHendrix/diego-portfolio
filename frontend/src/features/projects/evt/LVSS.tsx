@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface LVSSProps {
   skills: string[];
 }
 
-const LVSS: React.FC<LVSSProps> = ({ skills }) => {
+const LVSS = ({ skills }: LVSSProps) => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-4xl font-extrabold text-center">

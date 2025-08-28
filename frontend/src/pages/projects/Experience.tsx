@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'; // Needed for URL-based routing
 
 type ExperienceTabKey = 'evt' | 'rauland';
 
-const Experience: React.FC = () => {
+const Experience = () => {
   const location = useLocation();
   const navigate = useNavigate();
 

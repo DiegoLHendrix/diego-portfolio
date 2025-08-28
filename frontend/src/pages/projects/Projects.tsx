@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import CANopenSdo from './evt/CANopenSdo.js';
-import LVSS from './evt/LVSS.js';
-import AudioProc from './esd/audioProc.js';
 
-function Projects() {
+// Import projects
+import CANopenSdo from '@features/projects/evt/CANopenSdo.js';
+import LVSS from '@features/projects/evt/LVSS.js';
+import AudioProc from '@features/projects/esd/audioProc.js';
+
+const Projects = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const projectQuery = queryParams.get('project');
@@ -165,6 +167,6 @@ function Projects() {
       )}
     </div>
   );
-}
+};
 
 export default Projects;
