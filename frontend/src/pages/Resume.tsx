@@ -1,7 +1,7 @@
 import Headshot from '@assets/base/Headshot.jpg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Import the icons
 
-function Resume() {
+const Resume = () => {
   const docs = {
     Resume: 'Diego_Lopez_ComputerEngineer.pdf',
   };
@@ -207,6 +207,6 @@ function Resume() {
       </div>
     </main>
   );
-}
+};
 
 export default Resume;

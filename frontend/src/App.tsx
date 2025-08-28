@@ -3,18 +3,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Components
-import { DynamicTitle } from '@components/DynamicTitle.ts';
-const NavigationBar = lazy(() => import('@components/NavigationBar.tsx'));
-const Footer = lazy(() => import('@components/Footer.tsx'));
-const NotFound = lazy(() => import('@components/NotFound.tsx'));
+import { DynamicTitle } from '@components/DynamicTitle';
+const NavigationBar = lazy(() => import('@components/NavigationBar'));
+const Footer = lazy(() => import('@components/Footer'));
+const NotFound = lazy(() => import('@components/NotFound'));
 
 // Lazy Loaded pages
-const Home = lazy(() => import('@pages/home/Home.tsx'));
-const Resume = lazy(() => import('@pages/resume/Resume.tsx'));
-const Projects = lazy(() => import('@pages/projects/Projects.tsx'));
-const Experience = lazy(() => import('@pages/projects/Experience.tsx'));
+const Home = lazy(() => import('@pages/Home'));
+const Resume = lazy(() => import('@pages/Resume'));
+const Projects = lazy(() => import('@pages/Projects'));
+const Experience = lazy(() => import('@pages/Experience'));
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <header>
@@ -43,6 +43,6 @@ function App() {
       </footer>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

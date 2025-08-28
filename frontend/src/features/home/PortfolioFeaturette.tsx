@@ -62,12 +62,6 @@ const PortfolioFeaturette = () => {
             new challenges and finding innovative and efficient solutions.
             <br />
             <br />
-            Currently, I'm working on a computer vision system that will track a
-            tennis ball in Blender and process the image using MATLAB and C++.
-            My goal is to blend my skills in embedded systems with artificial
-            intelligence to build advanced technology.
-            <br />
-            <br />
             Over time, I've developed a love for continuous learning, always
             seeking ways to expand my knowledge and improve the tools I create
             or work with. Whether it's through hands-on projects, team
