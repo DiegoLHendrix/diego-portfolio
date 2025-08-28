@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import carouselImage1 from '@assets/base/carouselImage1.png';
 import carouselImage2 from '@assets/base/carouselImage2.jpg';
@@ -10,7 +10,7 @@ interface CarouselItem {
   description: string;
 }
 
-const PortfolioCarousel: React.FC = () => {
+const PortfolioCarousel = () => {
   const [index, setIndex] = useState(0);
 
   const carouselItems: CarouselItem[] = [

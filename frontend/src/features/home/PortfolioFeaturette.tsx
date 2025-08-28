@@ -1,6 +1,3 @@
-import React from 'react';
-
-// Import all your image assets directly
 import Headshot from '@assets/base/Headshot.jpg';
 import EVTLogo from '@assets/evt/EVT-Logo.jpg';
 import ThinkServer from '@assets/base/thinkserver.png';
@@ -14,7 +11,7 @@ interface FeaturetteItem {
   overlayImage?: string; // For cases like the EVT logo over a black square
 }
 
-const PortfolioFeaturette: React.FC = () => {
+const PortfolioFeaturette = () => {
   const featuretteItems: FeaturetteItem[] = [
     {
       image: Headshot,

@@ -1,10 +1,8 @@
-import React from 'react';
+import PortfolioCarousel from '@features/home/PortfolioCarousel';
+import ProjectsGrid from '@features/home/ProjectsGrid';
+import PortfolioFeaturette from '@features/home/PortfolioFeaturette';
 
-import PortfolioCarousel from './PortfolioCarousel';
-import ProjectsGrid from './ProjectsGrid';
-import PortfolioFeaturette from './PortfolioFeaturette';
-
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <main role="main">
       <PortfolioCarousel />

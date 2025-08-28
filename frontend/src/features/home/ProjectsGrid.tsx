@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProjectsGrid: React.FC = () => {
+const ProjectsGrid = () => {
   const navigate = useNavigate();
 
   const handleProjectClick = (projectKey: string) => {
