@@ -35,3 +35,5 @@ export function StaticTitle(): null {
 
   return null;
 }
+
+export default DynamicTitle;
