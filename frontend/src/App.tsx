@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Components
-import { DynamicTitle } from '@components/DynamicTitle';
+const DynamicTitle = lazy(() => import('@utils/DynamicTitle'));
 const NavigationBar = lazy(() => import('@components/NavigationBar'));
 const Footer = lazy(() => import('@components/Footer'));
 const NotFound = lazy(() => import('@components/NotFound'));
@@ -20,7 +20,6 @@ const App = () => {
       <header>
         <NavigationBar />
       </header>
-
       <div className="page-container">
         {/* Flexbox Container */}
         <main className="content-wrap">
