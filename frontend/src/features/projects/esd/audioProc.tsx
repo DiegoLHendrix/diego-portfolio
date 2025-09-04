@@ -8,7 +8,7 @@ const AUDIOPROC = ({ skills }: AUDIOPROCProps) => {
       <h1 className="text-4xl font-extrabold text-center">
         Embedded VHDL and C Audio Processor
       </h1>
-      <p className="text-xl text-center my-2">11/12/2024</p>
+      <p className="text-xl text-center my-2">November 11th, 2024</p>
 
       {/* Skills Section */}
       <p className="text-center my-4">

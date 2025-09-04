@@ -3,10 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Components
-const DynamicTitle = lazy(() => import('@utils/DynamicTitle'));
 const NavigationBar = lazy(() => import('@components/NavigationBar'));
 const Footer = lazy(() => import('@components/Footer'));
 const NotFound = lazy(() => import('@components/NotFound'));
+
+// Utilities
+const DynamicTitle = lazy(() => import('@utils/DynamicTitle'));
 
 // Lazy Loaded pages
 const Home = lazy(() => import('@pages/Home'));
@@ -33,10 +35,8 @@ const App = () => {
             {/* Catch-all route for undefined pages */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-          {/* </Suspense> */}
         </main>
       </div>
-
       <footer>
         <Footer />
       </footer>

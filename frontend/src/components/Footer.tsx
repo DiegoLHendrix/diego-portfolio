@@ -1,7 +1,6 @@
-import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="bg-primary text-white text-xl py-1 mt-auto z-10">
       <div className="max-w-screen-xl mx-auto px-4">

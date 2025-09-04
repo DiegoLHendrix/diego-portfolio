@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const NavigationBar: React.FC = () => {
+const NavigationBar = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -34,7 +34,7 @@ const NavigationBar: React.FC = () => {
           </a>
         </div>
 
-        {/* Right Side (GitHub, LinkedIn, Theme Toggle) */}
+        {/* Right Side (GitHub, LinkedIn) */}
         <div className="hidden lg:flex items-center ml-auto space-x-4">
           <a
             href="https://github.com/DiegoLHendrix"

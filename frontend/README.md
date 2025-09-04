@@ -6,8 +6,8 @@
 - `components/` : Reusable UI pieces that can be used anywhere.
 - `features/` : Domain specific pieces.
 - `pages/` : Files the router points to.
-- `utils/` : Small functions that do a single task.
 - `styles/` : CSS files, fonts, and themes.
+- `utils/` : Small functions that do a single task.
 
 ## Set up
 
