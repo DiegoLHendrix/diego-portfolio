@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaShareAlt, FaPlus } from 'react-icons/fa'; // Using more semantic icons
+import { FaShareAlt, FaPlus } from 'react-icons/fa';
 
 const SpeedDial = () => {
   const [isOpen, setIsOpen] = useState(false);

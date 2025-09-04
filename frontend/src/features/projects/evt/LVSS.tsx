@@ -8,7 +8,7 @@ const LVSS = ({ skills }: LVSSProps) => {
       <h1 className="text-4xl font-extrabold text-center">
         Low Voltage Sub-System (LVSS)
       </h1>
-      <p className="text-xl text-center my-2">2/10/2025</p>
+      <p className="text-xl text-center my-2">February 10th, 2025</p>
 
       {/* Skills Section */}
       <p className="text-center my-4">
@@ -39,39 +39,6 @@ const LVSS = ({ skills }: LVSSProps) => {
           <p className="text-xl">STM32 Nucleo</p>
           <p className="text-xl">LVSS PCB</p>
         </div>
-        {/* <div>
-          <div className="flex flex-wrap gap-6">
-            <div className="w-1/2">
-              <div className="group relative">
-                <SecureImage
-                  filename="evt/lvss/HSSEVM.png"
-                  alt="High Side Switch Evaluation Module"
-                  className="hover:opacity-75 cursor-pointer"
-                />
-              </div>
-            </div>
-            <div className="w-1/2">
-              <div className="group relative">
-                <SecureImage
-                  filename="evt/lvss/nucleo.png"
-                  alt="STM32 Nucleo Development Board"
-                  className="hover:opacity-75 cursor-pointer"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mt-6">
-            <div className="w-full">
-              <div className="group relative">
-                <SecureImage
-                  filename="evt/lvss/LVSSPCB.png"
-                  alt="LVSS Custom PCB"
-                  className="hover:opacity-75 cursor-pointer"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <hr className="my-8" />

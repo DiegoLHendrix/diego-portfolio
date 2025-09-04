@@ -7,7 +7,7 @@ const Experience = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // --- Pull tab from query string, fallback to "evt"
+  // Pull tab from query string, fallback to "evt"
   const queryTab =
     (new URLSearchParams(location.search).get('tab') as ExperienceTabKey) ||
     'evt';
@@ -18,7 +18,7 @@ const Experience = () => {
   // Sync state with URL when tab is changed
   useEffect(() => {
     navigate(`?tab=${activeTab}`, { replace: true });
-  }, [activeTab, navigate]); // Added 'navigate' to dependency array as a best practice
+  }, [activeTab, navigate]);
 
   const tabData = {
     evt: {
@@ -38,11 +38,13 @@ const Experience = () => {
     },
   };
 
+  // Configure the tab names and their corresponding keys
   const tabButtons = [
     { key: 'evt', label: 'EVT' },
     { key: 'rauland', label: 'Rauland' },
   ];
 
+  // Fill the current tab with the default data
   const currentTab = tabData[activeTab];
 
   return (

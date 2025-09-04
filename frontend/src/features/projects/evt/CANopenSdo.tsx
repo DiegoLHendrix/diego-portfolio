@@ -8,7 +8,7 @@ const CANopenSdo = ({ skills }: CANopenSdoProps) => {
       <h1 className="text-4xl font-extrabold text-center">
         CANopen Service Data Objects (SDO)
       </h1>
-      <p className="text-xl text-center my-2">1/20/2024</p>
+      <p className="text-xl text-center my-2">October 31st, 2024</p>
 
       {/* Skills Section */}
       <div className="text-center my-4">
