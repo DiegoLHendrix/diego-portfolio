@@ -2,13 +2,17 @@ name: Build
 
 on:
   push:
-    branches: ["main"]
+    branches: ["**"]
   pull_request:
-    branches: ["main"]
+    branches: ["**"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./frontend
 
     steps:
       - name: Checkout repository
@@ -19,5 +23,8 @@ jobs:
         with:
           node-version: 20 # Or your desired Node.js version
           cache: "npm"
-      - run: npm install
-      - run: npm run build
+
+      - name: Run npm
+        run: |
+          npm install
+          npm run build
